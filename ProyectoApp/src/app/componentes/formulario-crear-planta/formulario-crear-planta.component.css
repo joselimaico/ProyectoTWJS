@@ -1,0 +1,8 @@
+.contenedorFormulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedorFormulario > * {
+  width: 100%;
+}
