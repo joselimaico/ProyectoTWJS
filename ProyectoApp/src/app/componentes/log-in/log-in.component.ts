@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder} from "@angular/forms";
+import {FormBuilder, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-log-in',
@@ -7,17 +7,33 @@ import {FormBuilder} from "@angular/forms";
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
-
+  hide = true;
   loginForm = this.fb.group({
-    username: [null],
-    password: [null]
+    username: ['',Validators.compose([Validators.required,Validators.email])],
+    password: ['',Validators.compose([Validators.required,Validators.minLength(8)])]
   });
 
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }
+  getErrorMessage() {
+    return this.loginForm.get('username').hasError('required') ? 'email requerido' :
+      this.loginForm.get('username').hasError('email') ? 'email inválido' :
+        '';
+  }
+
+  getPasswordErrorMessage(){
+    return this.loginForm.get('password').hasError('required')? 'password requerido' :
+      this.loginForm.get('password').hasError('minlength')? 'mínimo 8 caracteres' :
+        '';
+  }
+
   onSubmit() {
+    const email = this.loginForm.get('username').value;
+    const password = this.loginForm.get('password').value;
+    console.log(email,password);
 
   }
+
 }

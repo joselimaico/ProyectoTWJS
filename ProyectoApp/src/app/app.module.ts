@@ -12,11 +12,14 @@ import { MatIconModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
 import { MatToolbarModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatListModule} from '@angular/material/list';
+import { SignInComponent } from './componentes/sign-in/sign-in.component';
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    LogInComponent
+    LogInComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatCardModule,
     MatToolbarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

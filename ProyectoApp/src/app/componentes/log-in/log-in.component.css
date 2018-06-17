@@ -10,7 +10,7 @@ form {
 }
 
 .login-content {
-  width: 400px;
+  width: 500px;
   display: block;
   margin: 0 auto;
 }
@@ -25,6 +25,10 @@ form {
 }
 
 .mat-raised-button {
+  width: 100%;
+  margin-top: 15px;
+}
+.mat-button {
   width: 100%;
   margin-top: 15px;
 }

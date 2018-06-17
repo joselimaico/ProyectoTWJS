@@ -2,18 +2,34 @@
   <div class="login-content">
     <mat-toolbar class="login-toolbar" color="primary">Log In</mat-toolbar>
     <mat-card>
-      <form  [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
+
+      <form  [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()" >
+
         <mat-form-field>
           <mat-icon matPrefix>person_outline</mat-icon>
-          <input autofocus type="text" matInput placeholder="Username" formControlName="username" required>
+          <input autofocus type="text" matInput placeholder="Email" formControlName="username" >
+          <mat-error *ngIf="loginForm.get('username').invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
+
 
         <mat-form-field>
           <mat-icon matPrefix>lock_outline</mat-icon>
-          <input type="password" autocomplete="false" matInput placeholder="Password" formControlName="password" required>
+          <input
+                 autocomplete="false"
+                 matInput
+                 placeholder="Password"
+                 formControlName="password"
+                 [type]="hide ? 'password' : 'text'"
+          >
+          <mat-error *ngIf="loginForm.get('password').invalid">{{getPasswordErrorMessage()}}</mat-error>
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+
         </mat-form-field>
 
+
         <button type="submit" mat-raised-button color="primary">Login</button>
+        <!--<button type="reset" mat-raised-button color="accent">Limpiar</button>-->
+        <a mat-button routerLink=".">Registrarse</a>
       </form>
     </mat-card>
   </div>
