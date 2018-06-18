@@ -10,6 +10,7 @@ import { FormularioLugarComponent } from './componentes/formularios/formulario-l
 import { PasosFormularioLugarComponent } from './componentes/formularios/pasos-formulario-lugar/pasos-formulario-lugar.component';
 import { FormularioHabitacionComponent } from './componentes/formularios/formulario-habitacion/formulario-habitacion.component';
 import { ResumenFormularioGeneralComponent } from './componentes/formularios/resumen-formulario-general/resumen-formulario-general.component';
+import { FormularioGeneralLugarComponent } from './componentes/formularios/formulario-general-lugar/formulario-general-lugar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ResumenFormularioGeneralComponent } from './componentes/formularios/res
     FormularioLugarComponent,
     PasosFormularioLugarComponent,
     FormularioHabitacionComponent,
-    ResumenFormularioGeneralComponent
+    ResumenFormularioGeneralComponent,
+    FormularioGeneralLugarComponent
   ],
   imports: [
     BrowserModule,
