@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="af575478-37df-4f9f-ac39-12d51183d999" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/app.module.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/app.module.ts" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/main/main.component.html" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/main/main.component.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -189,7 +188,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2735000" />
+    <option name="totallyTimeSpent" value="2804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -427,7 +426,7 @@
         <state relative-caret-position="17">
           <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>

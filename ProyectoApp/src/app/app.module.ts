@@ -7,12 +7,14 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import 'hammerjs';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormularioLugarComponent } from './componentes/formularios/formulario-lugar/formulario-lugar.component';
+import { PasosFormularioLugarComponent } from './componentes/formularios/pasos-formulario-lugar/pasos-formulario-lugar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    FormularioLugarComponent
+    FormularioLugarComponent,
+    PasosFormularioLugarComponent
   ],
   imports: [
     BrowserModule,
