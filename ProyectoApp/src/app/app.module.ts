@@ -8,13 +8,15 @@ import 'hammerjs';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormularioLugarComponent } from './componentes/formularios/formulario-lugar/formulario-lugar.component';
 import { PasosFormularioLugarComponent } from './componentes/formularios/pasos-formulario-lugar/pasos-formulario-lugar.component';
+import { FormularioHabitacionComponent } from './componentes/formularios/formulario-habitacion/formulario-habitacion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     FormularioLugarComponent,
-    PasosFormularioLugarComponent
+    PasosFormularioLugarComponent,
+    FormularioHabitacionComponent
   ],
   imports: [
     BrowserModule,
