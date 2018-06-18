@@ -9,6 +9,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormularioLugarComponent } from './componentes/formularios/formulario-lugar/formulario-lugar.component';
 import { PasosFormularioLugarComponent } from './componentes/formularios/pasos-formulario-lugar/pasos-formulario-lugar.component';
 import { FormularioHabitacionComponent } from './componentes/formularios/formulario-habitacion/formulario-habitacion.component';
+import { ResumenFormularioGeneralComponent } from './componentes/formularios/resumen-formulario-general/resumen-formulario-general.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormularioHabitacionComponent } from './componentes/formularios/formula
     MainComponent,
     FormularioLugarComponent,
     PasosFormularioLugarComponent,
-    FormularioHabitacionComponent
+    FormularioHabitacionComponent,
+    ResumenFormularioGeneralComponent
   ],
   imports: [
     BrowserModule,
