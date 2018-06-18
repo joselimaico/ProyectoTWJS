@@ -5,7 +5,7 @@
 
       <form  [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()" >
 
-        <mat-form-field>
+        <mat-form-field >
           <mat-icon matPrefix>person_outline</mat-icon>
           <input autofocus type="text" matInput placeholder="Email" formControlName="username" >
           <mat-error *ngIf="loginForm.get('username').invalid">{{getErrorMessage()}}</mat-error>
