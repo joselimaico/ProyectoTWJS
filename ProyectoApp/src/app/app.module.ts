@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -11,30 +12,34 @@ import {
   MatChipsModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule,
   MatSelectModule
 } from "@angular/material";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+
 import {MatGridListModule} from '@angular/material/grid-list';
+import { FormularioCrearLugarComponent } from './componentes/formulario-crear-lugar/formulario-crear-lugar.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {InputTextModule} from "primeng/primeng";
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     MenuOpcionesComponent,
-    FormularioCrearPlantaComponent
+    FormularioCrearPlantaComponent,
+    FormularioCrearLugarComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
     MatChipsModule,
-    BrowserAnimationsModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatGridListModule,
     MatCardModule,
-    MatButtonModule
-
-
+    MatButtonModule,
+    NgbModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]
