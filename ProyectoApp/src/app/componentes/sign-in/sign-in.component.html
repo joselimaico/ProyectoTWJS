@@ -1,34 +1,48 @@
+<div class="signin-container">
+  <div class="signin-content">
+    <mat-card>
+      <form [formGroup]="signinForm" novalidate class="example-form">
+        <mat-form-field  >
+          <mat-icon matSuffix >account_circle</mat-icon>
+          <input matInput placeholder="Crear Cuenta" disabled >
+        </mat-form-field>
 
-  <form class="example-form">
-    <mat-form-field  >
-      <mat-icon matSuffix >account_circle</mat-icon>
-      <input matInput placeholder="Crear Cuenta" disabled >
-    </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput autofocus type="text"  placeholder="Nombre" formControlName="username">
+          <mat-error *ngIf="signinForm.get('username').invalid">{{getNameErrorMessage()}}</mat-error>
+        </mat-form-field>
 
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="Nombre">
-    </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-icon matPrefix>person_outline</mat-icon>
+          <input autofocus type="text" matInput placeholder="Email" formControlName="email" >
+          <mat-error *ngIf="signinForm.get('email').invalid">{{getEmailErrorMessage()}}</mat-error>
+        </mat-form-field>
 
-    <mat-form-field class="example-full-width">
-      <mat-icon matPrefix>person_outline</mat-icon>
-      <input autofocus type="text" matInput placeholder="Email" formControlName="username" >
-      <!--<mat-error *ngIf="loginForm.get('username').invalid">{{getErrorMessage()}}</mat-error>-->
-    </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-icon matPrefix>lock_outline</mat-icon>
+          <input
+            autocomplete="false"
+            matInput
+            placeholder="Password"
+            formControlName="password"
+            [type]="hide ? 'password' : 'text'"
+          >
+          <mat-error *ngIf="signinForm.get('password').invalid">{{getPasswordErrorMessage()}}</mat-error>
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
 
-    <mat-form-field class="example-full-width">
-      <mat-icon matPrefix>lock_outline</mat-icon>
-      <input
-        autocomplete="false"
-        matInput
-        placeholder="Password"
-        formControlName="password"
-        [type]="hide ? 'password' : 'text'"
-      >
-      <!--<mat-error *ngIf="loginForm.get('password').invalid">{{getPasswordErrorMessage()}}</mat-error>-->
-      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="primary">Registrarse</button>
+        <!--<button type="reset" mat-raised-button color="accent">Limpiar</button>-->
+        <!--<button type="button" mat-button (click)="irASignIn()">Registrarse</button>-->
 
-    </mat-form-field>
+      </form>
 
-  </form>
+    </mat-card>
 
 
+  </div>
+
+
+
+
+</div>

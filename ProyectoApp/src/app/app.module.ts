@@ -14,6 +14,8 @@ import { MatToolbarModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatListModule} from '@angular/material/list';
 import { SignInComponent } from './componentes/sign-in/sign-in.component';
+import {RouterModule} from "@angular/router";
+import {RUTAS_APP} from "./app.routes";
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,13 @@ import { SignInComponent } from './componentes/sign-in/sign-in.component';
     MatCardModule,
     MatToolbarModule,
     ReactiveFormsModule,
-    MatListModule
+    MatListModule,
+    RouterModule.forRoot(
+      RUTAS_APP,
+      {
+        useHash: true
+      }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

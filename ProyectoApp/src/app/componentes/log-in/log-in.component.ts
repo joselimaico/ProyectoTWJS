@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-log-in',
@@ -13,7 +14,7 @@ export class LogInComponent implements OnInit {
     password: ['',Validators.compose([Validators.required,Validators.minLength(8)])]
   });
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private _router:Router) { }
 
   ngOnInit() {
   }
@@ -35,5 +36,11 @@ export class LogInComponent implements OnInit {
     console.log(email,password);
 
   }
+  irASignIn(){
+    const url = ['/signin'];
+    this._router.navigate(url);
+
+  }
+
 
 }
