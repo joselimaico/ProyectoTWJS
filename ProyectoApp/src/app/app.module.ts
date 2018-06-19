@@ -16,12 +16,14 @@ import {MatListModule} from '@angular/material/list';
 import { SignInComponent } from './componentes/sign-in/sign-in.component';
 import {RouterModule} from "@angular/router";
 import {RUTAS_APP} from "./app.routes";
+import { PaginaPrincipalComponent } from './componentes/pagina-principal/pagina-principal.component';
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     LogInComponent,
-    SignInComponent
+    SignInComponent,
+    PaginaPrincipalComponent
   ],
   imports: [
     BrowserModule,

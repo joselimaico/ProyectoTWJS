@@ -31,9 +31,15 @@ export class LogInComponent implements OnInit {
   }
 
   onSubmit() {
+    const url = ['/main']
     const email = this.loginForm.get('username').value;
     const password = this.loginForm.get('password').value;
-    console.log(email,password);
+    if(email==='joselimaicotele@gmail.com'&& password==='12345678'){
+      console.log(email,password);
+      this._router.navigate(url)
+
+    }
+
 
   }
   irASignIn(){
@@ -41,6 +47,7 @@ export class LogInComponent implements OnInit {
     this._router.navigate(url);
 
   }
+
 
 
 }
