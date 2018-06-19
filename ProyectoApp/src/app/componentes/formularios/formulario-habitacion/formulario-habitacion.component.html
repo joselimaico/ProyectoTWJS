@@ -1,3 +1,39 @@
-<p>
-  formulario-habitacion works!
-</p>
+<h1>Información Principal del Lugar</h1>
+<div class="example-container">
+  <mat-form-field>
+    <input matInput [placeholder]="nombreHabitacion" >
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select [placeholder]="tamanioHabitacion">
+      <mat-option value="pequenia">pequeña</mat-option>
+      <mat-option value="mediana">mediana</mat-option>
+      <mat-option value="grande">grande</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select [placeholder]="ambienteHabitacion">
+      <mat-option value="calido">cálido</mat-option>
+      <mat-option value="humedo">húmedo</mat-option>
+      <mat-option value="seco">seco</mat-option>
+    </mat-select>
+  </mat-form-field>
+    <p>¿Recibe luz solar?</p>
+    <br>
+    <mat-radio-group>
+      <mat-radio-button value="0">Si</mat-radio-button>
+      <mat-radio-button value="1">No</mat-radio-button>
+    </mat-radio-group>
+    <br>
+</div>
+<div>
+  <button mat-button style=
+    "float: left;
+    width: 50%;
+    font-size: 24px">Atrás</button>
+  <button mat-button style=
+    "float: right;
+    width: 50%;
+    font-size: 24px">Siguiente</button>
+</div>

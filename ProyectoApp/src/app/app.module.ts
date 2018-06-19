@@ -13,7 +13,7 @@ import { ResumenFormularioGeneralComponent } from './componentes/formularios/res
 import { FormularioGeneralLugarComponent } from './componentes/formularios/formulario-general-lugar/formulario-general-lugar.component';
 import {StepsModule} from "primeng/steps";
 import { MenuModule} from "primeng/menu";
-import {MatChipsModule, MatFormFieldModule, MatInputModule, MatSelectModule} from "@angular/material";
+import {MatChipsModule, MatFormFieldModule, MatInputModule, MatRadioModule, MatSelectModule} from "@angular/material";
 import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
@@ -36,7 +36,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatInputModule,
     MatSelectModule,
     MatChipsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

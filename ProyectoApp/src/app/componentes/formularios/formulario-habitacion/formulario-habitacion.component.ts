@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioHabitacionComponent implements OnInit {
 
+  idFormulario = 2;
+  nombreHabitacion = 'Nombre de la habitacion';
+  tamanioHabitacion = 'Tamaño de la habitacion';
+  ambienteHabitacion = 'Tipo de ambiente de la habitacion';
+  esIluminado = false;
   constructor() { }
 
   ngOnInit() {
