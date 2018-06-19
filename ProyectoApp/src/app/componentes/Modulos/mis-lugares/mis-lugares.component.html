@@ -1,3 +1,13 @@
-<p>
-  mis-lugares works!
-</p>
+<div class="row">
+  <div class="col-sm-12">Mis Lugares</div>
+  <div class="col-sm-3" style="background-color: antiquewhite">
+    <ul>
+      <li>
+        <a [routerLink]="['formularioLugar']"> Crear formulario</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-sm-12" style="background-color: aquamarine">
+    <router-outlet></router-outlet>
+  </div>
+</div>

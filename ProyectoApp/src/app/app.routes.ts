@@ -7,7 +7,13 @@ import {MisPlantasComponent} from "./componentes/Modulos/mis-plantas/mis-plantas
 export const RUTAS_APP: Routes = [
   {
     path: 'mislugares',
-    component: MisLugaresComponent
+    component: MisLugaresComponent,
+    children:[
+      {
+        path:'formularioLugar',
+        component: FormularioGeneralLugarComponent
+      }
+    ]
   },
   {
     path: 'misplantas',
