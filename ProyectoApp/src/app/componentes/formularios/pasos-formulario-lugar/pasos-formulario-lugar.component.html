@@ -1,2 +1,13 @@
 <h3>Clickable</h3>
-<p-steps [model]="items" [(activeIndex)]="indiceActivo" [readonly]="false"></p-steps>
+
+  <div>
+    <div class="content-section implementation">
+      <!--<p-growl [value]="msgs"></p-growl>-->
+      <p-steps [style]="{'width':'300%'}"
+             [model]="items"
+             [(activeIndex)]="indiceActivo"
+             [readonly]="false">
+      </p-steps>
+    <!--<p-steps [model]="items"></p-steps>-->
+  </div>
+
