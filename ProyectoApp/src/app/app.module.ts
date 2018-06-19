@@ -11,6 +11,10 @@ import { PasosFormularioLugarComponent } from './componentes/formularios/pasos-f
 import { FormularioHabitacionComponent } from './componentes/formularios/formulario-habitacion/formulario-habitacion.component';
 import { ResumenFormularioGeneralComponent } from './componentes/formularios/resumen-formulario-general/resumen-formulario-general.component';
 import { FormularioGeneralLugarComponent } from './componentes/formularios/formulario-general-lugar/formulario-general-lugar.component';
+import {StepsModule} from "primeng/steps";
+import { MenuModule} from "primeng/menu";
+import {MenuItem} from "primeng/api";
+
 
 @NgModule({
   declarations: [
@@ -25,7 +29,9 @@ import { FormularioGeneralLugarComponent } from './componentes/formularios/formu
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    StepsModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
