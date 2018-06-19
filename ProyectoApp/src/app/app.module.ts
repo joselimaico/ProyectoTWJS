@@ -15,6 +15,11 @@ import {StepsModule} from "primeng/steps";
 import { MenuModule} from "primeng/menu";
 import {MatChipsModule, MatFormFieldModule, MatInputModule, MatRadioModule, MatSelectModule} from "@angular/material";
 import {MatButtonModule} from '@angular/material/button';
+import { MisLugaresComponent } from './componentes/Modulos/mis-lugares/mis-lugares.component';
+import { PageNotFoundComponent } from './componentes/Modulos/page-not-found/page-not-found.component';
+import {RouterModule} from "@angular/router";
+import {RUTAS_APP} from "./app.routes";
+import { MisPlantasComponent } from './componentes/Modulos/mis-plantas/mis-plantas.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +29,19 @@ import {MatButtonModule} from '@angular/material/button';
     PasosFormularioLugarComponent,
     FormularioHabitacionComponent,
     ResumenFormularioGeneralComponent,
-    FormularioGeneralLugarComponent
+    FormularioGeneralLugarComponent,
+    MisLugaresComponent,
+    PageNotFoundComponent,
+    MisPlantasComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(
+      RUTAS_APP,
+      {
+        useHash: true
+      }
+    ),
     BrowserAnimationsModule,
     NgbModule.forRoot(),
     StepsModule,

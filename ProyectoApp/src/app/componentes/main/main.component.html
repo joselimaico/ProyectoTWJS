@@ -1,1 +1,25 @@
-<app-formulario-general-lugar></app-formulario-general-lugar>
+<!--<app-formulario-general-lugar></app-formulario-general-lugar>-->
+
+
+<h1>Header</h1>
+<div class="container">
+  <h1>Contenido</h1>
+      <div class="row">
+        <div class="col-sm-6" style="background-color: deepskyblue">
+          <ul>
+            <li>
+              <a routerLink="/mislugares"><h3>MisLugares</h3></a>
+
+            </li>
+            <li>
+              <a routerLink="/misplantas"><h3>MisPlantas</h3></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6" style="background-color: greenyellow">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+
+  </div>
+<h1>Footer</h1>
