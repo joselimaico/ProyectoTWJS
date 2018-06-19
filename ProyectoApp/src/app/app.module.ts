@@ -13,8 +13,8 @@ import { ResumenFormularioGeneralComponent } from './componentes/formularios/res
 import { FormularioGeneralLugarComponent } from './componentes/formularios/formulario-general-lugar/formulario-general-lugar.component';
 import {StepsModule} from "primeng/steps";
 import { MenuModule} from "primeng/menu";
-import {MenuItem} from "primeng/api";
-
+import {MatChipsModule, MatFormFieldModule, MatInputModule, MatSelectModule} from "@angular/material";
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,12 @@ import {MenuItem} from "primeng/api";
     BrowserAnimationsModule,
     NgbModule.forRoot(),
     StepsModule,
-    MenuModule
+    MenuModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatChipsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

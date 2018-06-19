@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioLugarComponent implements OnInit {
 
+  idFormulario = 1;
+  nombreLugar = 'Nombre del Lugar';
+  tipoLugar = 'Tipo del Lugar';
+  sectorLugar = 'Sector del Lugar';
   constructor() { }
 
   ngOnInit() {

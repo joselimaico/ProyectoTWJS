@@ -1,0 +1,13 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 50%;
+  font-size: 24px;
+}
+
+.boton {
+  width: 60%;
+}
