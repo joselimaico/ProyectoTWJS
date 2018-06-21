@@ -3,6 +3,7 @@ import {FormularioGeneralLugarComponent} from "./componentes/formularios/formula
 import {MisLugaresComponent} from "./componentes/Modulos/mis-lugares/mis-lugares.component";
 import {PageNotFoundComponent} from "./componentes/Modulos/page-not-found/page-not-found.component";
 import {MisPlantasComponent} from "./componentes/Modulos/mis-plantas/mis-plantas.component";
+import {SteperFormularioLugarComponent} from "./componentes/formularios/steper-formulario-lugar/steper-formulario-lugar.component";
 
 export const RUTAS_APP: Routes = [
   {
@@ -14,6 +15,10 @@ export const RUTAS_APP: Routes = [
         component: FormularioGeneralLugarComponent
       }
     ]
+  },
+  {
+    path:'stepper',
+    component:  SteperFormularioLugarComponent
   },
   {
     path: 'misplantas',
@@ -28,4 +33,5 @@ export const RUTAS_APP: Routes = [
     path:'**',
     component: PageNotFoundComponent
   }
+
 ];

@@ -13,13 +13,18 @@ import { ResumenFormularioGeneralComponent } from './componentes/formularios/res
 import { FormularioGeneralLugarComponent } from './componentes/formularios/formulario-general-lugar/formulario-general-lugar.component';
 import {StepsModule} from "primeng/steps";
 import { MenuModule} from "primeng/menu";
-import {MatChipsModule, MatFormFieldModule, MatInputModule, MatRadioModule, MatSelectModule} from "@angular/material";
+import {
+  MatChipsModule, MatFormFieldModule, MatInputModule, MatRadioModule, MatSelectModule,
+} from "@angular/material";
+import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonModule} from '@angular/material/button';
 import { MisLugaresComponent } from './componentes/Modulos/mis-lugares/mis-lugares.component';
 import { PageNotFoundComponent } from './componentes/Modulos/page-not-found/page-not-found.component';
 import {RouterModule} from "@angular/router";
 import {RUTAS_APP} from "./app.routes";
 import { MisPlantasComponent } from './componentes/Modulos/mis-plantas/mis-plantas.component';
+import { SteperFormularioLugarComponent } from './componentes/formularios/steper-formulario-lugar/steper-formulario-lugar.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -32,7 +37,8 @@ import { MisPlantasComponent } from './componentes/Modulos/mis-plantas/mis-plant
     FormularioGeneralLugarComponent,
     MisLugaresComponent,
     PageNotFoundComponent,
-    MisPlantasComponent
+    MisPlantasComponent,
+    SteperFormularioLugarComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +57,10 @@ import { MisPlantasComponent } from './componentes/Modulos/mis-plantas/mis-plant
     MatSelectModule,
     MatChipsModule,
     MatButtonModule,
-    MatRadioModule
+    MatRadioModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
