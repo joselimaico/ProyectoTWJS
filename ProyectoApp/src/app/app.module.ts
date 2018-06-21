@@ -17,13 +17,21 @@ import { SignInComponent } from './componentes/sign-in/sign-in.component';
 import {RouterModule} from "@angular/router";
 import {RUTAS_APP} from "./app.routes";
 import { PaginaPrincipalComponent } from './componentes/pagina-principal/pagina-principal.component';
+import { HistorialRiegoComponent } from './componentes/historial-riego/historial-riego.component';
+import {TableModule} from 'primeng/table';
+import {CarouselModule} from 'primeng/carousel';
+import {GrowlModule} from 'primeng/growl';
+import {ButtonModule} from 'primeng/button';
+import {ChartModule} from 'primeng/chart';
+
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     LogInComponent,
     SignInComponent,
-    PaginaPrincipalComponent
+    PaginaPrincipalComponent,
+    HistorialRiegoComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +44,11 @@ import { PaginaPrincipalComponent } from './componentes/pagina-principal/pagina-
     MatToolbarModule,
     ReactiveFormsModule,
     MatListModule,
+    TableModule,
+    CarouselModule,
+    GrowlModule,
+    ButtonModule,
+    ChartModule,
     RouterModule.forRoot(
       RUTAS_APP,
       {

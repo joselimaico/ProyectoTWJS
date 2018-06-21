@@ -1,0 +1,21 @@
+<p-table  [value]="riegos">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Fecha</th>
+      <th>Hora</th>
+      <th>Estado del Suelo</th>
+      <th>Riego</th>
+
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-riego>
+    <tr >
+      <td>{{riego.fecha}}</td>
+      <td>{{riego.hora}}</td>
+      <td>{{riego.estadoSuelo}}</td>
+      <td>{{riego.riego}}</td>
+
+
+    </tr>
+  </ng-template>
+</p-table>

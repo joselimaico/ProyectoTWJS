@@ -1,3 +1,95 @@
-<p>
-  pagina-principal works!
-</p>
+<div class="container">
+
+  <p-growl [value]="msgs"></p-growl>
+  <div class="row">
+    <div class="col-sm-1 pa-texto ">
+      <mat-icon matSuffix>loupe</mat-icon>
+      <p>Nuevo Lugar</p>
+    </div>
+    <div class="col-sm-11">
+      <p-carousel  headerText="Mis Plantas" [value]="plantas">
+        <ng-template let-planta pTemplate="item">
+          <div class="ui-grid ui-grid-responsive">
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-12"><img src="assets/imagenes/{{planta.especie}}.png" width="60"></div>
+            </div>
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-6">Nombre</div>
+              <div class="ui-grid-col-6">{{planta.nombre}}</div>
+            </div>
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-6">Años</div>
+              <div class="ui-grid-col-6">{{planta.anios}}</div>
+            </div>
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-6">Color</div>
+              <div class="ui-grid-col-6">{{planta.color}}</div>
+            </div>
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-6">Especie</div>
+              <div class="ui-grid-col-6">{{planta.especie}}</div>
+            </div>
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-12">
+                <button type="button" pButton icon="pi pi-search" (click)="selectPlanta(planta)"></button>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+
+
+
+
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-sm-1">
+      <mat-icon matSuffix>loupe</mat-icon>
+    </div>
+    <div class="col-sm-11">
+      <p-carousel  headerText="Mis Plantas" [value]="plantas">
+        <ng-template let-planta pTemplate="item">
+          <div class="ui-grid ui-grid-responsive">
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-12"><img src="assets/imagenes/{{planta.especie}}.png" width="60"></div>
+            </div>
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-6">Nombre</div>
+              <div class="ui-grid-col-6">{{planta.nombre}}</div>
+            </div>
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-6">Años</div>
+              <div class="ui-grid-col-6">{{planta.anios}}</div>
+            </div>
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-6">Color</div>
+              <div class="ui-grid-col-6">{{planta.color}}</div>
+            </div>
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-6">Especie</div>
+              <div class="ui-grid-col-6">{{planta.especie}}</div>
+            </div>
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-12">
+                <button type="button" pButton icon="pi pi-search" (click)="selectPlanta(planta)"></button>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+</div>
+
