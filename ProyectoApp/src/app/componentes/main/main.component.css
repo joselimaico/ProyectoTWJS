@@ -1,42 +1,39 @@
-#sa-TopPagina {
-    background-color: darkolivegreen;
-    display: block;
-    padding: 0;
-    height: 70px;
-    box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9997;
-}
-
-#sa-MenuBarraInicio {
-    background-color: gray;
-    float: none;
-    width: 100%;
-    height: 40px;
-    margin: 0;
-    text-align: center;
-
-    /* display: inline-block;
-    list-style-type: none;
-    padding: 0;
-    margin: 0 60px 0 0;
-    float: right;
-    height: 100%; */
-}
-
 .sa-barraSuperiorPagina {
     background-color: forestgreen;
     box-sizing: border-box;
     display: block;
     padding: 0;
-    height: 70px;
+    height: 100px;
     box-sizing: border-box;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 9997;
+}
+
+.sa-menuSuperiorPagina {
+    display: inline-block;
+    list-style-type: none;
+    float:right;
+    margin: 0 60px 0 0;
+    padding: 0;
+    height: 100%;
+}
+
+.sa-menuSuperiorPagina>li{
+    display:inline-block;
+    height: 100%;
+}
+
+.sa-menuSuperiorPagina>li>a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color .3s;
+    min-width: 120px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    height: 100%;
+    line-height: 70px;
 }
