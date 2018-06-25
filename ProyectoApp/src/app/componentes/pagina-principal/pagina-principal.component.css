@@ -1,7 +1,16 @@
-.pa-espaciado {
-  height: 250px;
-}
 
-.material-icons { font-size: 48px;  }
+
+.material-icons { font-size: 50px;  }
 
 .pa-texto {text-align: center;}
+
+.ui-grid-row[_ngcontent-c2] {
+  text-align: center;
+  height: 35px;
+
+}
+.ui-grid-col-12 {
+  width: 100%;
+}
+
+
