@@ -1,5 +1,5 @@
 .crearNuevoLugar {
-    background-color: rgb(204, 171, 88);
+    background-color: deepskyblue;
     text-align: center;
     height: 150px;
     margin: 0 60px 0 60px;
@@ -11,8 +11,11 @@
     border-width:thin; 
 }
 
-.sa-botonCrear {
+.fichaLugarEscogido {
+    margin: 30px 60px 30px 60px;
     padding: 0;
-    position: fixed;
-    
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-width: thin;
 }

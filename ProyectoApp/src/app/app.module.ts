@@ -27,6 +27,7 @@ import { SteperFormularioLugarComponent } from './componentes/formularios/steper
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ConfiguracionSistemaComponent } from './componentes/Modulos/configuracion-sistema/configuracion-sistema.component';
 import { ReporteRiegoComponent } from './componentes/Modulos/reporte-riego/reporte-riego.component';
+import { FichaLugarEscogidoComponent } from './componentes/formularios/ficha-lugar-escogido/ficha-lugar-escogido.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ReporteRiegoComponent } from './componentes/Modulos/reporte-riego/repor
     MisPlantasComponent,
     SteperFormularioLugarComponent,
     ConfiguracionSistemaComponent,
-    ReporteRiegoComponent
+    ReporteRiegoComponent,
+    FichaLugarEscogidoComponent
   ],
   imports: [
     BrowserModule,
