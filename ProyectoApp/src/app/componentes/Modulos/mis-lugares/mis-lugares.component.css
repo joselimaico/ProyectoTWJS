@@ -1,0 +1,18 @@
+.crearNuevoLugar {
+    background-color: rgb(204, 171, 88);
+    text-align: center;
+    height: 150px;
+    margin: 0 60px 0 60px;
+    padding:0;
+    box-sizing: border-box;
+    display: block;
+    border-style:solid;
+    border-color: black; 
+    border-width:thin; 
+}
+
+.sa-botonCrear {
+    padding: 0;
+    position: fixed;
+    
+}
