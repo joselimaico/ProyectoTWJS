@@ -4,6 +4,8 @@ import {MisLugaresComponent} from "./componentes/Modulos/mis-lugares/mis-lugares
 import {PageNotFoundComponent} from "./componentes/Modulos/page-not-found/page-not-found.component";
 import {MisPlantasComponent} from "./componentes/Modulos/mis-plantas/mis-plantas.component";
 import {SteperFormularioLugarComponent} from "./componentes/formularios/steper-formulario-lugar/steper-formulario-lugar.component";
+import { ConfiguracionSistemaComponent } from "./componentes/Modulos/configuracion-sistema/configuracion-sistema.component";
+import { ReporteRiegoComponent } from "./componentes/Modulos/reporte-riego/reporte-riego.component";
 
 export const RUTAS_APP: Routes = [
   {
@@ -23,6 +25,14 @@ export const RUTAS_APP: Routes = [
   {
     path: 'misplantas',
     component: MisPlantasComponent
+  },
+  {
+    path: 'configuracionSistemaRiego',
+    component: ConfiguracionSistemaComponent
+  },
+  {
+    path: 'registroDeRiego',
+    component: ReporteRiegoComponent
   },
   {
     path: '',

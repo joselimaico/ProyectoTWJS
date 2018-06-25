@@ -25,6 +25,8 @@ import {RUTAS_APP} from "./app.routes";
 import { MisPlantasComponent } from './componentes/Modulos/mis-plantas/mis-plantas.component';
 import { SteperFormularioLugarComponent } from './componentes/formularios/steper-formulario-lugar/steper-formulario-lugar.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ConfiguracionSistemaComponent } from './componentes/Modulos/configuracion-sistema/configuracion-sistema.component';
+import { ReporteRiegoComponent } from './componentes/Modulos/reporte-riego/reporte-riego.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     MisLugaresComponent,
     PageNotFoundComponent,
     MisPlantasComponent,
-    SteperFormularioLugarComponent
+    SteperFormularioLugarComponent,
+    ConfiguracionSistemaComponent,
+    ReporteRiegoComponent
   ],
   imports: [
     BrowserModule,
