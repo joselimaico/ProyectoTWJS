@@ -11,10 +11,12 @@
     border-width:thin; 
 }
 
-.fichaLugarEscogido {
+.LugarEscogido {
+    text-align: center;
     margin: 30px 60px 30px 60px;
     padding: 0;
-    text-align: center;
+    box-sizing: border-box;
+    display: block;
     border-style: solid;
     border-color: black;
     border-width: thin;

@@ -28,7 +28,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ConfiguracionSistemaComponent } from './componentes/Modulos/configuracion-sistema/configuracion-sistema.component';
 import { ReporteRiegoComponent } from './componentes/Modulos/reporte-riego/reporte-riego.component';
 import { FichaLugarEscogidoComponent } from './componentes/formularios/ficha-lugar-escogido/ficha-lugar-escogido.component';
-
+import {CardModule} from 'primeng/card';
+import {ButtonModule} from 'primeng/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,7 +67,9 @@ import { FichaLugarEscogidoComponent } from './componentes/formularios/ficha-lug
     MatRadioModule,
     MatStepperModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    CardModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
