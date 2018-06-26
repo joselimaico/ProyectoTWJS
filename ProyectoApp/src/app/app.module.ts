@@ -32,6 +32,7 @@ import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import { DescripcionObjetoComponent } from './componentes/formularios/componentes ficha/descripcion-objeto/descripcion-objeto.component';
 import { HijosObjetoComponent } from './componentes/formularios/componentes ficha/hijos-objeto/hijos-objeto.component';
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +74,8 @@ import { HijosObjetoComponent } from './componentes/formularios/componentes fich
     ReactiveFormsModule,
     FormsModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
