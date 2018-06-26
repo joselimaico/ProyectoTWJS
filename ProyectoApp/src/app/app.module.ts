@@ -23,6 +23,8 @@ import {CarouselModule} from 'primeng/carousel';
 import {GrowlModule} from 'primeng/growl';
 import {ButtonModule} from 'primeng/button';
 import {ChartModule} from 'primeng/chart';
+import { DescripcionLugarComponent } from './componentes/descripcion-lugar/descripcion-lugar.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import {ChartModule} from 'primeng/chart';
     LogInComponent,
     SignInComponent,
     PaginaPrincipalComponent,
-    HistorialRiegoComponent
+    HistorialRiegoComponent,
+    DescripcionLugarComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,7 @@ import {ChartModule} from 'primeng/chart';
     GrowlModule,
     ButtonModule,
     ChartModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot(
       RUTAS_APP,
       {

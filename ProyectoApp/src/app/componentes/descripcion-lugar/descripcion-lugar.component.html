@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-1  ">
+      <mat-icon matSuffix>loupe</mat-icon>
+      <p>Nuevo Sitio</p>
+    </div>
+    <div class="col-sm-6">
+      <p-carousel  headerText="El sitio" numVisible="1" [value]="sitio">
+        <ng-template let-lugar pTemplate="item">
+          <div class="ui-grid ui-grid-responsive">
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-12"><img src="assets/imagenes/{{lugar.tipoLugar}}.png" width="60"></div>
+            </div>
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-12">{{lugar.tipoLugar}}</div>
+            </div>
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-12">
+                <button type="button" pButton icon="pi pi-search" (click)="selectLugar(lugar)"></button>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <div class="col-sm-5">
+      <ngb-tabset>
+        <ngb-tab title="Descripción">
+          <ng-template ngbTabContent>
+
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab>
+          <ng-template ngbTabTitle><b>Habitaciones</b></ng-template>
+          <ng-template ngbTabContent>
+
+          </ng-template>
+        </ngb-tab>
+
+      </ngb-tabset>
+
+    </div>
+  </div>
+
+</div>

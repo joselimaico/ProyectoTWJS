@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Message} from "primeng/api";
+import {Router} from "@angular/router";
 
 class Planta {
   nombre:string
@@ -11,7 +12,11 @@ class Lugar {
   tipoLugar: string
   sectorLugar:string
   habitacion:[
-    any
+    {
+      tipoHabitacion:string
+      luz_solar:boolean
+    }
+
     ]
 }
 @Component({
@@ -25,7 +30,7 @@ export class PaginaPrincipalComponent implements OnInit {
   msgs: Message[];
   msg:Message[];
 
-  constructor() {
+  constructor(private _router:Router) {
     this.msgs = [];
     this.plantas = [
       {nombre: 'Helen', anios: 2, especie: 'Helecho', color: 'Verde'},
@@ -44,6 +49,15 @@ export class PaginaPrincipalComponent implements OnInit {
           }
         ]
 
+      },
+      {
+       tipoLugar:'Departamento',sectorLugar:'La gasca',
+       habitacion:[
+         {tipoHabitacion:'Sala',
+           luz_solar:true
+
+         }
+       ]
       }
     ]
 
@@ -56,6 +70,9 @@ export class PaginaPrincipalComponent implements OnInit {
   selectLugar(lugar:Lugar){
     this.msg=[]
     this.msg.push({severity: 'info', summary: 'Lugar Seleccionado', detail: lugar.tipoLugar});
+    const url = ['/detalle/'+lugar.tipoLugar];
+    this._router.navigate(url);
+
   }
 
   ngOnInit() {
