@@ -10,8 +10,18 @@
            height: 100px;
            margin: 25px 0 5px 0;">¡CREAR UN NUEVO LUGAR!</button>
   </div>
+  
   <div class="LugarEscogido">
-    <app-ficha-lugar-escogido></app-ficha-lugar-escogido>
+      <div class="row">
+          <ul>
+              <li>
+                  <a [routerLink]="['fichaDescripcionLugar']"> Mostrar ficha</a>
+              </li>
+          </ul>
+      </div>
+      <div class="row">
+        <router-outlet></router-outlet>
+      </div>
   </div>
   <div class="listaLugaresCreados">
     <h1>AQUI ubicar carusel de los lugares creados</h1>

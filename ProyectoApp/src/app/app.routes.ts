@@ -6,6 +6,9 @@ import {MisPlantasComponent} from "./componentes/Modulos/mis-plantas/mis-plantas
 import {SteperFormularioLugarComponent} from "./componentes/formularios/steper-formulario-lugar/steper-formulario-lugar.component";
 import { ConfiguracionSistemaComponent } from "./componentes/Modulos/configuracion-sistema/configuracion-sistema.component";
 import { ReporteRiegoComponent } from "./componentes/Modulos/reporte-riego/reporte-riego.component";
+import { FichaLugarEscogidoComponent } from "./componentes/formularios/ficha-lugar-escogido/ficha-lugar-escogido.component";
+import { DescripcionObjetoComponent } from "./componentes/formularios/componentes ficha/descripcion-objeto/descripcion-objeto.component";
+import { HijosObjetoComponent } from "./componentes/formularios/componentes ficha/hijos-objeto/hijos-objeto.component";
 
 export const RUTAS_APP: Routes = [
   {
@@ -15,6 +18,20 @@ export const RUTAS_APP: Routes = [
       {
         path:'formularioLugar',
         component: FormularioGeneralLugarComponent
+      },
+      {
+        path:'fichaDescripcionLugar',
+        component: FichaLugarEscogidoComponent,
+        children:[
+          {
+            path: 'descripcionLugar',
+            component: DescripcionObjetoComponent
+          },
+          {
+            path: 'misHabitaciones',
+            component: HijosObjetoComponent
+          }
+        ]
       }
     ]
   },

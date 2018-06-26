@@ -30,6 +30,8 @@ import { ReporteRiegoComponent } from './componentes/Modulos/reporte-riego/repor
 import { FichaLugarEscogidoComponent } from './componentes/formularios/ficha-lugar-escogido/ficha-lugar-escogido.component';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
+import { DescripcionObjetoComponent } from './componentes/formularios/componentes ficha/descripcion-objeto/descripcion-objeto.component';
+import { HijosObjetoComponent } from './componentes/formularios/componentes ficha/hijos-objeto/hijos-objeto.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +47,9 @@ import {ButtonModule} from 'primeng/button';
     SteperFormularioLugarComponent,
     ConfiguracionSistemaComponent,
     ReporteRiegoComponent,
-    FichaLugarEscogidoComponent
+    FichaLugarEscogidoComponent,
+    DescripcionObjetoComponent,
+    HijosObjetoComponent
   ],
   imports: [
     BrowserModule,

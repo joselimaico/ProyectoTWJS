@@ -1,0 +1,36 @@
+.sa-barraMenuFicha {
+    background-color: rgb(71, 73, 71);
+    box-sizing: border-box;
+    display: block;
+    padding: 0;
+    height: 100px;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    z-index: 9997;
+}
+
+.sa-menuFicha {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 60px 0 0;
+    padding: 0;
+    height: 100%;
+}
+
+.sa-menuFicha>li{
+    display:inline-block;
+    height: 30%;
+}
+
+.sa-menuFicha>li>a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color .3s;
+    min-width: 120px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    height: 100%;
+    line-height: 70px;
+}
