@@ -3,7 +3,7 @@
     <mat-toolbar class="login-toolbar" color="primary">Log In</mat-toolbar>
     <mat-card>
 
-      <form  [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()" >
+      <form  [formGroup]="loginForm"  (ngSubmit)="onSubmit()" >
 
         <mat-form-field >
           <mat-icon matPrefix>person_outline</mat-icon>

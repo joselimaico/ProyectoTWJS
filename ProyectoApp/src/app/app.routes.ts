@@ -3,6 +3,8 @@ import {LogInComponent} from "./componentes/log-in/log-in.component";
 import {SignInComponent} from "./componentes/sign-in/sign-in.component";
 import {PaginaPrincipalComponent} from "./componentes/pagina-principal/pagina-principal.component";
 import {DescripcionLugarComponent} from "./componentes/descripcion-lugar/descripcion-lugar.component";
+import {AuthGuard} from "./_guards";
+
 
 
 export const RUTAS_APP: Routes = [
@@ -19,7 +21,8 @@ export const RUTAS_APP: Routes = [
   },
   {
     path:'main',
-    component:PaginaPrincipalComponent
+    component:PaginaPrincipalComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'login',
@@ -27,7 +30,8 @@ export const RUTAS_APP: Routes = [
   },
   {
     path:'detalle/:lugar',
-    component:DescripcionLugarComponent
+    component:DescripcionLugarComponent,
+    canActivate:[AuthGuard]
   },
 
 
