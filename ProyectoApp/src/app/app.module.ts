@@ -31,6 +31,7 @@ import {AlertService, AuthenticationService, UserService} from "./_services";
 import {ErrorInterceptor, fakeBackendProvider, JwtInterceptor} from "./_helpers";
 import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http";
     DescripcionLugarComponent
   ],
   imports: [
+
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,

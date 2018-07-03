@@ -1,17 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Message} from "primeng/api";
+import {ActivatedRoute, ParamMap} from "@angular/router";
 
-class Lugar {
-  tipoLugar: string
-  sectorLugar:string
-  habitacion:[
-    {
-      tipoHabitacion:string
-      luz_solar:boolean
-    }
 
-    ]
-}
 
 @Component({
   selector: 'app-descripcion-lugar',
@@ -21,42 +12,35 @@ class Lugar {
 
 
 export class DescripcionLugarComponent implements OnInit {
-lugares: Lugar[]
+//lugares: Lugar[]
 msg:Message[]
-  @Input() sitio;
-  constructor() {
+  Idlugar:number
+//lugares:Lugar[];
+  constructor(private route: ActivatedRoute) {
 
-    this.lugares = [
-      {tipoLugar:'Casa',sectorLugar:'Miraflores',
-        habitacion:[
-          {
-            tipoHabitacion:'baño',
-            luz_solar:true
 
-          }
-        ]
-
-      },
-      {
-        tipoLugar:'Departamento',sectorLugar:'La gasca',
-        habitacion:[
-          {tipoHabitacion:'Sala',
-            luz_solar:true
-
-          }
-        ]
-      }
-    ]
   }
 
 
   ngOnInit() {
+     this.route.paramMap.subscribe(
+      (params:ParamMap)=>{
+        let id = parseInt(params.get('id'));
+        this.Idlugar =id;
+        console.log(this.Idlugar);
+
+      }
+    )
+
+
+
+
   }
 
-  selectLugar(lugar:Lugar){
-    this.msg=[]
-    this.msg.push({severity: 'info', summary: 'Lugar Seleccionado', detail: lugar.tipoLugar});
-
-  }
+  // selectLugar(lugar:Lugar){
+  //   this.msg=[]
+  //   this.msg.push({severity: 'info', summary: 'Lugar Seleccionado', detail: lugar.tipoLugar});
+  //
+  // }
 
 }

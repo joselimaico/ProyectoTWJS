@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Message} from "primeng/api";
 import {Router} from "@angular/router";
+import {Lugar} from "../../_models";
 
 class Planta {
   nombre:string
@@ -8,17 +9,7 @@ class Planta {
   especie:string
   color: string
 }
-class Lugar {
-  tipoLugar: string
-  sectorLugar:string
-  habitacion:[
-    {
-      tipoHabitacion:string
-      luz_solar:boolean
-    }
 
-    ]
-}
 @Component({
   selector: 'app-pagina-principal',
   templateUrl: './pagina-principal.component.html',
@@ -26,7 +17,8 @@ class Lugar {
 })
 export class PaginaPrincipalComponent implements OnInit {
   plantas: Planta[];
-  lugares: Lugar[];
+  lugares:Lugar[];
+
   msgs: Message[];
   msg:Message[];
 
@@ -40,7 +32,7 @@ export class PaginaPrincipalComponent implements OnInit {
 
     ];
     this.lugares = [
-      {tipoLugar:'Casa',sectorLugar:'Miraflores',
+      {idLugar:1,tipoLugar:'Casa',sectorLugar:'Miraflores',
         habitacion:[
           {
             tipoHabitacion:'baño',
@@ -51,31 +43,39 @@ export class PaginaPrincipalComponent implements OnInit {
 
       },
       {
-       tipoLugar:'Departamento',sectorLugar:'La gasca',
-       habitacion:[
-         {tipoHabitacion:'Sala',
-           luz_solar:true
+        idLugar:2,tipoLugar:'Departamento',sectorLugar:'La gasca',
+        habitacion:[
+          {tipoHabitacion:'Sala',
+            luz_solar:true
 
-         }
-       ]
+          }
+        ]
       }
     ]
+
+
 
   }
 
   selectPlanta(planta: Planta) {
     this.msgs = [];
     this.msgs.push({severity: 'info', summary: 'Planta Seleccionada', detail: 'Nombre:' + planta.nombre});
+    //this.selectUnLugar(0)
   }
   selectLugar(lugar:Lugar){
     this.msg=[]
-    this.msg.push({severity: 'info', summary: 'Lugar Seleccionado', detail: lugar.tipoLugar});
-    const url = ['/detalle/'+lugar.tipoLugar];
-    this._router.navigate(url);
+    // this.msg.push({severity: 'info', summary: 'Lugar Seleccionado', detail: lugar.tipoLugar});
+    //const url = ['/detalle', { queryParams: { lugar: lugar.tipoLugar} }];
+    this._router.navigate(['/detalle',lugar.idLugar]);
 
   }
 
   ngOnInit() {
+
   }
+
+  // selectUnLugar(lugarid){
+  //   console.log(lugares[lugarid])
+  // }
 
 }

@@ -22,16 +22,19 @@ export const RUTAS_APP: Routes = [
   {
     path:'main',
     component:PaginaPrincipalComponent,
-    canActivate:[AuthGuard]
+    // canActivate:[AuthGuard]
   },
   {
     path: 'login',
     component: LogInComponent
   },
   {
-    path:'detalle/:lugar',
+    path:'detalle/:id',
     component:DescripcionLugarComponent,
-    canActivate:[AuthGuard]
+    // canActivate:[AuthGuard]
+    // children:[
+    //
+    // ]
   },
 
 
