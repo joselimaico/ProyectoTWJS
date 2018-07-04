@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Message} from "primeng/api";
 import {Router} from "@angular/router";
 import {Lugar} from "../../_models";
+import {LugarService} from "../../_services/lugar.service";
 
 class Planta {
   nombre:string
@@ -18,11 +19,13 @@ class Planta {
 export class PaginaPrincipalComponent implements OnInit {
   plantas: Planta[];
   lugares:Lugar[];
-
   msgs: Message[];
   msg:Message[];
+  lugar=[]
 
-  constructor(private _router:Router) {
+  constructor(private _router:Router,
+              private _lugarService:LugarService
+              ) {
     this.msgs = [];
     this.plantas = [
       {nombre: 'Helen', anios: 2, especie: 'Helecho', color: 'Verde'},
@@ -31,27 +34,7 @@ export class PaginaPrincipalComponent implements OnInit {
       {nombre: 'Luz', anios: 2, especie: 'Amapola', color: 'Morado'},
 
     ];
-    this.lugares = [
-      {idLugar:1,tipoLugar:'Casa',sectorLugar:'Miraflores',
-        habitacion:[
-          {
-            tipoHabitacion:'baño',
-            luz_solar:true
 
-          }
-        ]
-
-      },
-      {
-        idLugar:2,tipoLugar:'Departamento',sectorLugar:'La gasca',
-        habitacion:[
-          {tipoHabitacion:'Sala',
-            luz_solar:true
-
-          }
-        ]
-      }
-    ]
 
 
 
@@ -60,22 +43,30 @@ export class PaginaPrincipalComponent implements OnInit {
   selectPlanta(planta: Planta) {
     this.msgs = [];
     this.msgs.push({severity: 'info', summary: 'Planta Seleccionada', detail: 'Nombre:' + planta.nombre});
+    console.log('lugares',this.lugares)
     //this.selectUnLugar(0)
   }
   selectLugar(lugar:Lugar){
-    this.msg=[]
+    //this.msg=[]
     // this.msg.push({severity: 'info', summary: 'Lugar Seleccionado', detail: lugar.tipoLugar});
     //const url = ['/detalle', { queryParams: { lugar: lugar.tipoLugar} }];
+
+    //this._lugarService.enviarArreglo(this.lugar);
+
     this._router.navigate(['/detalle',lugar.idLugar]);
+    //console.log(place)
 
   }
 
   ngOnInit() {
+    this.lugares=this._lugarService.lugares;
+
+
 
   }
 
   // selectUnLugar(lugarid){
-  //   console.log(lugares[lugarid])
+  //   console.log(places[lugarid])
   // }
 
 }

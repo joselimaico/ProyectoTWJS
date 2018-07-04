@@ -30,6 +30,7 @@ import { AuthGuard } from './_guards';
 import {AlertService, AuthenticationService, UserService} from "./_services";
 import {ErrorInterceptor, fakeBackendProvider, JwtInterceptor} from "./_helpers";
 import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http";
+import {LugarService} from "./_services/lugar.service";
 
 
 @NgModule({
@@ -71,6 +72,7 @@ import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http";
   ],
   providers: [
     AuthGuard,
+    LugarService,
     AlertService,
     AuthenticationService,
     UserService,

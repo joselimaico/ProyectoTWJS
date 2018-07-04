@@ -4,15 +4,15 @@
       <mat-icon matSuffix>loupe</mat-icon>
       <p>Nuevo Sitio</p>
     </div>
-    <div class="col-sm-6">
-      <p-carousel  headerText="El sitio" numVisible="1" [value]="lugares">
-        <ng-template let-lugar pTemplate="item">
+    <div class="col-sm-11">
+      <p-carousel  headerText="El sitio" numVisible="1" [value]="lugarSeleccionado">
+        <ng-template let-place pTemplate="item">
           <div class="ui-grid ui-grid-responsive">
             <div class="ui-grid-row">
-              <div class="ui-grid-col-12"><img src="assets/imagenes/{{lugar.tipoLugar}}.png" width="60"></div>
+              <div class="ui-grid-col-12"><img src="assets/imagenes/{{place.tipoLugar}}.png" width="60"></div>
             </div>
             <div class="ui-grid-row">
-              <div class="ui-grid-col-12">{{lugar.tipoLugar}}</div>
+              <div class="ui-grid-col-12">{{place.tipoLugar}}</div>
             </div>
             <div class="ui-grid-row">
               <div class="ui-grid-col-12">
@@ -23,16 +23,40 @@
         </ng-template>
       </p-carousel>
     </div>
-    <div class="col-sm-5">
+
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-12">
       <ngb-tabset>
-        <ngb-tab title="Descripción">
-          <ng-template ngbTabContent>
+        <ngb-tab title="Descripción" *ngFor="let lugar of lugarSeleccionado">
+          <ng-template ngbTabContent >
+            <p> Lugar: {{lugar.tipoLugar}}</p>
+            <p> Sector: {{lugar.sectorLugar}}</p>
 
           </ng-template>
         </ngb-tab>
         <ngb-tab>
           <ng-template ngbTabTitle><b>Habitaciones</b></ng-template>
           <ng-template ngbTabContent>
+            <p-carousel  headerText="El sitio"  [value]="lugarSeleccionado[0].habitacion">
+              <ng-template let-place pTemplate="item">
+                <div class="ui-grid ui-grid-responsive">
+                  <div class="ui-grid-row">
+                    <div class="ui-grid-col-12"><img src="assets/imagenes/{{place.tipoHabitacion}}.png" width="60"></div>
+                  </div>
+                  <div class="ui-grid-row">
+                    <div class="ui-grid-col-12">{{place.tipoHabitacion}}</div>
+                  </div>
+                  <div class="ui-grid-row">
+                    <div class="ui-grid-col-12">
+                      <button type="button" pButton icon="pi pi-search" ></button>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </p-carousel>
+
 
           </ng-template>
         </ngb-tab>

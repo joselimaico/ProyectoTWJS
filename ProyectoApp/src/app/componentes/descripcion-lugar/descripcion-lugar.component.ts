@@ -1,6 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {Message} from "primeng/api";
 import {ActivatedRoute, ParamMap} from "@angular/router";
+import {LugarService} from "../../_services/lugar.service";
+import {Lugar} from "../../_models";
 
 
 
@@ -12,17 +14,20 @@ import {ActivatedRoute, ParamMap} from "@angular/router";
 
 
 export class DescripcionLugarComponent implements OnInit {
-//lugares: Lugar[]
-msg:Message[]
+
   Idlugar:number
-//lugares:Lugar[];
-  constructor(private route: ActivatedRoute) {
+  lugares:Lugar[]
+  lugarSeleccionado=[]
+  ;
+  constructor(private route: ActivatedRoute,private _lugarService:LugarService) {
 
 
   }
 
 
   ngOnInit() {
+
+    //this.nombrePrueba=this._lugarService.nombreUsuario
      this.route.paramMap.subscribe(
       (params:ParamMap)=>{
         let id = parseInt(params.get('id'));
@@ -30,17 +35,24 @@ msg:Message[]
         console.log(this.Idlugar);
 
       }
-    )
 
+    )
+    this.lugares=this._lugarService.lugares
+    this.selectLugar(this.Idlugar)
+
+  }
+
+  selectLugar(id:number){
+     let place= [this.lugares.find(
+      (place:Lugar) => {
+        return place.idLugar===id
+      })]
+    this.lugarSeleccionado=place
+    console.log("lugar encontrado: ",this.lugarSeleccionado)
 
 
 
   }
 
-  // selectLugar(lugar:Lugar){
-  //   this.msg=[]
-  //   this.msg.push({severity: 'info', summary: 'Lugar Seleccionado', detail: lugar.tipoLugar});
-  //
-  // }
 
 }
