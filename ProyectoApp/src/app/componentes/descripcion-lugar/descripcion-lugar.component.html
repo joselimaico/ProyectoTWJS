@@ -1,11 +1,12 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-1  ">
-      <mat-icon matSuffix>loupe</mat-icon>
-      <p>Nuevo Sitio</p>
+    <div class="col-sm-1 example-button-row">
+      <button mat-fab color="primary">
+        <mat-icon>loupe</mat-icon>
+      </button>
     </div>
-    <div class="col-sm-11">
-      <p-carousel  headerText="El sitio" numVisible="1" [value]="lugarSeleccionado">
+    <div class="col-sm-5">
+      <p-carousel  headerText="El sitio" numVisible="1" [value]="lugarSeleccionado" >
         <ng-template let-place pTemplate="item">
           <div class="ui-grid ui-grid-responsive">
             <div class="ui-grid-row">
@@ -23,6 +24,17 @@
         </ng-template>
       </p-carousel>
     </div>
+    <div class="col-sm-6 button-row" >
+      <button mat-fab color="primary">
+        <mat-icon matSuffix>delete</mat-icon>
+      </button>
+      <br>
+      <br>
+      <button mat-fab color="primary">
+        <mat-icon matSuffix>update</mat-icon>
+      </button>
+
+    </div>
 
   </div>
   <br>
@@ -38,24 +50,37 @@
         </ngb-tab>
         <ngb-tab>
           <ng-template ngbTabTitle><b>Habitaciones</b></ng-template>
+
           <ng-template ngbTabContent>
-            <p-carousel  headerText="El sitio"  [value]="lugarSeleccionado[0].habitacion">
-              <ng-template let-place pTemplate="item">
-                <div class="ui-grid ui-grid-responsive">
-                  <div class="ui-grid-row">
-                    <div class="ui-grid-col-12"><img src="assets/imagenes/{{place.tipoHabitacion}}.png" width="60"></div>
-                  </div>
-                  <div class="ui-grid-row">
-                    <div class="ui-grid-col-12">{{place.tipoHabitacion}}</div>
-                  </div>
-                  <div class="ui-grid-row">
-                    <div class="ui-grid-col-12">
-                      <button type="button" pButton icon="pi pi-search" ></button>
+            <div class="row">
+              <div class="col-sm-1 example-button-row">
+                <button mat-fab color="primary">
+                  <mat-icon>loupe</mat-icon>
+                </button>
+              </div>
+              <div class="col-sm-11">
+                <p-carousel  headerText="El sitio"  [value]="lugarSeleccionado[0].habitacion">
+                  <ng-template let-room pTemplate="item">
+                    <div class="ui-grid ui-grid-responsive">
+                      <div class="ui-grid-row">
+                        <div class="ui-grid-col-12"><img src="assets/imagenes/{{room.tipoHabitacion}}.png" width="60"></div>
+                      </div>
+                      <div class="ui-grid-row">
+                        <div class="ui-grid-col-12">{{room.tipoHabitacion}}</div>
+                      </div>
+                      <div class="ui-grid-row">
+                        <div class="ui-grid-col-12">
+                          <button type="button" pButton icon="pi pi-search" (click)="selectHabitacion(room)" ></button>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </ng-template>
-            </p-carousel>
+                  </ng-template>
+                </p-carousel>
+
+              </div>
+            </div>
+
+
 
 
           </ng-template>
@@ -63,6 +88,13 @@
 
       </ngb-tabset>
 
+    </div>
+  </div>
+  <br>
+  <router-outlet></router-outlet>
+  <div class="row">
+    <div class="col-sm-5">
+      <button mat-stroked-button color="primary" (click)="gotoMain()">Regresar a la lista</button>
     </div>
   </div>
 

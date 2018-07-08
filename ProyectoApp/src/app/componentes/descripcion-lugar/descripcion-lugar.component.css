@@ -1,13 +1,25 @@
-.material-icons { font-size: 50px;  }
 
-.pa-texto {text-align: center;}
 
-.ui-grid-row[_ngcontent-c2] {
+
+
+.example-button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 50px;
+
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+  font-size: 50px;
+}
+
+
+.ui-grid-row {
   text-align: center;
-  height: 35px;
+  height: 45px;
+
 
 }
-.ui-grid-col-12 {
-  width: 100%;
-}
-

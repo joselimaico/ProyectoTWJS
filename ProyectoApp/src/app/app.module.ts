@@ -31,6 +31,7 @@ import {AlertService, AuthenticationService, UserService} from "./_services";
 import {ErrorInterceptor, fakeBackendProvider, JwtInterceptor} from "./_helpers";
 import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http";
 import {LugarService} from "./_services/lugar.service";
+import { DescripcionHabitacionComponent } from './componentes/descripcion-habitacion/descripcion-habitacion.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import {LugarService} from "./_services/lugar.service";
     SignInComponent,
     PaginaPrincipalComponent,
     HistorialRiegoComponent,
-    DescripcionLugarComponent
+    DescripcionLugarComponent,
+    DescripcionHabitacionComponent
   ],
   imports: [
 
@@ -66,7 +68,7 @@ import {LugarService} from "./_services/lugar.service";
     RouterModule.forRoot(
       RUTAS_APP,
       {
-        useHash: true
+        //useHash: true
       }
     )
   ],

@@ -6,13 +6,13 @@ export class LugarService {
   nombreUsuario = 'Adrian';
   lugares:Lugar[];
   lugarSeleccionado:Lugar[]
-  envioArreglo: EventEmitter<Lugar[]> = new EventEmitter();
+  envioArreglo: EventEmitter<[any]> = new EventEmitter();
 
 
 
-  enviarArreglo(arregloLugares:Lugar[]) {
-    //this.nombreUsuario = nombreUsuario;
-    this.lugarSeleccionado=arregloLugares
+  enviarArreglo(arregloLugares:[any]) {
+
+    //this.lugarSeleccionado=arregloLugares
     this.envioArreglo.emit(arregloLugares);
   }
   constructor(){
@@ -20,11 +20,13 @@ export class LugarService {
       {idLugar:1,tipoLugar:'Casa',sectorLugar:'Miraflores',
         habitacion:[
           {
+            idHabitacion:1,
             tipoHabitacion:'baño',
             luz_solar:true
 
           },
           {
+            idHabitacion:2,
             tipoHabitacion:'dormitorio',
             luz_solar:true
           }
@@ -35,7 +37,9 @@ export class LugarService {
       {
         idLugar:2,tipoLugar:'Departamento',sectorLugar:'La gasca',
         habitacion:[
-          {tipoHabitacion:'Sala',
+          {
+            idHabitacion:1,
+            tipoHabitacion:'Sala',
             luz_solar:true
 
           }

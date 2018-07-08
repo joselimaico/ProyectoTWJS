@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Message} from "primeng/api";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Lugar} from "../../_models";
 import {LugarService} from "../../_services/lugar.service";
 
@@ -24,7 +24,8 @@ export class PaginaPrincipalComponent implements OnInit {
   lugar=[]
 
   constructor(private _router:Router,
-              private _lugarService:LugarService
+              private _lugarService:LugarService,
+              private _route:ActivatedRoute
               ) {
     this.msgs = [];
     this.plantas = [
@@ -47,13 +48,9 @@ export class PaginaPrincipalComponent implements OnInit {
     //this.selectUnLugar(0)
   }
   selectLugar(lugar:Lugar){
-    //this.msg=[]
-    // this.msg.push({severity: 'info', summary: 'Lugar Seleccionado', detail: lugar.tipoLugar});
-    //const url = ['/detalle', { queryParams: { lugar: lugar.tipoLugar} }];
 
-    //this._lugarService.enviarArreglo(this.lugar);
 
-    this._router.navigate(['/detalle',lugar.idLugar]);
+    this._router.navigate([lugar.idLugar],{relativeTo: this._route});
     //console.log(place)
 
   }
@@ -65,8 +62,6 @@ export class PaginaPrincipalComponent implements OnInit {
 
   }
 
-  // selectUnLugar(lugarid){
-  //   console.log(places[lugarid])
-  // }
+
 
 }

@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af575478-37df-4f9f-ac39-12d51183d999" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ProyectoApp/src/app/_services/lugar.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/_models/lugar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/_models/lugar.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/_services/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/_services/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/_services/lugar.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/_services/lugar.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,8 +27,11 @@
       <file leaf-file-name="descripcion-lugar.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-624">
-              <caret line="1" column="36" lean-forward="true" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+            <state relative-caret-position="-136">
+              <caret line="40" column="43" lean-forward="true" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#81#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,20 +39,62 @@
       <file leaf-file-name="lugar.service.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/_services/lugar.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+            <state relative-caret-position="209">
+              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="descripcion-habitacion.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
               <folding>
-                <element signature="e#0#55#0" expanded="true" />
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="descripcion-lugar.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="descripcion-habitacion.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="descripcion-lugar.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="1020">
+              <caret line="72" column="106" selection-start-line="72" selection-start-column="106" selection-end-line="72" selection-end-column="106" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.routes.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/app.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="70" column="10" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#58#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,11 +102,8 @@
       <file leaf-file-name="pagina-principal.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="362">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
             </state>
           </provider>
         </entry>
@@ -76,14 +119,9 @@
       </file>
       <file leaf-file-name="pagina-principal.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/_services/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            <state relative-caret-position="510">
+              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -107,8 +145,6 @@
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/sign-in/sign-in.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/historial-riego/historial-riego.component.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/historial-riego/historial-riego.component.html" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.css" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.css" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/Seguridad/auth-service.service.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/Seguridad/auth.service.ts" />
@@ -123,16 +159,20 @@
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/_services/authentication.service.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/_models/index.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/app.component.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/typings.d.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/_services/index.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/_services/lugar.service.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/_models/lugar.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.css" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.css" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/_services/lugar.service.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.html" />
       </list>
     </option>
   </component>
@@ -164,6 +204,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -195,22 +236,6 @@
               <item name="ProyectoApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="_guards" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProyectoTWJS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProyectoTWJS" type="462c0819:PsiDirectoryNode" />
-              <item name="ProyectoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="_models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProyectoTWJS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProyectoTWJS" type="462c0819:PsiDirectoryNode" />
-              <item name="ProyectoApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="_services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -220,6 +245,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="componentes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProyectoTWJS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProyectoTWJS" type="462c0819:PsiDirectoryNode" />
+              <item name="ProyectoApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="componentes" type="462c0819:PsiDirectoryNode" />
+              <item name="descripcion-habitacion" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProyectoTWJS" type="b2602c69:ProjectViewProjectNode" />
@@ -252,7 +286,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -313,54 +346,35 @@
       <workItem from="1530542756022" duration="7561000" />
       <workItem from="1530636370717" duration="3331000" />
       <workItem from="1530646234780" duration="19760000" />
+      <workItem from="1531005010149" duration="18185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100440000" />
+    <option name="totallyTimeSpent" value="118625000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info anchor="bottom" id="TypeScript" order="7" />
+      <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18440185" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32896653" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32751092" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23992069" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="TypeScript" order="8" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32751092" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
-    </layout-to-restore>
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32896653" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -369,20 +383,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoApp/src/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -446,16 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -533,9 +523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
           <caret line="72" column="75" selection-start-line="72" selection-start-column="75" selection-end-line="72" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -558,16 +545,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/_guards/index.ts">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -617,33 +594,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/_models/user.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -654,27 +608,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/_services/lugar.service.ts">
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="70" column="10" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
           <folding>
-            <element signature="e#0#55#0" expanded="true" />
+            <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts">
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-624">
-          <caret line="1" column="36" lean-forward="true" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+        <state relative-caret-position="345">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="1020">
+          <caret line="72" column="106" selection-start-line="72" selection-start-column="106" selection-end-line="72" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/_services/lugar.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="40" column="43" lean-forward="true" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="7" />
         </state>
       </provider>
     </entry>
