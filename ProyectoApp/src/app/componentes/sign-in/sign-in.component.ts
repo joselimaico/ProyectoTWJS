@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {AuthenticationService} from "../../_services";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-sign-in',
@@ -13,7 +15,9 @@ export class SignInComponent implements OnInit {
     email: ['',Validators.compose([Validators.required,Validators.email])],
     password: ['',Validators.compose([Validators.required,Validators.minLength(8)])]
   });
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder,
+              private authService:AuthenticationService,
+              private _router:Router) { }
 
   ngOnInit() {
   }
@@ -30,8 +34,20 @@ export class SignInComponent implements OnInit {
   }
   getEmailErrorMessage() {
     return this.signinForm.get('email').hasError('required') ? 'email requerido' :
-      this.signinForm.get('username').hasError('email') ? 'email inválido' :
+      this.signinForm.get('email').hasError('email') ? 'email inválido' :
         '';
+  }
+  get f() { return this.signinForm.controls; }
+  onSubmit(){
+    this.authService.signin(this.f.username.value,this.f.email.value,this.f.password.value)
+      .subscribe(
+        res => {
+          console.log(res)
+          localStorage.setItem('token',res.token)
+          this._router.navigate(['/lugares'])
+        },
+        err => console.log(err)
+      )
   }
 
 }

@@ -50,11 +50,24 @@ module.exports.datastores = {
     ***************************************************************************/
     // adapter: 'sails-mysql',
     // url: 'mysql://user:password@host:port/database',
+    // adapter: 'sails-mongo',
+    // url: 'mongodb://userjfl:pwjfl123@ds229701.mlab.com:29701/plantasdb'
     adapter: 'sails-mongo',
-    url: 'mongodb://userjfl:pwjfl123@ds229701.mlab.com:29701/plantasdb'
+    url: 'mongodb://root@localhost/plantas'
+
+
 
 
   },
+  // myMongo:{
+  //   adapter: 'sails-mongo',
+  //   host: 'localhost',
+  //   port: 3306,
+  //   //user: 'root',
+  //   //password: 'g3tInCr4zee&stUfF'
+  //   database:'dbplantas'
+  // }
+
 
 
 };

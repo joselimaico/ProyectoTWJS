@@ -7,8 +7,8 @@
 
         <mat-form-field >
           <mat-icon matPrefix>person_outline</mat-icon>
-          <input autofocus type="text" matInput placeholder="Email" formControlName="username" >
-          <mat-error *ngIf="loginForm.get('username').invalid">{{getErrorMessage()}}</mat-error>
+          <input autofocus type="text" matInput placeholder="Email" formControlName="email" >
+          <mat-error *ngIf="loginForm.get('email').invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
 
 
@@ -17,6 +17,7 @@
           <input
                  autocomplete="false"
                  matInput
+
                  placeholder="Password"
                  formControlName="password"
                  [type]="hide ? 'password' : 'text'"
