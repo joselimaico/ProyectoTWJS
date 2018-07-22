@@ -1,10 +1,10 @@
-.sa-BarraNavegacion {
+.sa-BarraSuperior {
   overflow: hidden;
   background-color: seagreen;
   text-align: center;
 }
 
-.sa-BarraNavegacion a{
+.sa-BarraSuperior a{
   float: right;
   display: block;
   color: #f2f2f2;
@@ -12,7 +12,7 @@
   text-decoration: none;
 }
 
-.sa-BarraNavegacion a:hover {
+.sa-BarraSuperior a:hover {
   background-color: #ddd;
   color: black;
 }

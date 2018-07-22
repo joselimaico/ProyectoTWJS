@@ -4,7 +4,6 @@
 <h1>Pagina Principal</h1>
 <br>
 <div class="sa-contenedor-Preview-Sitios">
-
   <div class="row">
     <div class="col-lg-2" style="text-align: center; padding: 35px">
       <button mat-fab color="primary">
@@ -17,7 +16,7 @@
         <ng-template let-lugar pTemplate="item">
           <div class="ui-grid ui-grid-responsive">
             <div class="ui-grid-row">
-              <div class="ui-grid-col-12"><img src="assets/imagenes/{{lugar.tipoLugar}}.png" width="60"></div>
+              <div class="ui-grid-col-12"><img src="assets/imagenes/{{lugar.tipoLugar}}.png" alt="imagen del sitio" width="60"></div>
             </div>
             <div class="ui-grid-row">
               <div class="ui-grid-col-12">{{lugar.tipoLugar}}</div>
@@ -49,7 +48,7 @@
         <ng-template let-planta pTemplate="item">
           <div class="ui-grid ui-grid-responsive">
             <div class="ui-grid-row">
-              <div class="ui-grid-col-12"><img src="assets/imagenes/{{planta.especie}}.png" width="60"></div>
+              <div class="ui-grid-col-12"><img src="assets/imagenes/{{planta.especie}}.png" alt="imagen de la planta" width="60"></div>
             </div>
             <div class="ui-grid-row">
               <div class="ui-grid-col-6">Nombre</div>

@@ -21,7 +21,7 @@ export const RUTAS_APP: Routes = [
     component: SignInComponent
   },
   {
-    path:'lugares',
+    path:'PaginaPrincipal',
     component:PaginaPrincipalComponent,
     // canActivate:[AuthGuard]
   },
@@ -30,7 +30,7 @@ export const RUTAS_APP: Routes = [
     component: LogInComponent
   },
   {
-    path:'lugares/:id',
+    path:'PaginaPrincipal/:id',
     component:DescripcionLugarComponent,
     // canActivate:[AuthGuard],
     children:[

@@ -32,6 +32,8 @@ import {ErrorInterceptor, fakeBackendProvider, JwtInterceptor} from "./_helpers"
 import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http";
 import {LugarService} from "./_services/lugar.service";
 import { DescripcionHabitacionComponent } from './componentes/descripcion-habitacion/descripcion-habitacion.component';
+import { ContenedorPrincipalComponent } from './componentes/contenedor-principal/contenedor-principal.component';
+
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { DescripcionHabitacionComponent } from './componentes/descripcion-habita
     PaginaPrincipalComponent,
     HistorialRiegoComponent,
     DescripcionLugarComponent,
-    DescripcionHabitacionComponent
+    DescripcionHabitacionComponent,
+    ContenedorPrincipalComponent
   ],
   imports: [
 
