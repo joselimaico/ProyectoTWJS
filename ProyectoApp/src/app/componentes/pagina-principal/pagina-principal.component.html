@@ -1,16 +1,18 @@
-<div class="container">
+<p-growl [value]="msgs"></p-growl>
+<p-growl [value]="msg"></p-growl>
 
-  <p-growl [value]="msgs"></p-growl>
-  <p-growl [value]="msg"></p-growl>
+<h1>Pagina Principal</h1>
+<br>
+<div class="sa-contenedor-Preview-Sitios">
+
   <div class="row">
-    <div class="col-sm-1 pa-texto ">
-     <button mat-fab color="primary">
-       <mat-icon >loupe</mat-icon>
-     </button>
-
+    <div class="col-lg-2" style="text-align: center; padding: 35px">
+      <button mat-fab color="primary">
+        <mat-icon><h4>add_circle</h4></mat-icon>
+      </button>
       <p>Nuevo Sitio</p>
     </div>
-    <div class="col-sm-11">
+    <div class="col-lg-10">
       <p-carousel  headerText="Mis Sitios" [value]="lugares">
         <ng-template let-lugar pTemplate="item">
           <div class="ui-grid ui-grid-responsive">
@@ -29,22 +31,20 @@
         </ng-template>
       </p-carousel>
     </div>
-
-
-
-
   </div>
 
-  <br>
+</div>
 
+
+<div class="sa-contenedor-Preview-Plantas">
   <div class="row">
-    <div class="col-sm-1">
+    <div class="col-lg-2" style="text-align: center; padding-top: 80px">
       <button mat-fab color="primary">
-        <mat-icon >loupe</mat-icon>
+        <mat-icon>add_circle</mat-icon>
       </button>
       <p>Nueva Planta</p>
     </div>
-    <div class="col-sm-11">
+    <div class="col-lg-10">
       <p-carousel  headerText="Mis Plantas" [value]="plantas">
         <ng-template let-planta pTemplate="item">
           <div class="ui-grid ui-grid-responsive">
@@ -76,11 +76,7 @@
         </ng-template>
       </p-carousel>
     </div>
-
   </div>
-
-
-
-
 </div>
+
 
