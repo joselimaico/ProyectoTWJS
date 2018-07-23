@@ -1,0 +1,21 @@
+.sa-contenedor-Stepper {
+  margin: auto;
+  width: 60%;
+  /*border: 3px solid #73AD21;*/
+  padding: 10px;
+}
+
+.sa-CardFormularioLugar{
+  max-width: 400px;
+}
+
+.sa-contenedor-Campos {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+

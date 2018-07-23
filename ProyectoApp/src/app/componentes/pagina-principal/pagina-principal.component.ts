@@ -47,19 +47,27 @@ export class PaginaPrincipalComponent implements OnInit {
     console.log('lugares',this.lugares)
     //this.selectUnLugar(0)
   }
+
   selectLugar(lugar:Lugar){
-
-
-    this._router.navigate([lugar.idLugar],{relativeTo: this._route});
-    //console.log(place)
-
+    const url = ['/MisLugares/'+lugar.idLugar];
+    this._router.navigate(url);
   }
+
+  // selectLugar(lugar:Lugar){
+  //
+  //
+  //   this._router.navigate([lugar.idLugar],{relativeTo: this._route});
+  //   //console.log(place)
+  //
+  // }
 
   ngOnInit() {
     this.lugares=this._lugarService.lugares;
+  }
 
-
-
+  crearNuevoLugar(){
+    const url = ['/FormularioLugar'];
+    this._router.navigate(url);
   }
 
 

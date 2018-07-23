@@ -5,6 +5,11 @@ import {PaginaPrincipalComponent} from "./componentes/pagina-principal/pagina-pr
 import {DescripcionLugarComponent} from "./componentes/descripcion-lugar/descripcion-lugar.component";
 import {AuthGuard} from "./_guards";
 import {DescripcionHabitacionComponent} from "./componentes/descripcion-habitacion/descripcion-habitacion.component";
+import {MisLugaresComponent} from "./componentes/mis-lugares/mis-lugares.component";
+import {MisPlantasComponent} from "./componentes/mis-plantas/mis-plantas.component";
+import {HistorialRiegoComponent} from "./componentes/historial-riego/historial-riego.component";
+import {FormularioLugarComponent} from "./componentes/CrearItems/formulario-lugar/formulario-lugar.component";
+import {FormularioPlantaComponent} from "./componentes/CrearItems/formulario-planta/formulario-planta.component";
 
 
 
@@ -22,7 +27,7 @@ export const RUTAS_APP: Routes = [
   },
   {
     path:'PaginaPrincipal',
-    component:PaginaPrincipalComponent,
+    component:PaginaPrincipalComponent
     // canActivate:[AuthGuard]
   },
   {
@@ -30,7 +35,28 @@ export const RUTAS_APP: Routes = [
     component: LogInComponent
   },
   {
-    path:'PaginaPrincipal/:id',
+    path:'MisLugares',
+    component: MisLugaresComponent
+  },
+
+  {
+    path:'MisPlantas',
+    component: MisPlantasComponent
+  },
+  {
+    path: 'Historial',
+    component: HistorialRiegoComponent
+  },
+  {
+    path: 'FormularioLugar',
+    component: FormularioLugarComponent
+  },
+  {
+    path: 'FormularioPlanta',
+    component: FormularioPlantaComponent
+  },
+  {
+    path:'MisLugares/:id',
     component:DescripcionLugarComponent,
     // canActivate:[AuthGuard],
     children:[
@@ -38,7 +64,6 @@ export const RUTAS_APP: Routes = [
 
     ]
   },
-
 
   {
     path: '**',

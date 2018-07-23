@@ -1,9 +1,8 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {Message} from "primeng/api";
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import {LugarService} from "../../_services/lugar.service";
 import {Lugar} from "../../_models";
-import {DescripcionHabitacionComponent} from "../descripcion-habitacion/descripcion-habitacion.component";
+import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
 
 
@@ -16,11 +15,16 @@ import {DescripcionHabitacionComponent} from "../descripcion-habitacion/descripc
 
 export class DescripcionLugarComponent implements OnInit {
 
+  quiereActualizar:boolean;
+  closeResult: string;
   Idlugar:number
   lugares:Lugar[]
-  lugarSeleccionado=[]
-  ;
-  constructor(private route: ActivatedRoute,private _lugarService:LugarService,private _router:Router) {
+  lugarSeleccionado=[];
+  habitacionSeleccionada=[];
+  constructor(private route: ActivatedRoute,
+              private _lugarService:LugarService,
+              private _router:Router,
+              private modalService: NgbModal) {
 
 
   }
@@ -29,6 +33,7 @@ export class DescripcionLugarComponent implements OnInit {
   ngOnInit() {
 
 
+    this.quiereActualizar=false;
      this.route.paramMap.subscribe(
       (params:ParamMap)=>{
         let id = parseInt(params.get('id'));
@@ -40,9 +45,29 @@ export class DescripcionLugarComponent implements OnInit {
     )
     this.lugares=this._lugarService.lugares
     this.selectLugar(this.Idlugar)
-
-
   }
+
+  open(content){
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'})
+      .result.then((result)=>{
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason)=>{
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
+  }
+
+
+
 
   selectLugar(id:number){
      let place= [this.lugares.find(
@@ -67,6 +92,10 @@ export class DescripcionLugarComponent implements OnInit {
     this._lugarService.enviarArreglo(room)
 
 
+  }
+
+  actualizarLugar(){
+    this.quiereActualizar = true;
   }
 
 

@@ -1,0 +1,53 @@
+<mat-horizontal-stepper class="sa-contenedor-Stepper" [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <mat-card class="sa-CardFormularioLugar">
+      <div class="sa-contenedor-Campos">
+        <mat-form-field>
+          <input matInput placeholder="Input">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <textarea matInput placeholder="Textarea"></textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-select placeholder="Select">
+            <mat-option value="option">Option</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-card>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <mat-card>
+      <div class="sa-contenedor-Campos">
+        <mat-form-field>
+          <input matInput placeholder="Input">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <textarea matInput placeholder="Textarea"></textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-select placeholder="Select">
+            <mat-option value="option">Option</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-card>
+  </mat-step>
+
+</mat-horizontal-stepper>
+
+
+
+
+
+

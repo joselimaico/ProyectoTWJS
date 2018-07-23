@@ -1,7 +1,46 @@
-<div *ngFor="let room of roomArray">
-  <p>{{room.idHabitacion}}</p>
-  <p>{{room.tipoHabitacion}}</p>
-  <p>{{room.luz_solar}}</p>
+<div class="container">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Habitacion 1</mat-card-title>
+        <mat-card-subtitle>Tipo de la Habitación</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <p-dataScroller [value]="cars" [rows]="10">
+          <p-header>
+            Lista de Plantas en la Habitación
+          </p-header>
+          <ng-template let-car pTemplate="item" let-i="index">
+            <div class="ui-g car-item">
+              <div class="ui-g-12 ui-md-3">
+                <img src="assets/showcase/images/demo/car/{{car.brand}}.png">
+              </div>
+              <div class="ui-g-12 ui-md-9">
+                <div class="ui-g">
+                  <div class="ui-g-2 ui-sm-6">Vin: </div>
+                  <div class="ui-g-10 ui-sm-6">{{car.vin}}</div>
 
+                  <div class="ui-g-2 ui-sm-6">Year: </div>
+                  <div class="ui-g-10 ui-sm-6">{{car.year}}</div>
 
+                  <div class="ui-g-2 ui-sm-6">Brand: </div>
+                  <div class="ui-g-10 ui-sm-6">{{car.brand}}</div>
+
+                  <div class="ui-g-2 ui-sm-6">Color: </div>
+                  <div class="ui-g-10 ui-sm-6">{{car.color}}</div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </p-dataScroller>
+      </mat-card-actions>
+    </mat-card>
 </div>

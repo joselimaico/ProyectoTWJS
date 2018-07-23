@@ -6,7 +6,7 @@ import { MainComponent } from './componentes/main/main.component';
 import { LogInComponent } from './componentes/log-in/log-in.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material';
+import {MatChipsModule, MatInputModule, MatSelectModule} from '@angular/material';
 import { MatCardModule } from '@angular/material';
 import { MatIconModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
@@ -33,8 +33,14 @@ import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http";
 import {LugarService} from "./_services/lugar.service";
 import { DescripcionHabitacionComponent } from './componentes/descripcion-habitacion/descripcion-habitacion.component';
 import { ContenedorPrincipalComponent } from './componentes/contenedor-principal/contenedor-principal.component';
-
-
+import { MisLugaresComponent } from './componentes/mis-lugares/mis-lugares.component';
+import { MisPlantasComponent } from './componentes/mis-plantas/mis-plantas.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {OrderListModule} from 'primeng/orderlist';
+import {DataScrollerModule} from "primeng/primeng";
+import { FormularioLugarComponent } from './componentes/CrearItems/formulario-lugar/formulario-lugar.component';
+import { FormularioPlantaComponent } from './componentes/CrearItems/formulario-planta/formulario-planta.component';
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -47,7 +53,11 @@ import { ContenedorPrincipalComponent } from './componentes/contenedor-principal
     HistorialRiegoComponent,
     DescripcionLugarComponent,
     DescripcionHabitacionComponent,
-    ContenedorPrincipalComponent
+    ContenedorPrincipalComponent,
+    MisLugaresComponent,
+    MisPlantasComponent,
+    FormularioLugarComponent,
+    FormularioPlantaComponent
   ],
   imports: [
 
@@ -58,6 +68,8 @@ import { ContenedorPrincipalComponent } from './componentes/contenedor-principal
     MatIconModule,
     MatButtonModule,
     MatInputModule,
+    MatSelectModule,
+    MatChipsModule,
     MatCardModule,
     MatToolbarModule,
     ReactiveFormsModule,
@@ -67,6 +79,9 @@ import { ContenedorPrincipalComponent } from './componentes/contenedor-principal
     GrowlModule,
     ButtonModule,
     ChartModule,
+    MatExpansionModule,
+    DataScrollerModule,
+    MatStepperModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(
       RUTAS_APP,
