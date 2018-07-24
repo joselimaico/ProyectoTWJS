@@ -3,7 +3,10 @@ import {Lugar} from "../_models";
 
 @Injectable()
 export class LugarService {
-  nombreUsuario = 'Adrian';
+
+  listaLugares:Lugar[];
+  lugarEscogido: Lugar;
+
   lugares:Lugar[];
   lugarSeleccionado:Lugar[]
   envioArreglo: EventEmitter<[any]> = new EventEmitter();
