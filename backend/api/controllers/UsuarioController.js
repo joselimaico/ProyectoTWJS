@@ -14,15 +14,17 @@ module.exports = {
 
   signup: async (req, res) => {
     let params = req.allParams()
-    let created = await User.create({email: params.email, username: params.username, password: params.password}).fetch()
-    let payload = {subject:created._id}
-    let token=jwt.sign(payload,'secretKey')
-    return res.json({token})
+    let created = await Usuario.create({email: params.email, username: params.username, password: params.password}).fetch()
+    return res.json(created);
+
+    // let payload = {subject:created._id}
+    // let token=jwt.sign(payload,'secretKey')
+    // return res.json({token})
 
   },
   login:(req,res)=>{
     let userData=req.body
-    User.findOne({email:userData.email},(error,user)=>{
+    Usuario.findOne({email:userData.email},(error,user)=>{
       if(error){
         console.log(error)
       }else {

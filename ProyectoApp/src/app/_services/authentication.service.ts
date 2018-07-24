@@ -4,8 +4,8 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class AuthenticationService {
-  private _loginUrl="http://localhost:1337/user/login";
-  private _signupUrl="http://localhost:1337/user/signup";
+  private _loginUrl="http://localhost:1337/Usuario/login";
+  private _signupUrl="http://localhost:1337/Usuario/signup";
   constructor(private http: HttpClient) { }
 
   login(email,password) {

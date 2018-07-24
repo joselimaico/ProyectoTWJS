@@ -9,6 +9,7 @@ import {Planta} from "../_models/Clases/Planta";
 })
 export class InternalService {
 
+  arregloAuxiliar:any[];
   UsuarioActual:Usuario;
   LugarEscogido: Lugar;
   HabitacionEscogida: Habitacion;
@@ -16,8 +17,15 @@ export class InternalService {
 
   constructor() { }
 
+  cargarAlAuxiliar(algo){
+    this.arregloAuxiliar.push(algo);
+    console.log('arreglo auxiliar dice: mi contenido es: ',this.arregloAuxiliar);
+  }
+
+
   actualizarUsuario(user:Usuario){
     this.UsuarioActual = user;
+    console.log('el nuevo usuario es: ',this.UsuarioActual);
   }
 
   actualizarLugar(place:Lugar){
@@ -49,5 +57,5 @@ export class InternalService {
   retornarPlanta(){
     return this.PlantaEscogida;
   }
-  
+
 }

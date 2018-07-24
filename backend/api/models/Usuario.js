@@ -9,14 +9,14 @@
 module.exports = {
 
   attributes: {
-    idUsuario: {type:'number',required: true},
+    idUsuario: {type:'number',required: false},
 
     email:{ type: 'string', required: true, unique: true },
     username: { type: 'string', required: true, unique: true },
-    password: { type: 'string', required: true },
+    password: { type: 'string', required: true},
 
-    nombreUsuario: {type: 'string',required:true},
-    apellidoUsuario: {type: 'string',required:true},
+    nombreUsuario: {type: 'string',required:false},
+    apellidoUsuario: {type: 'string',required:false},
     fechaNacimientoUsuario: {type:'string',required:false},
     imagenUsuario: {type: 'string',required: false},
 

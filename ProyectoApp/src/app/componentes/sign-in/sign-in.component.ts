@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthenticationService} from "../../_services";
 import {Router} from "@angular/router";
+import {InternalService} from "../../Servicios/internal.service";
+import {Usuario} from "../../_models/Clases/Usuario";
 
 @Component({
   selector: 'app-sign-in',
@@ -17,7 +19,8 @@ export class SignInComponent implements OnInit {
   });
   constructor(private fb:FormBuilder,
               private authService:AuthenticationService,
-              private _router:Router) { }
+              private _router:Router,
+              private _internalService:InternalService) { }
 
   ngOnInit() {
   }
@@ -42,9 +45,16 @@ export class SignInComponent implements OnInit {
     this.authService.signin(this.f.username.value,this.f.email.value,this.f.password.value)
       .subscribe(
         res => {
-          console.log(res)
-          localStorage.setItem('token',res.token)
-          this._router.navigate(['/PaginaPrincipal'])
+          console.log('he hecho el signin correctamente. el resultado es: ',res);
+          let nuevoUsuario:Usuario = res;
+          this._internalService.actualizarUsuario(nuevoUsuario);
+
+
+
+
+
+          // localStorage.setItem('token',res.token)
+          //this._router.navigate(['/PaginaPrincipal'])
         },
         err => console.log(err)
       )

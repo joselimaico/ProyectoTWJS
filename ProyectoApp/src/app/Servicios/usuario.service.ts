@@ -1,0 +1,26 @@
+import { Injectable } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs/index";
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UsuarioService {
+
+  URL='http://localhost:1337/Usuario';
+
+  constructor(private _httpClient:HttpClient) { }
+
+  obtenerListaDeUsuariosRegistrados():Observable<any>{
+    return this._httpClient.get<any>(this.URL);
+  }
+
+  obtenerUsuarioEscogido(id):Observable<any>{
+    return this._httpClient.get<any>(this.URL+'/'+id);
+  }
+
+  actualizarUsuarioActual(id, body):Observable<any>{
+    return this._httpClient.put<any>(this.URL+'/'+id,JSON.stringify(body));
+  }
+
+}
