@@ -1,7 +1,7 @@
 import {Lugar} from "./Lugar";
 
 export interface Usuario{
-  idUsuario: number;
+  id: number;
   correoUsuario: string;
   usernameUsuario:string;
   passwordUsuario: string;

@@ -46,12 +46,6 @@ export class DescripcionLugarComponent implements OnInit {
     this.selectLugar(this.Idlugar);
   }
 
-  seleccionarHabitacion(habitacion: ) {
-    this.selectedCar = car;
-    this.displayDialog = true;
-  }
-
-
   selectLugar(id:number){
     let place= [this.lugares.find(
       (place:Lugar) => {

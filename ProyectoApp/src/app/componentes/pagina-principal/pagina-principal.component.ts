@@ -3,6 +3,7 @@ import {Message} from "primeng/api";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Lugar} from "../../_models";
 import {LugarService} from "../../_services/lugar.service";
+import {InternalService} from "../../Servicios/internal.service";
 
 class Planta {
   nombre:string
@@ -25,7 +26,8 @@ export class PaginaPrincipalComponent implements OnInit {
 
   constructor(private _router:Router,
               private _lugarService:LugarService,
-              private _route:ActivatedRoute
+              private _route:ActivatedRoute,
+              private _internalService:InternalService
               ) {
     this.msgs = [];
     this.plantas = [
@@ -63,11 +65,16 @@ export class PaginaPrincipalComponent implements OnInit {
 
   ngOnInit() {
     this.lugares=this._lugarService.lugares;
+    this.consultarUsuarioActual();
   }
 
   crearNuevoLugar(){
     const url = ['/FormularioLugar'];
     this._router.navigate(url);
+  }
+
+  consultarUsuarioActual(){
+    console.log('el usuario actual es: ',this._internalService.retornarUsuario());
   }
 
 

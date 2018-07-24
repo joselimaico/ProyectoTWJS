@@ -3,6 +3,8 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {first} from "rxjs/operators";
 import {AlertService, AuthenticationService} from "../../_services";
+import {Usuario} from "../../_models/Clases/Usuario";
+import {InternalService} from "../../Servicios/internal.service";
 
 @Component({
   selector: 'app-log-in',
@@ -24,7 +26,8 @@ export class LogInComponent implements OnInit {
               private _router:Router,
               private authenticationService: AuthenticationService,
               private alertService: AlertService,
-              private route: ActivatedRoute,) { }
+              private route: ActivatedRoute,
+              private _internalService:InternalService) { }
 
   ngOnInit() {
     this.loginForm = this.fb.group({
@@ -83,7 +86,11 @@ export class LogInComponent implements OnInit {
       .subscribe(
         res => {
           console.log(res)
-          localStorage.setItem('token',res.token)
+          let nuevoUsuario:Usuario = res;
+          this._internalService.actualizarUsuario(nuevoUsuario);
+
+          // localStorage.setItem('token',res.token)
+
           this._router.navigate(['/PaginaPrincipal'])
         },
         err => console.log(err)

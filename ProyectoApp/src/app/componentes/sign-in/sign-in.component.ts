@@ -54,7 +54,7 @@ export class SignInComponent implements OnInit {
 
 
           // localStorage.setItem('token',res.token)
-          //this._router.navigate(['/PaginaPrincipal'])
+          this._router.navigate(['/PaginaPrincipal'])
         },
         err => console.log(err)
       )

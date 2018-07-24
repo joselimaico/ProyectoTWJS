@@ -41,6 +41,7 @@ import {DataScrollerModule} from "primeng/primeng";
 import { FormularioLugarComponent } from './componentes/CrearItems/formulario-lugar/formulario-lugar.component';
 import { FormularioPlantaComponent } from './componentes/CrearItems/formulario-planta/formulario-planta.component';
 import {MatStepperModule} from '@angular/material/stepper';
+import { PerfilUsuarioComponent } from './componentes/perfil-usuario/perfil-usuario.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     MisLugaresComponent,
     MisPlantasComponent,
     FormularioLugarComponent,
-    FormularioPlantaComponent
+    FormularioPlantaComponent,
+    PerfilUsuarioComponent
   ],
   imports: [
 

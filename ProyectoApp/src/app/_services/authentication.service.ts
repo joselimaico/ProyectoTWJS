@@ -25,7 +25,7 @@ export class AuthenticationService {
 
   }
   signin(username, email, password){
-    return this.http.post<any>(this._signupUrl,{username:username, email:email, password:password});
+    return this.http.post<any>(this._signupUrl,{username:username, email:email, password:password, imagenUsuario:'https://sistemas.com/termino/wp-content/uploads/Usuario-Icono.jpg'});
   }
 
   logout() {

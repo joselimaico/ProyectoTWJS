@@ -14,7 +14,7 @@ module.exports = {
 
   signup: async (req, res) => {
     let params = req.allParams()
-    let created = await Usuario.create({email: params.email, username: params.username, password: params.password}).fetch()
+    let created = await Usuario.create({email: params.email, username: params.username, password: params.password, imagenUsuario: params.imagenUsuario}).fetch()
     return res.json(created);
 
     // let payload = {subject:created._id}
@@ -34,9 +34,11 @@ module.exports = {
           if(user.password !== userData.password) {
             res.status(401).send('Invalid password')
           }else{
-          let payload = {subject:user._id}
-          let token = jwt.sign(payload, 'secretKey')
-          res.status(200).send({token})
+          // let payload = {subject:user._id}
+          // let token = jwt.sign(payload, 'secretKey')
+          // res.status(200).send({token})
+
+            res.status(200).send(user);
           }
       }
     })

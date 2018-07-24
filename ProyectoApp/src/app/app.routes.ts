@@ -10,6 +10,7 @@ import {MisPlantasComponent} from "./componentes/mis-plantas/mis-plantas.compone
 import {HistorialRiegoComponent} from "./componentes/historial-riego/historial-riego.component";
 import {FormularioLugarComponent} from "./componentes/CrearItems/formulario-lugar/formulario-lugar.component";
 import {FormularioPlantaComponent} from "./componentes/CrearItems/formulario-planta/formulario-planta.component";
+import {PerfilUsuarioComponent} from "./componentes/perfil-usuario/perfil-usuario.component";
 
 
 
@@ -54,6 +55,10 @@ export const RUTAS_APP: Routes = [
   {
     path: 'FormularioPlanta',
     component: FormularioPlantaComponent
+  },
+  {
+    path: 'PerfilUsuario',
+    component: PerfilUsuarioComponent
   },
   {
     path:'MisLugares/:id',
