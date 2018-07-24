@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NEW_APP_NAME</title>
+    <title>Floral</title>
 
     <% /* Viewport tag for sensible mobile support */ %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -26,32 +26,32 @@
   <body>
     <div id="page-wrap">
       <header id="page-header" class="navbar navbar-expand-sm navbar-dark bg-dark flex-column flex-md-row justify-content-between">
-        <a class="navbar-brand mr-0" href="/">NEW_APP_NAME</a>
+        <a class="navbar-brand mr-0" href="/">Floral</a>
         <div class="navbar-nav flex-row">
           <!-- LOGGED-IN NAVIGATION -->
           <% if(me) { %>
-          <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/contact">Help</a>
+          <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/contact">Ayuda</a>
           <!-- Only in desktop nav -->
           <div class="nav-item dropdown d-none d-sm-block">
             <a class="nav-link dropdown-toggle" id="header-account-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
             <div class="dropdown-menu account-menu" aria-labelledby="header-account-menu-link">
-              <a class="dropdown-item" href="/account">Settings</a>
-              <a class="dropdown-item" href="/logout">Sign out</a>
+              <a class="dropdown-item" href="/account">Configuración</a>
+              <a class="dropdown-item" href="/logout">Salir</a>
             </div>
           </div>
           <!-- Only in mobile nav -->
-          <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/account">Account Settings</a>
-          <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/logout">Sign out</a>
+          <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/account">COnfiguración de la Cuenta</a>
+          <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/logout">Salir</a>
           <% } else { %>
           <!-- LOGGED-OUT NAVIGATION -->
           <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/faq">FAQ</a>
-          <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/login">Log in</a>
+          <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/login">Ingresar</a>
           <!-- Only in desktop nav -->
           <div class="form-inline d-none ml-2 d-md-block" >
-            <a class="btn btn-outline-info" href="/signup">Sign up</a>
+            <a class="btn btn-outline-info" href="/signup">Registrarse</a>
           </div>
           <!-- Only in mobile nav -->
-          <a class="nav-item nav-link text-info ml-2 d-block d-md-none" href="/signup">Sign up</a>
+          <a class="nav-item nav-link text-info ml-2 d-block d-md-none" href="/signup">Registrarse</a>
           <% } %>
         </div>
       </header>
@@ -60,13 +60,13 @@
       <% if(me&&me.emailChangeCandidate) { %>
       <div class="container-fluid">
         <div class="alert alert-secondary mt-2" role="alert">
-        Your updated email address needs verification. Until you click the link sent to <strong><%= me.emailChangeCandidate %></strong>, you'll still need to sign in as <strong><%= me.emailAddress %></strong>.
+        Tu correo actualizado aún necesita verificación. Hasta que hagas click en el link enviado a <strong><%= me.emailChangeCandidate %></strong>, solo podrás ingresar con <strong><%= me.emailAddress %></strong>.
         </div>
       </div>
       <% } else if(me&&me.emailStatus === 'unconfirmed') { %>
       <div class="container-fluid">
         <div class="alert alert-secondary mt-2" role="alert">
-        Your email address still needs verification. Your account access may be limited until you click the link sent to <strong><%= me.emailChangeCandidate ? me.emailChangeCandidate : me.emailAddress%></strong>.
+        Tu correo aún necesita verificación. El acceso a tu cuenta puede ser limitado hasta que hagas click en el link enviado a <strong><%= me.emailChangeCandidate ? me.emailChangeCandidate : me.emailAddress%></strong>.
         </div>
       </div>
       <% } %>
@@ -75,14 +75,14 @@
 
       <footer id="page-footer" class="navbar navbar-light justify-content-between flex-row-reverse">
         <div class="nav">
-          <small class="nav-item"><a class="nav-link text-info" href="/contact">Contact<span class="d-none d-sm-inline"> us</span></a></small>
-          <small class="nav-item"><a class="nav-link text-info" href="/legal/terms">Terms<span class="d-none d-sm-inline"> of Use</span></a></small>
-          <small class="nav-item"><a class="nav-link text-info" href="/legal/privacy">Privacy<span class="d-none d-sm-inline"> policy</span></a></small>
+          <small class="nav-item"><a class="nav-link text-info" href="/contact">Contáctanos</a></small>
+          <small class="nav-item"><a class="nav-link text-info" href="/legal/terms">Términos<span class="d-none d-sm-inline"> de Uso</span></a></small>
+          <small class="nav-item"><a class="nav-link text-info" href="/legal/privacy">Política<span class="d-none d-sm-inline"> de privacidad</span></a></small>
           <% if(me) { %>
-          <small class="nav-item"><a class="nav-link text-info" href="/logout">Sign out</a></small>
+          <small class="nav-item"><a class="nav-link text-info" href="/logout">Salir</a></small>
           <% } %>
         </div>
-        <small class="copy">Copyright &copy; 2018 NEW_APP_COMPANY. <br class="xs-only"/>All rights reserved.</small>
+        <small class="copy">Copyright &copy; 2018 SmartGreen. <br class="xs-only"/>Todos los derechos reservados.</small>
       </footer>
     </div>
 

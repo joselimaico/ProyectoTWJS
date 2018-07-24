@@ -37,6 +37,18 @@ module.exports = {
       example: 'Abradolf Lincler'
     },
 
+    imagenUsuario: {
+      type: 'string',
+      required: false,
+      description: 'imagen del usuario para mostrar',
+      example: 'Abradolf Lincler'
+    },
+
+    lugares: {
+      collection: 'Lugar',
+      via: 'userLugar'
+    },
+
     isSuperAdmin: {
       type: 'boolean',
       description: 'Whether this user is a "super admin" with extra permissions, etc.',
