@@ -1,0 +1,32 @@
+<div class="contenedorBotones">
+  <div class="row">
+    <div class="col-lg-3">
+      <button mat-flat-button color="primary" (click)="regarPlanta()">Regar Ahora!!</button>
+    </div>
+    <div class="col-lg-3">
+      <button mat-flat-button color="primary" (click)="verUltimoRiego()">Ver ultimo riego</button>
+    </div>
+    <div class="col-lg-3">
+      <button mat-flat-button color="primary" (click)="verEstadoDelSuelo()">ver estado suelo</button>
+    </div>
+    <div class="col-lg-3">
+      <div class="row">
+        <div class="col-lg-6">
+          <button mat-flat-button color="primary" (click)="encenderAutoRiego()">encender Riego Automático</button>
+        </div>
+        <div class="col-lg-6">
+          <button mat-flat-button color="primary" (click)="apagarAutoRiego()">apagar Riego Automático</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="resultadoConsulta">
+  <div class="resultadoUltimoRiego" *ngIf="ultimoRegistroRiego">
+    El ultimo riego a la planta fue: {{ultimoRegistroRiego}}
+  </div>
+  <div class="resultadoEstadoSuelo" *ngIf="estadoSuelo">
+    El estado del suelo es: {{estadoSuelo}}
+  </div>
+</div>

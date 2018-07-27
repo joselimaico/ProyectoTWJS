@@ -9,8 +9,6 @@ import {Usuario} from "../_models/Clases/Usuario";
 export class UsuarioService {
 
   URL='http://localhost:1337/Usuario';
-  url='http://192.168.43.225/water';
-
 
   constructor(private _httpClient:HttpClient) { }
 
@@ -24,10 +22,6 @@ export class UsuarioService {
 
   actualizarUsuarioActual(id, body):Observable<any>{
     return this._httpClient.put<any>(this.URL+'/'+id,JSON.stringify(body));
-  }
-
-  Enviar():Observable<any>{
-    return this._httpClient.get<any>(this.url);
   }
 
 }

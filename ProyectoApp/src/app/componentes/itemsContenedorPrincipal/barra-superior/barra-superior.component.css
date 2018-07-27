@@ -1,0 +1,18 @@
+.sa-BarraSuperior {
+  overflow: hidden;
+  background-color: seagreen;
+  text-align: center;
+}
+
+.sa-BarraSuperior a{
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.sa-BarraSuperior a:hover {
+  background-color: #ddd;
+  color: black;
+}

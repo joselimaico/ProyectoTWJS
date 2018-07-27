@@ -1,0 +1,18 @@
+.sa-BarraMenuPrincipal {
+  overflow: hidden;
+  background-color: darkslategrey;
+  text-align: center;
+}
+
+.sa-BarraMenuPrincipal a{
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.sa-BarraMenuPrincipal a:hover {
+  background-color: #ddd;
+  color: black;
+}

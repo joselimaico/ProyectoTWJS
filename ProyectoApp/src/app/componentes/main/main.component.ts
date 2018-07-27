@@ -12,6 +12,7 @@ import {UsuarioService} from "../../Servicios/usuario.service";
 export class MainComponent implements OnInit {
 
 
+prueba:string
 
   constructor(private _router: Router,
               private _http: HttpClient,
@@ -28,17 +29,6 @@ export class MainComponent implements OnInit {
   irAlPerfilUsuario(){
     const url=['/PerfilUsuario'];
     this._router.navigate(url);
-  }
-
-
-
-  regar(){
-    this._usuarioService.Enviar()
-      .subscribe(
-        res => {
-          console.log(res);
-        }
-      )
   }
 
 

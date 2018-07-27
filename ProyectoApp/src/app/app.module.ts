@@ -42,6 +42,9 @@ import { FormularioLugarComponent } from './componentes/CrearItems/formulario-lu
 import { FormularioPlantaComponent } from './componentes/CrearItems/formulario-planta/formulario-planta.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import { PerfilUsuarioComponent } from './componentes/perfil-usuario/perfil-usuario.component';
+import { MenuOpcionesComponent } from './componentes/itemsContenedorPrincipal/menu-opciones/menu-opciones.component';
+import { BarraSuperiorComponent } from './componentes/itemsContenedorPrincipal/barra-superior/barra-superior.component';
+import { DescripcionPlantaComponent } from './componentes/MisPlantasComponents/descripcion-planta/descripcion-planta.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +62,10 @@ import { PerfilUsuarioComponent } from './componentes/perfil-usuario/perfil-usua
     MisPlantasComponent,
     FormularioLugarComponent,
     FormularioPlantaComponent,
-    PerfilUsuarioComponent
+    PerfilUsuarioComponent,
+    MenuOpcionesComponent,
+    BarraSuperiorComponent,
+    DescripcionPlantaComponent
   ],
   imports: [
 

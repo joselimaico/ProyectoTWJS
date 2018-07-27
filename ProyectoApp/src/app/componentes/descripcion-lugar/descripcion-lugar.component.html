@@ -31,6 +31,7 @@
     <div class="col-lg-9">
       <ngb-tabset>
         <div class="row">
+
           <div class="col-lg-6">
             <ngb-tab title="Descripción" *ngFor="let lugar of lugarSeleccionado">
               <ng-template ngbTabContent>
@@ -43,6 +44,8 @@
               </ng-template>
             </ngb-tab>
           </div>
+
+
           <div class="col-lg-6">
             <ngb-tab title="Habitaciones">
               <ng-template ngbTabContent>
@@ -75,12 +78,21 @@
                         </p-carousel>
                       </div>
                     </div>
+
+
+                    <!--<div class="row">-->
+                      <!--<div class="col-lg-12" style="background-color: greenyellow">-->
+                        <!--<app-descripcion-habitacion></app-descripcion-habitacion>-->
+                      <!--</div>-->
+                    <!--</div>-->
+
                   </mat-card-content>
                 </mat-card>
               </ng-template>
             </ngb-tab>
           </div>
         </div>
+
       </ngb-tabset>
     </div>
 
@@ -92,11 +104,6 @@
 </div>
 
 <br>
-
-<div class="sa-contenedor-Informacion-Lugar-Escogido" *ngIf="habitacionSeleccionada" style="text-align: center">
-  <app-descripcion-habitacion></app-descripcion-habitacion>
-</div>
-
 
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
@@ -125,7 +132,3 @@
     <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
   </div>
 </ng-template>
-
-<!--<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>-->
-<!--<hr>-->
-<!--<pre>{{closeResult}}</pre>-->
