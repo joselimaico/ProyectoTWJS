@@ -26,36 +26,25 @@ module.exports = {
   updateUsuario: async (req, res) => {
    let Data = req.allParams()
     sails.log('contenido: ',Data);
-   await Usuario
+
+   let updated = await Usuario
      .update(
        {_id:Data.id},
        {
          nombreUsuario: Data.nombreUsuario,
          apellidoUsuario: Data.apellidoUsuario,
          fechaNacimientoUsuario: Data.fechaNacimientoUsuario
-       }
-       )
-     // .fetch();
-     .then((error, cambio)=>
-         {
-            if(error){
-              return res.json(500,{error: error});
-            }else{
-              sails.log('se actualizó el registro!!!, ', cambio);
-              return res.json(200, {resultado: cambio})
-            }
+       })
+     .fetch();
 
-         });
+   return res.json(updated);
   },
 
-  eliminateUser: async(req, res) =>{
-   Usuario.findByIdAndDelete({_id:req.params.id})
-     .then((usuario)=>{
-       res.send(usuario)
-     })
+  deleteUser: async(req, res)=>{
+   let params = req.allParams();
+   let deleted = await Usuario.destroy({_id:params.id}).fetch();
+   return res.status(200).json(deleted);
   },
-
-
 
   login:(req,res)=>{
     let userData=req.body
