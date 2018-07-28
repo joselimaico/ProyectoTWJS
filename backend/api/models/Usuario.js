@@ -9,7 +9,6 @@
 module.exports = {
 
   attributes: {
-    idUsuario: {type:'number',required: false},
 
     email:{ type: 'string', required: true, unique: true },
     username: { type: 'string', required: true, unique: true },

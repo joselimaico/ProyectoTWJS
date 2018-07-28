@@ -9,6 +9,7 @@ import {Usuario} from "../_models/Clases/Usuario";
 export class UsuarioService {
 
   URL='http://localhost:1337/Usuario';
+  URLActualizarUsuario = 'http://localhost:1337/Usuario/updateUsuario/';
 
   constructor(private _httpClient:HttpClient) { }
 
@@ -20,8 +21,8 @@ export class UsuarioService {
     return this._httpClient.get<any>(this.URL+'/'+id);
   }
 
-  actualizarUsuarioActual(id, body):Observable<any>{
-    return this._httpClient.put<any>(this.URL+'/'+id,JSON.stringify(body));
+  actualizarUsuarioActual(body):Observable<any>{
+    return this._httpClient.patch<any>(this.URLActualizarUsuario,JSON.stringify(body));
   }
 
 }

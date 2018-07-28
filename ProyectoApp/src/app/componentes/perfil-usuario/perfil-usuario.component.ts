@@ -42,28 +42,19 @@ export class PerfilUsuarioComponent implements OnInit {
 
   actualizarInformacionDelUsuario(){
     let bodyDelUpdate ={
-      email: this._internalService.retornarUsuario().correoUsuario,
-      username: this._internalService.retornarUsuario().usernameUsuario,
-      password: this._internalService.retornarUsuario().passwordUsuario,
+      id: this._internalService.retornarUsuario().id,
 
       nombreUsuario: this.inputNombre,
       apellidoUsuario: this.inputApellido,
       fechaNacimientoUsuario: this.inputFechaNacimiento
     }
 
-    console.log('informacion del usuario actual: ',this._internalService.retornarUsuario());
-
-    console.log('email: ',this._internalService.retornarUsuario());
-    console.log('username: ',this._internalService.retornarUsuario());
-    console.log('password: ',this._internalService.retornarUsuario());
-    // this._usuarioService.actualizarUsuarioActual(
-    //   this._internalService.retornarUsuario().id,bodyDelUpdate)
-    //   .subscribe(
-    //     res =>{
-    //       console.log('hell yeah se actualizo!! ahora tengo esto: ',res);
-    //     }
-    //   )
-    //
+    this._usuarioService.actualizarUsuarioActual(bodyDelUpdate)
+      .subscribe(
+        res =>{
+          console.log('hell yeah se actualizo!! ahora tengo esto: ',res);
+        }
+      )
 
   }
 

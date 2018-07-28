@@ -22,6 +22,41 @@ module.exports = {
     // return res.json({token})
 
   },
+
+  updateUsuario: async (req, res) => {
+   let Data = req.allParams()
+    sails.log('contenido: ',Data);
+   await Usuario
+     .update(
+       {_id:Data.id},
+       {
+         nombreUsuario: Data.nombreUsuario,
+         apellidoUsuario: Data.apellidoUsuario,
+         fechaNacimientoUsuario: Data.fechaNacimientoUsuario
+       }
+       )
+     // .fetch();
+     .then((error, cambio)=>
+         {
+            if(error){
+              return res.json(500,{error: error});
+            }else{
+              sails.log('se actualizó el registro!!!, ', cambio);
+              return res.json(200, {resultado: cambio})
+            }
+
+         });
+  },
+
+  eliminateUser: async(req, res) =>{
+   Usuario.findByIdAndDelete({_id:req.params.id})
+     .then((usuario)=>{
+       res.send(usuario)
+     })
+  },
+
+
+
   login:(req,res)=>{
     let userData=req.body
     Usuario.findOne({email:userData.email},(error,user)=>{
