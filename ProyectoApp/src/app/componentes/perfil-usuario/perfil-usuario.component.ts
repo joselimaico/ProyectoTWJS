@@ -42,7 +42,7 @@ export class PerfilUsuarioComponent implements OnInit {
 
   actualizarInformacionDelUsuario(){
     let bodyDelUpdate ={
-      id: this._internalService.retornarUsuario().id,
+      _id: this._internalService.retornarUsuario().id,
 
       nombreUsuario: this.inputNombre,
       apellidoUsuario: this.inputApellido,

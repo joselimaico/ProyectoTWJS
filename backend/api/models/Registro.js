@@ -9,11 +9,10 @@ module.exports = {
 
   attributes: {
 
-    idRegistro: {type: 'number', required: true},
     fechaRegistro: {type: 'string', required: true},
     horaRegistro: {type: 'string', required: true},
-    estadoSueloRegistro: {type: 'string', required: true},
-    sueloRegadoRegistro: {type: 'boolean', required: true},
+    estadoSueloRegistro: {type: 'string', required: false},
+    sueloRegadoRegistro: {type: 'boolean', required: false},
     observacionRegistro: {type: 'string', required: false},
 
     plantaFK: {

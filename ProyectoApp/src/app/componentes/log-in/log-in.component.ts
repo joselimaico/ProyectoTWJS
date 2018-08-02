@@ -12,13 +12,14 @@ import {InternalService} from "../../Servicios/internal.service";
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
-  hide = true;
-
-  submitted = false;
-  returnUrl: string;
-  loginForm:FormGroup;
   email:string;
   password:string;
+
+
+
+  hide = true;
+  loginForm:FormGroup;
+
 
 
 
@@ -86,16 +87,19 @@ export class LogInComponent implements OnInit {
       .subscribe(
         res => {
           console.log(res)
-          let nuevoUsuario:Usuario = res;
-          this._internalService.actualizarUsuario(nuevoUsuario);
-
-          // localStorage.setItem('token',res.token)
-
+          localStorage.setItem('token',res.token)
           this._router.navigate(['/PaginaPrincipal'])
         },
         err => console.log(err)
       )
   }
+
+
+  // logInUsuario(){
+  //   this.authenticationService.login()
+  // }
+
+
   irASignIn(){
     const url = ['/signin'];
     this._router.navigate(url);

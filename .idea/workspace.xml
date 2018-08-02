@@ -3,7 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="af575478-37df-4f9f-ac39-12d51183d999" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/planta.service.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/planta.service.ts" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/usuario.service.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/usuario.service.ts" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/_guards/auth.guard.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/_guards/auth.guard.ts" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/_services/authentication.service.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/_services/authentication.service.ts" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/MisPlantasComponents/descripcion-planta/descripcion-planta.component.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/MisPlantasComponents/descripcion-planta/descripcion-planta.component.ts" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.html" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.html" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.ts" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/main/main.component.html" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/main/main.component.html" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/perfil-usuario/perfil-usuario.component.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/perfil-usuario/perfil-usuario.component.ts" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/sign-in/sign-in.component.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/sign-in/sign-in.component.ts" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/index.html" afterPath="$PROJECT_DIR$/ProyectoApp/src/index.html" />
       <change beforePath="$PROJECT_DIR$/backend/api/controllers/UsuarioController.js" afterPath="$PROJECT_DIR$/backend/api/controllers/UsuarioController.js" />
+      <change beforePath="$PROJECT_DIR$/backend/api/models/Registro.js" afterPath="$PROJECT_DIR$/backend/api/models/Registro.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,23 +30,79 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/config/routes.js">
+    <leaf>
+      <file leaf-file-name="RegistroController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/api/controllers/RegistroController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="155">
+              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsuarioController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/api/controllers/UsuarioController.js">
+      <file leaf-file-name="pagina-principal.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="46" column="4" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+            <state relative-caret-position="249">
+              <caret line="63" column="5" lean-forward="false" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sign-in.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/sign-in/sign-in.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="79">
+              <caret line="42" column="27" lean-forward="true" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sign-in.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/sign-in/sign-in.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="33" column="62" lean-forward="true" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log-in.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="26" column="2" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log-in.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="29" column="63" lean-forward="false" selection-start-line="29" selection-start-column="63" selection-end-line="29" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.guard.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/_guards/auth.guard.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,8 +110,30 @@
       <file leaf-file-name="authentication.service.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/_services/authentication.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="45">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.routes.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/main/main.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -55,10 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/contenedor-principal/contenedor-principal.component.html" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.css" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.css" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/CrearItems/formulario-lugar/formulario-lugar.component.css" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/CrearItems/formulario-lugar/formulario-lugar.component.html" />
@@ -75,37 +163,41 @@
         <option value="$PROJECT_DIR$/backend/api/models/Planta.js" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/lugar.service.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/habitacion.service.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/planta.service.ts" />
         <option value="$PROJECT_DIR$/backend/api/models/Habitacion.js" />
         <option value="$PROJECT_DIR$/backend/api/models/Lugar.js" />
-        <option value="$PROJECT_DIR$/backend/api/models/Registro.js" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/internal.service.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/sign-in/sign-in.component.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/_services/authentication.service.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/itemsContenedorPrincipal/menu-opciones/menu-opciones.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/itemsContenedorPrincipal/menu-opciones/menu-opciones.component.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/itemsContenedorPrincipal/menu-opciones/menu-opciones.component.css" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/itemsContenedorPrincipal/barra-superior/barra-superior.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/itemsContenedorPrincipal/barra-superior/barra-superior.component.css" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/main/main.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/mis-plantas/mis-plantas.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/raspberry.service.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/MisPlantasComponents/descripcion-planta/descripcion-planta.component.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/MisPlantasComponents/descripcion-planta/descripcion-planta.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/main/main.component.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/perfil-usuario/perfil-usuario.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/_models/Clases/Usuario.ts" />
         <option value="$PROJECT_DIR$/backend/api/models/Usuario.js" />
         <option value="$PROJECT_DIR$/backend/config/datastores.js" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/usuario.service.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/perfil-usuario/perfil-usuario.component.ts" />
         <option value="$PROJECT_DIR$/backend/config/routes.js" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/perfil-usuario/perfil-usuario.component.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/usuario.service.ts" />
+        <option value="$PROJECT_DIR$/backend/api/controllers/RegistroController.js" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/planta.service.ts" />
+        <option value="$PROJECT_DIR$/backend/api/models/Registro.js" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/MisPlantasComponents/descripcion-planta/descripcion-planta.component.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/index.html" />
         <option value="$PROJECT_DIR$/backend/api/controllers/UsuarioController.js" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/main/main.component.html" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/sign-in/sign-in.component.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/_services/authentication.service.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/_guards/auth.guard.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.html" />
       </list>
     </option>
   </component>
@@ -125,7 +217,7 @@
       <path value="$PROJECT_DIR$/backend/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -148,7 +240,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,13 +271,57 @@
               <item name="ProyectoApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="_guards" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProyectoTWJS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProyectoTWJS" type="462c0819:PsiDirectoryNode" />
+              <item name="ProyectoApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="_services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProyectoTWJS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProyectoTWJS" type="462c0819:PsiDirectoryNode" />
+              <item name="ProyectoApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="componentes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProyectoTWJS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProyectoTWJS" type="462c0819:PsiDirectoryNode" />
+              <item name="ProyectoApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="componentes" type="462c0819:PsiDirectoryNode" />
+              <item name="log-in" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProyectoTWJS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProyectoTWJS" type="462c0819:PsiDirectoryNode" />
+              <item name="ProyectoApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="componentes" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProyectoTWJS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProyectoTWJS" type="462c0819:PsiDirectoryNode" />
+              <item name="ProyectoApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="componentes" type="462c0819:PsiDirectoryNode" />
+              <item name="pagina-principal" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -198,11 +333,11 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/ProyectoApp/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Jose\Documents\GitHub\ProyectoTWJS\ProyectoApp\src" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jose\Documents\GitHub\ProyectoTWJS\ProyectoApp\src\app" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jose\Documents\GitHub\ProyectoTWJS\ProyectoApp\src" />
       <recent name="C:\Users\Jose\Documents\GitHub\ProyectoTWJS\ProyectoApp\src\app" />
     </key>
   </component>
@@ -264,14 +399,16 @@
       <workItem from="1532699536656" duration="5346000" />
       <workItem from="1532721012768" duration="13889000" />
       <workItem from="1532780242319" duration="5983000" />
+      <workItem from="1533065436262" duration="7065000" />
+      <workItem from="1533177181654" duration="6031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234415000" />
+    <option name="totallyTimeSpent" value="247511000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -305,109 +442,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/api/models/Lugar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/api/models/Planta.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/api/models/Registro.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="8" column="64" lean-forward="false" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="63" column="4" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="67" column="34" lean-forward="false" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="2" lean-forward="false" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/contenedor-principal/contenedor-principal.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="27" column="3" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="27" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/contenedor-principal/contenedor-principal.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/contenedor-principal/contenedor-principal.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/itemsContenedorPrincipal/menu-opciones/menu-opciones.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/main/main.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -446,20 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/mis-plantas/mis-plantas.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/MisPlantasComponents/descripcion-planta/descripcion-planta.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/MisPlantasComponents/descripcion-planta/descripcion-planta.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -478,20 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="45" column="16" lean-forward="false" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/Servicios/raspberry.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="34" column="21" lean-forward="false" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/perfil-usuario/perfil-usuario.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="61" column="31" lean-forward="false" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -514,13 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/sign-in/sign-in.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -591,7 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
           <caret line="51" column="43" lean-forward="false" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -627,46 +629,204 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/config/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/perfil-usuario/perfil-usuario.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="61" column="31" lean-forward="false" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/perfil-usuario/perfil-usuario.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="53" column="15" lean-forward="true" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/Servicios/planta.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/mis-plantas/mis-plantas.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/Servicios/raspberry.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/api/models/Registro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/mis-plantas/mis-plantas.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/Servicios/usuario.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="11" column="69" lean-forward="false" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="69" />
+        <state relative-caret-position="102">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/MisPlantasComponents/descripcion-planta/descripcion-planta.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1201">
+          <caret line="75" column="33" lean-forward="false" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/_services/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="102" column="14" lean-forward="true" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#58#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/api/controllers/UsuarioController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="40" column="4" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/api/controllers/RegistroController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/_services/authentication.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state relative-caret-position="45">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/config/routes.js">
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/_guards/auth.guard.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="215">
+          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/main/main.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/api/controllers/UsuarioController.js">
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="46" column="4" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+        <state relative-caret-position="85">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="63" column="5" lean-forward="false" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/sign-in/sign-in.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="42" column="27" lean-forward="true" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/sign-in/sign-in.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="33" column="62" lean-forward="true" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="26" column="2" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="29" column="63" lean-forward="false" selection-start-line="29" selection-start-column="63" selection-end-line="29" selection-end-column="63" />
           <folding />
         </state>
       </provider>

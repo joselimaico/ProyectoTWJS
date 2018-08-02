@@ -65,18 +65,11 @@ export class PaginaPrincipalComponent implements OnInit {
 
   ngOnInit() {
     this.lugares=this._lugarService.lugares;
-    this.consultarUsuarioActual();
   }
 
   crearNuevoLugar(){
     const url = ['/FormularioLugar'];
     this._router.navigate(url);
   }
-
-  consultarUsuarioActual(){
-    console.log('el usuario actual es: ',this._internalService.retornarUsuario());
-  }
-
-
 
 }

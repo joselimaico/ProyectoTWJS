@@ -8,6 +8,7 @@ import {HttpClient} from "@angular/common/http";
 export class PlantaService {
 
   URL='http://localhost:1337/Planta';
+  URLCargarRegistro='http://localhost:1337/Registro/saveRegister';
 
   constructor(private _httpClient:HttpClient) { }
 
@@ -19,6 +20,10 @@ export class PlantaService {
     return this._httpClient.get<any>(this.URL+'/'+id);
   }
 
+  guardarRegistro(body):Observable<any>{
+    return this._httpClient.post<any>(this.URLCargarRegistro,body);
+  }
+
   crearNuevaPlanta(body):Observable<any>{
     return this._httpClient.post<any>(this.URL,JSON.stringify(body));
   }
@@ -26,6 +31,8 @@ export class PlantaService {
   actualizarPlantaEscogida(id, body):Observable<any>{
     return this._httpClient.put<any>(this.URL+'/'+id,JSON.stringify(body));
   }
+
+
 
   eliminarPlantaEscogida(id):Observable<any>{
     return this._httpClient.delete<any>(this.URL+'/'+id);

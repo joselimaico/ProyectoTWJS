@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {RaspberryService} from "../../../Servicios/raspberry.service";
+import {PlantaService} from "../../../Servicios/planta.service";
 
 @Component({
   selector: 'app-descripcion-planta',
@@ -12,7 +13,8 @@ export class DescripcionPlantaComponent implements OnInit {
   estadoSuelo: string;
 
 
-  constructor(private _raspberryService: RaspberryService) { }
+  constructor(private _raspberryService: RaspberryService,
+              private _plantaService: PlantaService) { }
 
   ngOnInit() {
   }
@@ -21,7 +23,25 @@ export class DescripcionPlantaComponent implements OnInit {
     this._raspberryService.water()
       .subscribe(
         res => {
+          let date = new Date();
+          let fecha = date.getDate();
+          let hora  = date.getHours();
+
+          let bodyRegistro = {
+            fechaRegistro: fecha,
+            horaRegistro: hora
+          };
+
+          this._plantaService
+            .guardarRegistro(bodyRegistro).subscribe(
+              resultado => {
+                console.log('YA PUEDO GUARDAR EN BD!!');
+                console.log('esto retorna el sails, ',resultado);
+
+              }
+          );
           console.log('genial.  Se ha regado la planta!!!! El servidor envia ==> ',res);
+
         }
       )
   }

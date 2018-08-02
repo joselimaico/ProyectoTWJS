@@ -28,8 +28,8 @@ export const RUTAS_APP: Routes = [
   },
   {
     path:'PaginaPrincipal',
-    component:PaginaPrincipalComponent
-    // canActivate:[AuthGuard]
+    component:PaginaPrincipalComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'login',

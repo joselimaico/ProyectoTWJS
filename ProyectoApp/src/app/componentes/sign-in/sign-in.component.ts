@@ -45,15 +45,8 @@ export class SignInComponent implements OnInit {
     this.authService.signin(this.f.username.value,this.f.email.value,this.f.password.value)
       .subscribe(
         res => {
-          console.log('he hecho el signin correctamente. el resultado es: ',res);
-          let nuevoUsuario:Usuario = res;
-          this._internalService.actualizarUsuario(nuevoUsuario);
-
-
-
-
-
-          // localStorage.setItem('token',res.token)
+          console.log(res);
+          localStorage.setItem('token',res.token) //AQUI GUARDA EL TOKEN
           this._router.navigate(['/PaginaPrincipal'])
         },
         err => console.log(err)
