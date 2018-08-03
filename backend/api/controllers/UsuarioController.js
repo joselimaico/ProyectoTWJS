@@ -85,20 +85,33 @@ module.exports = {
   },
 
   updateUsuario: async (req, res) => {
-   let Data = req.allParams()
-    sails.log('contenido: ',Data);
-
-   let updated = await Usuario
+    if(!req.headers.authorization){
+      return res.status(401).send('Unauthorized Request');
+    }
+    let token = req.headers.authorization.split(' ')[1]
+    if(token === 'null'){
+      return res.status(406).send('El token esta vacio');
+    }
+    console.log('token :',token);
+    let payload = jwt.verify(token, 'llaveSecreta');
+    if(!payload){
+      return res.status(401).send('El token es incorrecto');
+    }
+    console.log('el payload es: ',payload);
+    let idUsuario = payload.subject;
+    console.log('ahora el id del usuario es: ',idUsuario);
+    let Data = req.allParams();
+    console.log('el contenido de la consulta es: ',Data);
+    let updated = await Usuario
      .update(
-       {_id:Data.id},
+       {id:idUsuario},
        {
          nombreUsuario: Data.nombreUsuario,
          apellidoUsuario: Data.apellidoUsuario,
          fechaNacimientoUsuario: Data.fechaNacimientoUsuario
        })
      .fetch();
-
-   return res.json(updated);
+   res.status(200).send({updated});
   },
 
   deleteUser: async(req, res)=>{

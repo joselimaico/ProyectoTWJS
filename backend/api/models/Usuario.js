@@ -16,7 +16,7 @@ module.exports = {
 
     nombreUsuario: {type: 'string',required:false},
     apellidoUsuario: {type: 'string',required:false},
-    fechaNacimientoUsuario: {type:'string',required:false},
+    fechaNacimientoUsuario: {type:'json',required:false},
     imagenUsuario: {type: 'string',required: false},
 
     misLugares:{

@@ -13,7 +13,7 @@ import {AuthenticationService} from "../../_services";
 })
 export class PerfilUsuarioComponent implements OnInit {
 
-  resultadoConsulta;
+  resultadoConsulta : any;
   closeResult: string;
   inputNombre: string;
   inputApellido: string;
@@ -33,27 +33,27 @@ export class PerfilUsuarioComponent implements OnInit {
       .subscribe(
         res =>{
           console.log('resultado de consulta. ',res);
+          this.resultadoConsulta = res.usuarioEncontrado;
         }
       )
   }
 
 
   actualizarInformacionDelUsuario(){
-    // let bodyDelUpdate ={
-    //   _id: this._internalService.retornarUsuario().id,
-    //
-    //   nombreUsuario: this.inputNombre,
-    //   apellidoUsuario: this.inputApellido,
-    //   fechaNacimientoUsuario: this.inputFechaNacimiento
-    // }
-    //
-    // this._usuarioService.actualizarUsuarioActual(bodyDelUpdate)
-    //   .subscribe(
-    //     res =>{
-    //       console.log('hell yeah se actualizo!! ahora tengo esto: ',res);
-    //     }
-    //   )
-    //
+    let bodyDelUpdate ={
+      nombreUsuario: this.inputNombre,
+      apellidoUsuario: this.inputApellido,
+      fechaNacimientoUsuario: this.inputFechaNacimiento
+    }
+
+    console.log('el body es este: ',bodyDelUpdate);
+
+    this._usuarioService.actualizarUsuarioActual(bodyDelUpdate)
+      .subscribe(
+        res =>{
+          console.log('hell yeah se actualizo!! ahora tengo esto: ',res);
+        }
+      )
   }
 
 
