@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 import {UsuarioService} from "../../Servicios/usuario.service";
-import {InternalService} from "../../Servicios/internal.service";
-import {Usuario} from "../../_models/Clases/Usuario";
 import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {AuthenticationService} from "../../_services";
 
@@ -52,10 +49,10 @@ export class PerfilUsuarioComponent implements OnInit {
       .subscribe(
         res =>{
           console.log('hell yeah se actualizo!! ahora tengo esto: ',res);
+          this.cargarDatosDelUsuario();
         }
       )
   }
-
 
   open(content){
     this.modalService.open(content)
