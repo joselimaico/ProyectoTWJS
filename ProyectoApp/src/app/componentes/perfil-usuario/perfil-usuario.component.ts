@@ -4,6 +4,7 @@ import {UsuarioService} from "../../Servicios/usuario.service";
 import {InternalService} from "../../Servicios/internal.service";
 import {Usuario} from "../../_models/Clases/Usuario";
 import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {AuthenticationService} from "../../_services";
 
 @Component({
   selector: 'app-perfil-usuario',
@@ -20,7 +21,7 @@ export class PerfilUsuarioComponent implements OnInit {
 
 
   constructor(private _usuarioService:UsuarioService,
-              private _internalService:InternalService,
+              private _authService:AuthenticationService,
               private modalService: NgbModal) { }
 
   ngOnInit() {
@@ -28,34 +29,31 @@ export class PerfilUsuarioComponent implements OnInit {
   }
 
   cargarDatosDelUsuario(){
-    this._usuarioService.obtenerUsuarioEscogido
-    (this._internalService.retornarUsuario().id)
+    this._usuarioService.obtenerUsuarioEscogido()
       .subscribe(
-        res => {
-          console.log('los resultados del servidor son :',res);
-          this.resultadoConsulta = res;
-          console.log('ahora tengo lo siguiente (resultados de la consulta): ',this.resultadoConsulta);
+        res =>{
+          console.log('resultado de consulta. ',res);
         }
       )
   }
 
 
   actualizarInformacionDelUsuario(){
-    let bodyDelUpdate ={
-      _id: this._internalService.retornarUsuario().id,
-
-      nombreUsuario: this.inputNombre,
-      apellidoUsuario: this.inputApellido,
-      fechaNacimientoUsuario: this.inputFechaNacimiento
-    }
-
-    this._usuarioService.actualizarUsuarioActual(bodyDelUpdate)
-      .subscribe(
-        res =>{
-          console.log('hell yeah se actualizo!! ahora tengo esto: ',res);
-        }
-      )
-
+    // let bodyDelUpdate ={
+    //   _id: this._internalService.retornarUsuario().id,
+    //
+    //   nombreUsuario: this.inputNombre,
+    //   apellidoUsuario: this.inputApellido,
+    //   fechaNacimientoUsuario: this.inputFechaNacimiento
+    // }
+    //
+    // this._usuarioService.actualizarUsuarioActual(bodyDelUpdate)
+    //   .subscribe(
+    //     res =>{
+    //       console.log('hell yeah se actualizo!! ahora tengo esto: ',res);
+    //     }
+    //   )
+    //
   }
 
 

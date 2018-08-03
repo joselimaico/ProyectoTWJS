@@ -37,33 +37,39 @@ export const RUTAS_APP: Routes = [
   },
   {
     path:'MisLugares',
-    component: MisLugaresComponent
+    component: MisLugaresComponent,
+    canActivate:[AuthGuard]
   },
 
   {
     path:'MisPlantas',
-    component: MisPlantasComponent
+    component: MisPlantasComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'Historial',
-    component: HistorialRiegoComponent
+    component: HistorialRiegoComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'FormularioLugar',
-    component: FormularioLugarComponent
+    component: FormularioLugarComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'FormularioPlanta',
-    component: FormularioPlantaComponent
+    component: FormularioPlantaComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'PerfilUsuario',
-    component: PerfilUsuarioComponent
+    component: PerfilUsuarioComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'MisLugares/:id',
     component:DescripcionLugarComponent,
-    // canActivate:[AuthGuard],
+    canActivate:[AuthGuard],
     children:[
       {path:'habitacion/:id',component:DescripcionHabitacionComponent}
 

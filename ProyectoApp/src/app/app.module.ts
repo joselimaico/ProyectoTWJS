@@ -45,6 +45,7 @@ import { PerfilUsuarioComponent } from './componentes/perfil-usuario/perfil-usua
 import { MenuOpcionesComponent } from './componentes/itemsContenedorPrincipal/menu-opciones/menu-opciones.component';
 import { BarraSuperiorComponent } from './componentes/itemsContenedorPrincipal/barra-superior/barra-superior.component';
 import { DescripcionPlantaComponent } from './componentes/MisPlantasComponents/descripcion-planta/descripcion-planta.component';
+import {TokenInterceptorService} from "./token-interceptor.service";
 
 @NgModule({
   declarations: [
@@ -104,8 +105,9 @@ import { DescripcionPlantaComponent } from './componentes/MisPlantasComponents/d
     AlertService,
     AuthenticationService,
     UserService,
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true},
 
     // provider used to create fake backend
     fakeBackendProvider

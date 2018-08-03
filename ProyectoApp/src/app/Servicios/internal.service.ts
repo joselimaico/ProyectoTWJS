@@ -9,6 +9,8 @@ import {Planta} from "../_models/Clases/Planta";
 })
 export class InternalService {
 
+  token:string;
+
   arregloAuxiliar:any[];
   UsuarioActual:Usuario;
   LugarEscogido: Lugar;
@@ -22,6 +24,13 @@ export class InternalService {
     console.log('arreglo auxiliar dice: mi contenido es: ',this.arregloAuxiliar);
   }
 
+  cargarToken(token){
+    this.token = token;
+  }
+
+  retornarToken(){
+    return this.token;
+  }
 
   actualizarUsuario(user:Usuario){
     this.UsuarioActual = user;

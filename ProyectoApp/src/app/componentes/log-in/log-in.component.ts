@@ -87,7 +87,10 @@ export class LogInComponent implements OnInit {
       .subscribe(
         res => {
           console.log(res)
-          localStorage.setItem('token',res.token)
+          localStorage.setItem('token',`${res.token}`)
+          console.log('Dentro del subscribe el localstorage tiene algo??',localStorage.hasOwnProperty('token'));
+          console.log('dentro del subscribe el token es: ',localStorage.getItem('token'));
+          this._internalService.cargarToken(res.token);
           this._router.navigate(['/PaginaPrincipal'])
         },
         err => console.log(err)
