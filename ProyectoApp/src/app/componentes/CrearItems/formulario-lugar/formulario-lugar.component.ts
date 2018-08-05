@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LugarService} from "../../../Servicios/lugar.service";
 
 @Component({
   selector: 'app-formulario-lugar',
@@ -53,18 +54,22 @@ export class FormularioLugarComponent implements OnInit {
   urlImagenLugar = 'https://media-cdn.tripadvisor.com/media/photo-s/0c/11/0b/bb/lugar-dos-afectos.jpg';
   urlImagenHabitacion = 'http://albergueoabeiro.com/wp-content/uploads/2016/04/habitacion-cama-de-matrimonio.jpg';
 
-  constructor() { }
+  constructor(private _lugarService: LugarService) { }
 
   ngOnInit() {
   }
 
   crearNuevoRegistro(){
-    let bodyLugar = this.crearNuevoLugar();
+    let bodyLugar = this.crearBodyLugar();
     let bodyHabitacion = this.crearNuevaHabitacion();
     if (bodyLugar != null){
-    // AQUI LA CONSULTA AL SERVIDOR USANDO REQUEST EXCLUSIVO DEL LUGAR
+      this._lugarService.crearNuevoLugar(bodyLugar)
+        .subscribe(res => {
+          console.log('esto devuelve el server: ',res);
+        })
     }
     if(bodyHabitacion != null){
+      console.log('Formulario Habitación vacía');
     // AQUI LA CONSULTA AL SERVIDOR USANDO REQUEST EXCLUSIVO DE LA HABITACIÓN
     }
 
@@ -86,12 +91,12 @@ export class FormularioLugarComponent implements OnInit {
       descripcionHabitacion: `${this.inputAmbienteHabitacion}`,
       imagenHabitacion: `${this.urlImagenHabitacion}`
     };
-    console.log('objeto JSON', body);
+    //console.log('objeto JSON', body);
     return body;
   }
 
 
-  crearNuevoLugar(){
+  crearBodyLugar(){
     let body = {
       nombreLugar: `${this.inputNombreLugar}`,
       tipoLugar: `${this.inputTipoLugar}`,
@@ -99,7 +104,7 @@ export class FormularioLugarComponent implements OnInit {
       descripcionLugar: `${this.inputDescripcionLugar}`,
       imagenLugar: `${this.urlImagenLugar}`
     };
-    console.log('objeto JSON', body);
+    //console.log('objeto JSON', body);
     return body;
   }
 

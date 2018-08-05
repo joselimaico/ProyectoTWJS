@@ -72,9 +72,9 @@ module.exports = {
     if(!payload){
       return res.status(401).send('El token es incorrecto');
     }
-    console.log('el payload es: ',payload);
+    //console.log('el payload es: ',payload);
     let idUsuario = payload.subject;
-    console.log('ahora el id del usuario es: ',idUsuario);
+    //console.log('ahora el id del usuario es: ',idUsuario);
     Usuario.findOne({id:idUsuario},(error, usuarioEncontrado) =>{
       if(error){
         res.status(401).send('no existe el usuario');

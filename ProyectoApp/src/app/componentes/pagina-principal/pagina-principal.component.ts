@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Message} from "primeng/api";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Lugar} from "../../_models";
-import {LugarService} from "../../_services/lugar.service";
+import {PlaceService} from "../../_services/place.service";
 import {InternalService} from "../../Servicios/internal.service";
 
 class Planta {
@@ -25,7 +25,7 @@ export class PaginaPrincipalComponent implements OnInit {
   lugar=[]
 
   constructor(private _router:Router,
-              private _lugarService:LugarService,
+              private _lugarService:PlaceService,
               private _route:ActivatedRoute,
               private _internalService:InternalService
               ) {

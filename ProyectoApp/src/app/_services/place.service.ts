@@ -2,7 +2,7 @@ import {EventEmitter, Injectable,} from "@angular/core";
 import {Lugar} from "../_models";
 
 @Injectable()
-export class LugarService {
+export class PlaceService {
 
   listaLugares:Lugar[];
   lugarEscogido: Lugar;

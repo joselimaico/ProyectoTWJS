@@ -30,7 +30,7 @@ import { AuthGuard } from './_guards';
 import {AlertService, AuthenticationService, UserService} from "./_services";
 import {ErrorInterceptor, fakeBackendProvider, JwtInterceptor} from "./_helpers";
 import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http";
-import {LugarService} from "./_services/lugar.service";
+import {LugarService} from "./Servicios/lugar.service";
 import { DescripcionHabitacionComponent } from './componentes/descripcion-habitacion/descripcion-habitacion.component';
 import { ContenedorPrincipalComponent } from './componentes/contenedor-principal/contenedor-principal.component';
 import { MisLugaresComponent } from './componentes/mis-lugares/mis-lugares.component';
@@ -46,6 +46,8 @@ import { MenuOpcionesComponent } from './componentes/itemsContenedorPrincipal/me
 import { BarraSuperiorComponent } from './componentes/itemsContenedorPrincipal/barra-superior/barra-superior.component';
 import { DescripcionPlantaComponent } from './componentes/MisPlantasComponents/descripcion-planta/descripcion-planta.component';
 import {TokenInterceptorService} from "./token-interceptor.service";
+import {PlaceService} from "./_services";
+
 
 @NgModule({
   declarations: [
@@ -102,6 +104,7 @@ import {TokenInterceptorService} from "./token-interceptor.service";
   providers: [
     AuthGuard,
     LugarService,
+    PlaceService,
     AlertService,
     AuthenticationService,
     UserService,

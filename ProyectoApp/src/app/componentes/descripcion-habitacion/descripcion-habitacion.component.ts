@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {LugarService} from "../../_services";
+import {PlaceService} from "../../_services";
 
 @Component({
   selector: 'app-descripcion-habitacion',
@@ -9,7 +9,7 @@ import {LugarService} from "../../_services";
 export class DescripcionHabitacionComponent implements OnInit {
 
   roomArray:[any]
-  constructor(private _lugarService:LugarService) { }
+  constructor(private _lugarService:PlaceService) { }
 
   ngOnInit() {
     this.escucharCambios()

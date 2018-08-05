@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
-import {LugarService} from "../../_services/lugar.service";
+import {PlaceService} from "../../_services/place.service";
 import {Lugar} from "../../_models";
 import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
@@ -22,7 +22,7 @@ export class DescripcionLugarComponent implements OnInit {
   lugarSeleccionado=[];
   habitacionSeleccionada=[];
   constructor(private route: ActivatedRoute,
-              private _lugarService:LugarService,
+              private _lugarService:PlaceService,
               private _router:Router,
               private modalService: NgbModal) {
 

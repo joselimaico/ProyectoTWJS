@@ -9,7 +9,6 @@ module.exports = {
 
   attributes: {
 
-    idLugar: {type: 'number', required: true},
     nombreLugar: {type: 'string', required: true},
     tipoLugar: {type: 'string', required: false},
     sectorLugar: {type: 'string', required: false},
