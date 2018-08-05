@@ -49,11 +49,10 @@ module.exports = {
          sectorLugar: DataParams.sectorLugar,
          descripcionLugar: DataParams.descripcionLugar,
          imagenLugar: DataParams.imagenLugar,
-         usuarioFK: idUsuario
+         // lugarFK:
        }
-     );
+     ).fetch();
     res.status(200).send({newPlace});
-
    }
 
 

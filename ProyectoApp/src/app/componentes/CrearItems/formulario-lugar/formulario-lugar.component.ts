@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LugarService} from "../../../Servicios/lugar.service";
+import {HabitacionService} from "../../../Servicios/habitacion.service";
+import {forEach} from "@angular/router/src/utils/collection";
 
 @Component({
   selector: 'app-formulario-lugar',
@@ -54,29 +56,42 @@ export class FormularioLugarComponent implements OnInit {
   urlImagenLugar = 'https://media-cdn.tripadvisor.com/media/photo-s/0c/11/0b/bb/lugar-dos-afectos.jpg';
   urlImagenHabitacion = 'http://albergueoabeiro.com/wp-content/uploads/2016/04/habitacion-cama-de-matrimonio.jpg';
 
-  constructor(private _lugarService: LugarService) { }
+  constructor(private _lugarService: LugarService,
+              private _habitacionService: HabitacionService) { }
 
   ngOnInit() {
   }
 
   crearNuevoRegistro(){
     let bodyLugar = this.crearBodyLugar();
-    let bodyHabitacion = this.crearNuevaHabitacion();
     if (bodyLugar != null){
       this._lugarService.crearNuevoLugar(bodyLugar)
         .subscribe(res => {
-          console.log('esto devuelve el server: ',res);
+          // console.log('esto devuelve el server: ',res);
+          let idLugar = res.newPlace.id;
+          // console.log('id del lugar es: ',idLugar);
+          let bodyHabitacion = this.crearNuevaHabitacion(idLugar);
+          console.log('el body de la habitacion: ',bodyHabitacion);
+
+          if (bodyHabitacion.nombreHabitacion!='undefined'&&
+              bodyHabitacion.descripcionHabitacion != 'undefined'&&
+              bodyHabitacion.luzSolarHabitacion != 'undefined' &&
+              bodyHabitacion.tamanioHabitacion != 'undefined' &&
+              bodyHabitacion.imagenHabitacion != 'undefined')
+          {
+            this._habitacionService.crearNuevaHabitacion(bodyHabitacion)
+              .subscribe( resultado => {
+                  console.log('el servidor pudo guardar una nueva habitación: ',resultado);
+                }
+              )
+          }
+
         })
     }
-    if(bodyHabitacion != null){
-      console.log('Formulario Habitación vacía');
-    // AQUI LA CONSULTA AL SERVIDOR USANDO REQUEST EXCLUSIVO DE LA HABITACIÓN
-    }
-
   }
 
 
-  crearNuevaHabitacion(){
+  crearNuevaHabitacion(FKLugar){
     let luzSolar: boolean;
     if(this.inputLuzSolar === 'Si'){
       luzSolar = true;
@@ -89,7 +104,8 @@ export class FormularioLugarComponent implements OnInit {
       tamanioHabitacion: `${this.inputTamanioHabitacion}`,
       luzSolarHabitacion: `${luzSolar}`,
       descripcionHabitacion: `${this.inputAmbienteHabitacion}`,
-      imagenHabitacion: `${this.urlImagenHabitacion}`
+      imagenHabitacion: `${this.urlImagenHabitacion}`,
+      lugarFK: `${FKLugar}`
     };
     //console.log('objeto JSON', body);
     return body;

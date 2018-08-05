@@ -8,6 +8,7 @@ import {HttpClient} from "@angular/common/http";
 export class HabitacionService {
 
   URL='http://localhost:1337/Habitacion';
+  URLCrearNuevaHabitacion = 'http:/localhost:1337/Habitacion/createRoom';
 
   constructor(private _httpClient:HttpClient) { }
 
@@ -20,7 +21,7 @@ export class HabitacionService {
   }
 
   crearNuevaHabitacion(body):Observable<any>{
-    return this._httpClient.post<any>(this.URL,JSON.stringify(body));
+    return this._httpClient.post<any>(this.URL,body);
   }
 
   actualizarHabitacionEscogida(id, body):Observable<any>{

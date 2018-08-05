@@ -11,7 +11,6 @@ module.exports = {
 
   attributes: {
 
-    idHabitacion: {type: 'number', required: true},
     nombreHabitacion: {type: 'string', required: true},
     tamanioHabitacion: {type: 'string', required: false},
     luzSolarHabitacion: {type: 'string', required: false},
