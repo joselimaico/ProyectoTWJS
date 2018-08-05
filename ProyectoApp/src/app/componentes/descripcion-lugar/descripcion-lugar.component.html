@@ -1,14 +1,14 @@
 <div class="sa-contenedor-Informacion-Lugar-Escogido">
   <div class="row">
 
-    <div class="col-lg-3">
-      <mat-card class="example-card">
+    <div class="col-lg-3" *ngIf="lugarSeleccionado">
+      <mat-card class="example-card"  *ngFor="let place of lugarSeleccionado">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Nombre del Lugar</mat-card-title>
-          <mat-card-subtitle>Tipo de lugar</mat-card-subtitle>
+          <mat-card-title>{{place.nombreLugar}}</mat-card-title>
+          <mat-card-subtitle>{{place.tipoLugar}}</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <img mat-card-image [src]="place.imagenLugar" alt="Photo of a Shiba Inu">
         <mat-card-actions>
           <div class="row">
             <div class="col-lg-6" style="text-align: center">
@@ -29,7 +29,7 @@
     </div>
 
     <div class="col-lg-9">
-      <ngb-tabset>
+      <ngb-tabset *ngIf="lugarSeleccionado">
         <div class="row">
 
           <div class="col-lg-6">
@@ -59,14 +59,14 @@
                         <p>Nueva habitación</p>
                       </div>
                       <div class="col-lg-11">
-                        <p-carousel  headerText="Lista de Habitaciones"  [value]="lugarSeleccionado[0].habitacion">
+                        <p-carousel  headerText="Lista de Habitaciones"  [value]="lugarSeleccionado.misHabitaciones">
                           <ng-template let-room pTemplate="item">
                             <div class="ui-grid ui-grid-responsive">
                               <div class="ui-grid-row">
-                                <div class="ui-grid-col-12"><img src="assets/imagenes/{{room.tipoHabitacion}}.png" width="60"></div>
+                                <div class="ui-grid-col-12"><img [src]="room.imagenHabitacion" width="60"></div>
                               </div>
                               <div class="ui-grid-row">
-                                <div class="ui-grid-col-12">{{room.tipoHabitacion}}</div>
+                                <div class="ui-grid-col-12">{{room.nombreHabitacion}}</div>
                               </div>
                               <div class="ui-grid-row">
                                 <div class="ui-grid-col-12">

@@ -22,13 +22,13 @@ module.exports = {
         imagenUsuario: params.imagenUsuario
       }).fetch();
 
-    console.log('resultado de la creacion: ',created);
+    //console.log('resultado de la creacion: ',created);
     let payload = {
       subject: created.id
     }
-    console.log('el payload tiene: ',payload);
+    //console.log('el payload tiene: ',payload);
     let token = jwt.sign(payload, 'llaveSecreta');
-    console.log('el TOKEN ES: ',token);
+    //console.log('el TOKEN ES: ',token);
     res.status(200).send({token});
   },
 
@@ -45,13 +45,13 @@ module.exports = {
           res.status(401).send('Invalid password')
         }else
         {
-          console.log('el usuario consultado es: ',user);
+          //console.log('el usuario consultado es: ',user);
           let payload = {
             subject: user.id
           }
-          console.log('el payload (login) es:', payload);
+          //console.log('el payload (login) es:', payload);
           let token = jwt.sign(payload,'llaveSecreta');
-          console.log('el token (login) es: ', token);
+          //console.log('el token (login) es: ', token);
           res.status(200).send({token});
         }
       }

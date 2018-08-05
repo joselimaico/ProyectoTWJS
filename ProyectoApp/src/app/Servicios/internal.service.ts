@@ -12,7 +12,9 @@ export class InternalService {
   token:string;
 
   arregloAuxiliar:any[];
-  UsuarioActual:Usuario;
+  // UsuarioActual:Usuario;
+  idLugar: number;
+
   LugarEscogido: Lugar;
   HabitacionEscogida: Habitacion;
   PlantaEscogida: Planta;
@@ -32,14 +34,17 @@ export class InternalService {
     return this.token;
   }
 
-  actualizarUsuario(user:Usuario){
-    this.UsuarioActual = user;
-    console.log('el nuevo usuario es: ',this.UsuarioActual);
+  actualizarLugar(idPlace){
+    this.idLugar = idPlace;
   }
 
-  actualizarLugar(place:Lugar){
-    this.LugarEscogido = place;
+  retornarLugar(){
+    return this.idLugar;
   }
+
+
+
+
 
   actualizarHabitacion(room:Habitacion){
     this.HabitacionEscogida = room;
@@ -50,14 +55,6 @@ export class InternalService {
   }
 
 
-
-  retornarUsuario(){
-    return this.UsuarioActual;
-  }
-
-  retornarLugar(){
-    return this.LugarEscogido;
-  }
 
   retornarHabitacion(){
     return this.HabitacionEscogida;

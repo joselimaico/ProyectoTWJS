@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {LugarService} from "../../../Servicios/lugar.service";
 import {HabitacionService} from "../../../Servicios/habitacion.service";
 import {forEach} from "@angular/router/src/utils/collection";
+import {Router} from "@angular/router";
+import {InternalService} from "../../../Servicios/internal.service";
 
 @Component({
   selector: 'app-formulario-lugar',
@@ -57,21 +59,27 @@ export class FormularioLugarComponent implements OnInit {
   urlImagenHabitacion = 'http://albergueoabeiro.com/wp-content/uploads/2016/04/habitacion-cama-de-matrimonio.jpg';
 
   constructor(private _lugarService: LugarService,
-              private _habitacionService: HabitacionService) { }
+              private _habitacionService: HabitacionService,
+              private _router: Router,
+              private _internalService: InternalService) { }
 
   ngOnInit() {
   }
 
   crearNuevoRegistro(){
     let bodyLugar = this.crearBodyLugar();
-    if (bodyLugar != null){
-      this._lugarService.crearNuevoLugar(bodyLugar)
+    if (bodyLugar.nombreLugar != 'undefined'&&
+        bodyLugar.descripcionLugar != 'undefined'&&
+        bodyLugar.sectorLugar != 'undefined' &&
+        bodyLugar.tipoLugar != 'undefined'){
+        this._lugarService.crearNuevoLugar(bodyLugar)
         .subscribe(res => {
           // console.log('esto devuelve el server: ',res);
           let idLugar = res.newPlace.id;
+          this._internalService.actualizarLugar(idLugar);
           // console.log('id del lugar es: ',idLugar);
           let bodyHabitacion = this.crearNuevaHabitacion(idLugar);
-          console.log('el body de la habitacion: ',bodyHabitacion);
+          //console.log('el body de la habitacion: ',bodyHabitacion);
 
           if (bodyHabitacion.nombreHabitacion!='undefined'&&
               bodyHabitacion.descripcionHabitacion != 'undefined'&&
@@ -82,10 +90,12 @@ export class FormularioLugarComponent implements OnInit {
             this._habitacionService.crearNuevaHabitacion(bodyHabitacion)
               .subscribe( resultado => {
                   console.log('el servidor pudo guardar una nueva habitación: ',resultado);
+                  let idHabitacion = resultado.newRoom.id;
+                  this._router.navigate([`/Lugar/${idLugar}/Habitacion/${idHabitacion}`]);
                 }
               )
           }
-
+          this._router.navigate([`/Lugar/${idLugar}`]);
         })
     }
   }

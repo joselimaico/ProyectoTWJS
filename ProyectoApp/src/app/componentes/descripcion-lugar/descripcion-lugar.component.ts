@@ -3,6 +3,8 @@ import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import {PlaceService} from "../../_services/place.service";
 import {Lugar} from "../../_models";
 import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {InternalService} from "../../Servicios/internal.service";
+import {LugarService} from "../../Servicios/lugar.service";
 
 
 
@@ -19,10 +21,11 @@ export class DescripcionLugarComponent implements OnInit {
   closeResult: string;
   Idlugar:number
   lugares:Lugar[]
-  lugarSeleccionado=[];
+  lugarSeleccionado:any;
   habitacionSeleccionada=[];
   constructor(private route: ActivatedRoute,
-              private _lugarService:PlaceService,
+              private _lugarService:LugarService,
+              private _internalService: InternalService,
               private _router:Router,
               private modalService: NgbModal) {
 
@@ -33,18 +36,30 @@ export class DescripcionLugarComponent implements OnInit {
     this.recibirLugar();
   }
 
-
   recibirLugar(){
-    this.route.paramMap.subscribe(
-      (params:ParamMap)=>{
-        let id = parseInt(params.get('id'));
-        this.Idlugar =id;
-        console.log(this.Idlugar);
-      }
-    )
-    this.lugares=this._lugarService.lugares;
-    this.selectLugar(this.Idlugar);
+    let idDelLugar = this._internalService.retornarLugar();
+
+    this._lugarService.obtenerMiLugar(idDelLugar)
+      .subscribe((resultado) => {
+        console.log('esto devuelve el servidor al consultar mi lugar: ',resultado);
+        this.lugarSeleccionado = resultado.lugarEncontrado;
+      });
   }
+
+
+
+
+  // recibirLugar(){
+  //   this.route.paramMap.subscribe(
+  //     (params:ParamMap)=>{
+  //       let id = parseInt(params.get('id'));
+  //       this.Idlugar =id;
+  //       console.log(this.Idlugar);
+  //     }
+  //   )
+  //   this.lugares=this._lugarService.lugares;
+  //   this.selectLugar(this.Idlugar);
+  // }
 
   selectLugar(id:number){
     let place= [this.lugares.find(
@@ -58,7 +73,7 @@ export class DescripcionLugarComponent implements OnInit {
   selectHabitacion(room){
     this._router.navigate(['habitacion',room.idHabitacion],{relativeTo:this.route})
 
-    this._lugarService.enviarArreglo(room)
+    //this._lugarService.enviarArreglo(room)
 
 
   }

@@ -40,7 +40,6 @@ export const RUTAS_APP: Routes = [
     component: MisLugaresComponent,
     canActivate:[AuthGuard]
   },
-
   {
     path:'MisPlantas',
     component: MisPlantasComponent,
@@ -67,11 +66,11 @@ export const RUTAS_APP: Routes = [
     canActivate:[AuthGuard]
   },
   {
-    path:'MisLugares/:id',
+    path:'Lugar/:id',
     component:DescripcionLugarComponent,
     canActivate:[AuthGuard],
     children:[
-      {path:'habitacion/:id',component:DescripcionHabitacionComponent}
+      {path:'Habitacion/:id',component:DescripcionHabitacionComponent}
 
     ]
   },

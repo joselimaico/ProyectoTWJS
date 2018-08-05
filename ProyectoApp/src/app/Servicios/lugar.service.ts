@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable} from "rxjs/index";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,7 @@ export class LugarService {
 
   URL='http://localhost:1337/Lugar';
   URLCrearNuevoLugar = 'http://localhost:1337/Lugar/createPlace';
+  URLObtenerMiLugar = 'http://localhost:1337/Lugar/getMyPlace';
 
   constructor(private _httpClient:HttpClient) { }
 
@@ -16,6 +17,10 @@ export class LugarService {
     return this._httpClient.post<any>(this.URLCrearNuevoLugar,body);
   }
 
+  obtenerMiLugar(idLugar):Observable<any>{
+    let params = new HttpParams().set("idLugar",idLugar);
+    return this._httpClient.get<any>(this.URLObtenerMiLugar,{params});
+  }
 
 
 
