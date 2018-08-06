@@ -10,8 +10,13 @@ export class HabitacionService {
   URL='http://localhost:1337/Habitacion';
   URLCrearNuevaHabitacion = 'http://localhost:1337/Habitacion/createRoom';
   URLObtenerTodasHabitaciones = 'http://localhost:1337/Habitacion/getAllRooms';
+  URLObtenerMiHabitacion = 'http://localhost:1337/Habitacion/getMyRoom';
 
   constructor(private _httpClient:HttpClient) { }
+
+  crearNuevaHabitacion(body):Observable<any>{
+    return this._httpClient.post<any>(this.URLCrearNuevaHabitacion,body);
+  }
 
   obtenerListaDeHabitacionesRegistradas(idLugar):Observable<any>{
     let params = new HttpParams().set("idLugar",idLugar);
@@ -19,12 +24,11 @@ export class HabitacionService {
   }
 
   obtenerHabitacionEscogida(id):Observable<any>{
-    return this._httpClient.get<any>(this.URL+'/'+id);
+    let params = new HttpParams().set("idHabitacion",id);
+    return this._httpClient.get<any>(this.URLObtenerMiHabitacion,{params});
   }
 
-  crearNuevaHabitacion(body):Observable<any>{
-    return this._httpClient.post<any>(this.URL,body);
-  }
+
 
   actualizarHabitacionEscogida(id, body):Observable<any>{
     return this._httpClient.put<any>(this.URL+'/'+id,JSON.stringify(body));

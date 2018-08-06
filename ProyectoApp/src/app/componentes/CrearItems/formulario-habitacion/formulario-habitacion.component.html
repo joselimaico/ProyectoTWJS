@@ -1,0 +1,33 @@
+<mat-card>
+  <div class="sa-contenedor-Campos">
+    <mat-form-field>
+      <input matInput placeholder="Nombre de la habitación" name="nombreHab" [(ngModel)]="iNombreHabitacion">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-select placeholder="Tamaño de la Habitación" name="tamanioHabitacion" [(ngModel)]="iTamanioHabitacion">
+        <mat-option [value]="opcion" *ngFor="let opcion of opcTamanioHabitacion">
+          {{opcion}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <br>
+    <mat-form-field>
+      <mat-select placeholder="Ambiente de la Habitación" name="ambiente" [(ngModel)]="iAmbienteHabitacion">
+        <mat-option [value]="opcion" *ngFor="let opcion of opcAmbienteHabitacion">
+          {{opcion}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-select placeholder="¿Tiene luz Solar?" name="sectorLugar" [(ngModel)]="iLuzSolar">
+        <mat-option [value]="opcion" *ngFor="let opcion of opcLuzSolar">
+          {{opcion}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <br>
+</mat-card>

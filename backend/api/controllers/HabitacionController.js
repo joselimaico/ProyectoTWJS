@@ -32,7 +32,7 @@ module.exports = {
         luzSolarHabitacion: DataParams.luzSolarHabitacion,
         descripcionHabitacion: DataParams.descripcionHabitacion,
         imagenHabitacion: DataParams.imagenHabitacion,
-        usuarioFK: DataParams.usuarioFK
+        lugarFK: DataParams.lugarFK
       }
     ).fetch();
     res.status(200).send({newRoom});
@@ -56,6 +56,7 @@ module.exports = {
     // let idUsuario = payload.subject;
 
 
+
     let idLugar = dataParams.idLugar;
     await Habitacion.find({lugarFK: idLugar}, (error, listaHabitaciones) =>{
       if(error){
@@ -65,8 +66,30 @@ module.exports = {
         res.status(200).send({listaHabitaciones});
       }
     })
+  },
 
+  getMyRoom: async(req,res)=>{
+    let dataParams = req.allParams();
+    if(!req.headers.authorization){
+      return res.status(401).send('Unauthorized Request');
+    }
+    let token = req.headers.authorization.split(' ')[1]
+    if(token === 'null'){
+      return res.status(406).send('El token esta vacio');
+    }
+    console.log('token :',token);
+    let payload = jwt.verify(token, 'llaveSecreta');
+    if(!payload){
+      return res.status(401).send('El token es incorrecto');
+    }
 
+    await Habitacion.find({id:dataParams.idHabitacion}, (error,habitacion)=>{
+      if(error){
+        res.status(400).send('no se pudo completar la operación');
+      }else{
+        res.status(200).send({habitacion});
+      }
+    });
 
   }
 

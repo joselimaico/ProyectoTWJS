@@ -47,6 +47,7 @@ import { BarraSuperiorComponent } from './componentes/itemsContenedorPrincipal/b
 import { DescripcionPlantaComponent } from './componentes/MisPlantasComponents/descripcion-planta/descripcion-planta.component';
 import {TokenInterceptorService} from "./token-interceptor.service";
 import {PlaceService} from "./_services";
+import { FormularioHabitacionComponent } from './componentes/CrearItems/formulario-habitacion/formulario-habitacion.component';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import {PlaceService} from "./_services";
     PerfilUsuarioComponent,
     MenuOpcionesComponent,
     BarraSuperiorComponent,
-    DescripcionPlantaComponent
+    DescripcionPlantaComponent,
+    FormularioHabitacionComponent
   ],
   imports: [
 

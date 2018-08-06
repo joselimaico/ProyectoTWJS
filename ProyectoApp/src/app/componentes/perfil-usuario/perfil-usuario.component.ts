@@ -54,11 +54,10 @@ export class PerfilUsuarioComponent implements OnInit {
       )
   }
 
-  open(content){
-    this.modalService.open(content)
-      .result.then((result)=>{
+  open(content) {
+    this.modalService.open(content).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
-    }, (reason)=>{
+    }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
   }

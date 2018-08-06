@@ -52,11 +52,11 @@
   <div class="modal-body">
     <form>
       <div class="form-group">
-        <label>Nombre del Usuario</label>
+        <label for="nombreUsuario">Nombre del Usuario</label>
         <div class="input-group">
           <input id="nombreUsuario" class="form-control" [placeholder]="resultadoConsulta.nombreUsuario" name="nombre" [(ngModel)]="inputNombre" >
         </div>
-        <label>Apellido del Usuario</label>
+        <label for="apellidoUsuario">Apellido del Usuario</label>
         <div class="input-group">
           <input id="apellidoUsuario" class="form-control" [placeholder]="resultadoConsulta.apellidoUsuario" name="apellido" [(ngModel)]="inputApellido">
         </div>
@@ -66,7 +66,6 @@
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" (click)="dp.toggle()" type="button">
               <mat-icon style="width: 1.2rem; height: 1rem; cursor: pointer;">calendar_today</mat-icon>
-              <!--<img src="img/calendar-icon.svg" />-->
             </button>
           </div>
         </div>
@@ -74,7 +73,8 @@
     </form>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="actualizarInformacionDelUsuario()">Actualizar</button>
+    <button type="button" class="btn btn-outline-dark"
+            (click)="actualizarInformacionDelUsuario()">Actualizar</button>
   </div>
 </ng-template>
 

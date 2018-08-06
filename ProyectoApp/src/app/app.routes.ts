@@ -11,6 +11,7 @@ import {HistorialRiegoComponent} from "./componentes/historial-riego/historial-r
 import {FormularioLugarComponent} from "./componentes/CrearItems/formulario-lugar/formulario-lugar.component";
 import {FormularioPlantaComponent} from "./componentes/CrearItems/formulario-planta/formulario-planta.component";
 import {PerfilUsuarioComponent} from "./componentes/perfil-usuario/perfil-usuario.component";
+import {FormularioHabitacionComponent} from "./componentes/CrearItems/formulario-habitacion/formulario-habitacion.component";
 
 
 
@@ -73,6 +74,10 @@ export const RUTAS_APP: Routes = [
       {path:'Habitacion/:id',component:DescripcionHabitacionComponent}
 
     ]
+  },
+  {
+    path:'crearNuevaHabitacion',
+    component:FormularioHabitacionComponent
   },
 
   {

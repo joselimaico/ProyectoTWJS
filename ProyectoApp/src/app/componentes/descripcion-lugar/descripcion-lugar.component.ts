@@ -1,11 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
-import {PlaceService} from "../../_services/place.service";
-import {Lugar} from "../../_models";
 import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {InternalService} from "../../Servicios/internal.service";
 import {LugarService} from "../../Servicios/lugar.service";
 import {HabitacionService} from "../../Servicios/habitacion.service";
+import {Habitacion} from "../../_models/Clases/Habitacion";
 
 
 
@@ -18,13 +17,10 @@ import {HabitacionService} from "../../Servicios/habitacion.service";
 
 export class DescripcionLugarComponent implements OnInit {
 
-  quiereActualizar:boolean;
   closeResult: string;
-  Idlugar:number
-  lugares:Lugar[]
-  listaHabitaciones:any;
+  listaHabitaciones: Habitacion[];
   lugarSeleccionado:any;
-  habitacionSeleccionada=[];
+
   constructor(private route: ActivatedRoute,
               private _router:Router,
               private _lugarService:LugarService,
@@ -34,7 +30,6 @@ export class DescripcionLugarComponent implements OnInit {
 
 
   }
-
   ngOnInit() {
     this.recibirLugar();
   }
@@ -49,43 +44,19 @@ export class DescripcionLugarComponent implements OnInit {
         this._habitacionService.obtenerListaDeHabitacionesRegistradas(idDelLugar)
           .subscribe((respuesta) => {
             console.log('lista de habitaciones del lugar actual: ', respuesta);
-            this.listaHabitaciones = respuesta.listaHabitaciones;
+            this.listaHabitaciones = <Habitacion[]>respuesta.listaHabitaciones;
           })
       });
   }
 
-
-
-
-  // recibirLugar(){
-  //   this.route.paramMap.subscribe(
-  //     (params:ParamMap)=>{
-  //       let id = parseInt(params.get('id'));
-  //       this.Idlugar =id;
-  //       console.log(this.Idlugar);
-  //     }
-  //   )
-  //   this.lugares=this._lugarService.lugares;
-  //   this.selectLugar(this.Idlugar);
-  // }
-
-  selectLugar(id:number){
-    let place= [this.lugares.find(
-      (place:Lugar) => {
-        return place.idLugar===id
-      })]
-    this.lugarSeleccionado=place
-    console.log("lugar encontrado: ",this.lugarSeleccionado)
+  irAlFormularioHabitacion(){
+    this._router.navigate(['/crearNuevaHabitacion']);
   }
 
-  selectHabitacion(room){
-    this._router.navigate(['habitacion',room.idHabitacion],{relativeTo:this.route})
-
-    //this._lugarService.enviarArreglo(room)
 
 
-  }
 
+  //---------------------------------------------------------------------
 
   open(content){
     this.modalService.open(content)
@@ -108,7 +79,7 @@ export class DescripcionLugarComponent implements OnInit {
 
   gotoMain(){
     //let selectedId=this.Idlugar ?this.Idlugar:null
-    this._router.navigate(['../'],{relativeTo:this.route})
+    this._router.navigate(['/PaginaPrincipal'],{relativeTo:this.route})
   }
 
 
