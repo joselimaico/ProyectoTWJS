@@ -1,9 +1,10 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnChanges, OnInit} from '@angular/core';
 import {Message} from "primeng/api";
 import {ActivatedRoute, Router} from "@angular/router";
-import {Lugar} from "../../_models";
 import {PlaceService} from "../../_services/place.service";
 import {InternalService} from "../../Servicios/internal.service";
+import {LugarService} from "../../Servicios/lugar.service";
+import {Lugar} from "../../_models/Clases/Lugar";
 
 class Planta {
   nombre:string
@@ -17,15 +18,15 @@ class Planta {
   templateUrl: './pagina-principal.component.html',
   styleUrls: ['./pagina-principal.component.css']
 })
-export class PaginaPrincipalComponent implements OnInit {
+export class PaginaPrincipalComponent implements OnInit, OnChanges {
   plantas: Planta[];
-  lugares:Lugar[];
+  lugares: Lugar[];
   msgs: Message[];
   msg:Message[];
-  lugar=[]
+  lugar=[];
 
   constructor(private _router:Router,
-              private _lugarService:PlaceService,
+              private _lugarService:LugarService,
               private _route:ActivatedRoute,
               private _internalService:InternalService
               ) {
@@ -37,10 +38,6 @@ export class PaginaPrincipalComponent implements OnInit {
       {nombre: 'Luz', anios: 2, especie: 'Amapola', color: 'Morado'},
 
     ];
-
-
-
-
   }
 
   selectPlanta(planta: Planta) {
@@ -51,20 +48,30 @@ export class PaginaPrincipalComponent implements OnInit {
   }
 
   selectLugar(lugar:Lugar){
-    const url = ['/MisLugares/'+lugar.idLugar];
+    this._internalService.actualizarLugar(lugar.id);
+    const url = ['/Lugar/'+this._internalService.retornarLugar()];
+
     this._router.navigate(url);
   }
 
-  // selectLugar(lugar:Lugar){
-  //
-  //
-  //   this._router.navigate([lugar.idLugar],{relativeTo: this._route});
-  //   //console.log(place)
-  //
-  // }
+  ngOnChanges(){
+    this.cargarDatosDelSitio();
+  }
 
   ngOnInit() {
-    this.lugares=this._lugarService.lugares;
+    this.cargarDatosDelSitio();
+  }
+
+
+  cargarDatosDelSitio(){
+    this._lugarService.obtenerListaDeLugaresRegistrados()
+      .subscribe(
+        (resultado) => {
+          // console.log('mis lugares con este usuario: ',resultado);
+          this.lugares = <Lugar[]>resultado.listaLugares;
+          console.log('los lugares que tengo en este momento son: ',this.lugares);
+        }
+      )
   }
 
   crearNuevoLugar(){

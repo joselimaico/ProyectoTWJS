@@ -10,6 +10,7 @@ export class LugarService {
   URL='http://localhost:1337/Lugar';
   URLCrearNuevoLugar = 'http://localhost:1337/Lugar/createPlace';
   URLObtenerMiLugar = 'http://localhost:1337/Lugar/getMyPlace';
+  URLObtenerTodosMisLugares = 'http://localhost:1337/Lugar/getAllPlaces';
 
   constructor(private _httpClient:HttpClient) { }
 
@@ -22,14 +23,15 @@ export class LugarService {
     return this._httpClient.get<any>(this.URLObtenerMiLugar,{params});
   }
 
-
-
-
-
-
   obtenerListaDeLugaresRegistrados():Observable<any>{
-    return this._httpClient.get<any>(this.URL);
+    return this._httpClient.get<any>(this.URLObtenerTodosMisLugares);
   }
+
+
+
+
+
+
 
   obtenerLugarEscogido(id):Observable<any>{
     return this._httpClient.get<any>(this.URL+'/'+id);

@@ -1,7 +1,7 @@
 import {Habitacion} from "./Habitacion";
 
 export interface Lugar {
-  idLugar: number;
+  id: number;
   nombreLugar: string;
   tipoLugar: string;
   sectorLugar: string;

@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="af575478-37df-4f9f-ac39-12d51183d999" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/habitacion.service.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/habitacion.service.ts" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/CrearItems/formulario-lugar/formulario-lugar.component.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/CrearItems/formulario-lugar/formulario-lugar.component.ts" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts" />
-      <change beforePath="$PROJECT_DIR$/backend/api/controllers/HabitacionController.js" afterPath="$PROJECT_DIR$/backend/api/controllers/HabitacionController.js" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/lugar.service.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/lugar.service.ts" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/_models/Clases/Lugar.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/_models/Clases/Lugar.ts" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html" />
+      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts" />
+      <change beforePath="$PROJECT_DIR$/backend/api/controllers/LugarController.js" afterPath="$PROJECT_DIR$/backend/api/controllers/LugarController.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,80 +24,30 @@
       <file leaf-file-name="LugarController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/api/controllers/LugarController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="35" />
+            <state relative-caret-position="339">
+              <caret line="130" column="4" lean-forward="true" selection-start-line="130" selection-start-column="4" selection-end-line="130" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HabitacionController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/api/controllers/HabitacionController.js">
+      <file leaf-file-name="pagina-principal.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="habitacion.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/Servicios/habitacion.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="descripcion-lugar.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="48" column="65" lean-forward="true" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
+            <state relative-caret-position="272">
+              <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
               <folding>
-                <element signature="e#0#48#0" expanded="true" />
+                <element signature="e#0#66#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="formulario-lugar.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/CrearItems/formulario-lugar/formulario-lugar.component.ts">
+      <file leaf-file-name="internal.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/Servicios/internal.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="94" column="17" lean-forward="true" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="descripcion-lugar.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsuarioController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/api/controllers/UsuarioController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="97" column="12" lean-forward="true" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lugar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/api/models/Lugar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -106,8 +56,38 @@
       <file leaf-file-name="lugar.service.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/Servicios/lugar.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="21" column="70" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="70" />
+            <state relative-caret-position="280">
+              <caret line="25" column="51" lean-forward="true" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lugar.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/api/models/Lugar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lugar.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/_models/Clases/Lugar.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="2" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="habitacion.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/Servicios/habitacion.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -121,11 +101,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/_models/Usuario.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/_models/Clases/Registro.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/_models/Clases/Planta.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/_models/Clases/Habitacion.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/_models/Clases/Lugar.ts" />
         <option value="$PROJECT_DIR$/backend/api/models/Planta.js" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/itemsContenedorPrincipal/menu-opciones/menu-opciones.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/itemsContenedorPrincipal/menu-opciones/menu-opciones.component.ts" />
@@ -145,7 +123,6 @@
         <option value="$PROJECT_DIR$/ProyectoApp/src/index.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/sign-in/sign-in.component.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/_guards/auth.guard.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/usuario.service.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.ts" />
@@ -165,13 +142,16 @@
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/internal.service.ts" />
         <option value="$PROJECT_DIR$/backend/api/controllers/UsuarioController.js" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/lugar.service.ts" />
-        <option value="$PROJECT_DIR$/backend/api/controllers/LugarController.js" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/habitacion.service.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/CrearItems/formulario-lugar/formulario-lugar.component.ts" />
         <option value="$PROJECT_DIR$/backend/api/controllers/HabitacionController.js" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/lugar.service.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html" />
+        <option value="$PROJECT_DIR$/backend/api/controllers/LugarController.js" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/_models/Clases/Lugar.ts" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts" />
       </list>
     </option>
   </component>
@@ -222,6 +202,11 @@
             <path>
               <item name="ProyectoTWJS" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProyectoTWJS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProyectoTWJS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProyectoTWJS" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProyectoTWJS" type="b2602c69:ProjectViewProjectNode" />
@@ -338,12 +323,12 @@
       <workItem from="1533325824647" duration="4877000" />
       <workItem from="1533418642616" duration="16274000" />
       <workItem from="1533444980150" duration="595000" />
-      <workItem from="1533492412078" duration="15522000" />
+      <workItem from="1533492412078" duration="18624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302159000" />
+    <option name="totallyTimeSpent" value="305261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -380,20 +365,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/config/session.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-406">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/config/security.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/config/custom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -534,13 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="63" column="5" lean-forward="false" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/_helpers/jwt.interceptor.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -587,13 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/main/main.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -664,30 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="72" column="16" lean-forward="true" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/Servicios/internal.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="45" column="2" lean-forward="false" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/api/models/Lugar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/api/models/Habitacion.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -700,14 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="97" column="12" lean-forward="true" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/Servicios/lugar.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" column="70" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="70" />
           <folding />
         </state>
       </provider>
@@ -728,37 +653,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/Servicios/habitacion.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="48" column="65" lean-forward="true" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
           <folding>
-            <element signature="e#0#48#0" expanded="true" />
+            <element signature="e#0#48#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/api/controllers/LugarController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/api/controllers/HabitacionController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        <state relative-caret-position="442">
+          <caret line="62" column="11" lean-forward="false" selection-start-line="40" selection-start-column="2" selection-end-line="66" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/main/main.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/Servicios/habitacion.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="72" column="16" lean-forward="true" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/Servicios/lugar.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="25" column="51" lean-forward="true" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/api/models/Lugar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/_models/Clases/Lugar.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="2" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/Servicios/internal.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/api/controllers/LugarController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="130" column="4" lean-forward="true" selection-start-line="130" selection-start-column="4" selection-end-line="130" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

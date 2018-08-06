@@ -16,10 +16,10 @@
         <ng-template let-lugar pTemplate="item">
           <div class="ui-grid ui-grid-responsive">
             <div class="ui-grid-row">
-              <div class="ui-grid-col-12"><img src="assets/imagenes/{{lugar.tipoLugar}}.png" alt="imagen del sitio" width="60"></div>
+              <div class="ui-grid-col-12"><img [src]="lugar.imagenLugar" alt="imagen del sitio" width="60"></div>
             </div>
             <div class="ui-grid-row">
-              <div class="ui-grid-col-12">{{lugar.tipoLugar}}</div>
+              <div class="ui-grid-col-12">{{lugar.nombreLugar}}</div>
             </div>
             <div class="ui-grid-row">
               <div class="ui-grid-col-12">
