@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af575478-37df-4f9f-ac39-12d51183d999" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/planta.service.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/Servicios/planta.service.ts" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/_services/authentication.service.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/_services/authentication.service.ts" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/app.routes.ts" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/CrearItems/formulario-planta/formulario-planta.component.html" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/CrearItems/formulario-planta/formulario-planta.component.html" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/CrearItems/formulario-planta/formulario-planta.component.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/CrearItems/formulario-planta/formulario-planta.component.ts" />
       <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.css" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.css" />
       <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.html" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.html" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.ts" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.css" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.css" />
       <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.ts" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.ts" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html" />
-      <change beforePath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts" afterPath="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.ts" />
-      <change beforePath="$PROJECT_DIR$/backend/api/models/Planta.js" afterPath="$PROJECT_DIR$/backend/api/models/Planta.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,19 +18,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="descripcion-habitacion.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="descripcion-habitacion.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="106" column="102" lean-forward="false" selection-start-line="106" selection-start-column="102" selection-end-line="106" selection-end-column="102" />
+            <state relative-caret-position="170">
+              <caret line="10" column="104" lean-forward="true" selection-start-line="10" selection-start-column="104" selection-end-line="10" selection-end-column="104" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#mat-card#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#mat-card-actions#0;n#mat-card#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#mat-card-actions#0;n#mat-card#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#ngb-tabset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#ngb-tab#0;n#div#1;n#div#0;n#ngb-tabset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#mat-card-content#0;n#mat-card#0;n#ng-template#0;n#ngb-tab#0;n#div#1;n#div#0;n#ngb-tabset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#ng-template#0;n#p-carousel#0;n#h2#0;n#div#1;n#div#0;n#mat-card-content#0;n#mat-card#0;n#ng-template#0;n#ngb-tab#0;n#div#1;n#div#0;n#ngb-tabset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#ng-template#0;n#p-carousel#0;n#h2#0;n#div#1;n#div#0;n#mat-card-content#0;n#mat-card#0;n#ng-template#0;n#ngb-tab#0;n#div#1;n#div#0;n#ngb-tabset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -56,22 +42,24 @@
       <file leaf-file-name="descripcion-habitacion.component.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            <state relative-caret-position="68">
+              <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="descripcion-lugar.component.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="descripcion-lugar.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="52" lean-forward="false" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+            <state relative-caret-position="195">
+              <caret line="142" column="53" lean-forward="false" selection-start-line="142" selection-start-column="53" selection-end-line="142" selection-end-column="53" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#mat-card-actions#0;n#mat-card#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,9 +131,9 @@
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/pagina-principal/pagina-principal.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/_services/authentication.service.ts" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/log-in/log-in.component.ts" />
-        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.css" />
         <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.html" />
+        <option value="$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html" />
       </list>
     </option>
   </component>
@@ -313,12 +301,12 @@
       <workItem from="1533325824647" duration="4877000" />
       <workItem from="1533418642616" duration="16274000" />
       <workItem from="1533444980150" duration="595000" />
-      <workItem from="1533492412078" duration="46622000" />
+      <workItem from="1533492412078" duration="48297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="333259000" />
+    <option name="totallyTimeSpent" value="334934000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -740,42 +728,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="52" lean-forward="false" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#mat-card-actions#0;n#mat-card#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        <state relative-caret-position="68">
+          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-habitacion/descripcion-habitacion.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="106" column="102" lean-forward="false" selection-start-line="106" selection-start-column="102" selection-end-line="106" selection-end-column="102" />
+        <state relative-caret-position="170">
+          <caret line="10" column="104" lean-forward="true" selection-start-line="10" selection-start-column="104" selection-end-line="10" selection-end-column="104" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#mat-card#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#mat-card-actions#0;n#mat-card#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#mat-card-actions#0;n#mat-card#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#ngb-tabset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#ngb-tab#0;n#div#1;n#div#0;n#ngb-tabset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#mat-card-content#0;n#mat-card#0;n#ng-template#0;n#ngb-tab#0;n#div#1;n#div#0;n#ngb-tabset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#ng-template#0;n#p-carousel#0;n#h2#0;n#div#1;n#div#0;n#mat-card-content#0;n#mat-card#0;n#ng-template#0;n#ngb-tab#0;n#div#1;n#div#0;n#ngb-tabset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#ng-template#0;n#p-carousel#0;n#h2#0;n#div#1;n#div#0;n#mat-card-content#0;n#mat-card#0;n#ng-template#0;n#ngb-tab#0;n#div#1;n#div#0;n#ngb-tabset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#h5#0;n#div#0;n#ng-template#0;n#p-carousel#0;n#h2#0;n#div#1;n#div#0;n#mat-card-content#0;n#mat-card#0;n#ng-template#0;n#ngb-tab#0;n#div#1;n#div#0;n#ngb-tabset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoApp/src/app/componentes/descripcion-lugar/descripcion-lugar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="142" column="53" lean-forward="false" selection-start-line="142" selection-start-column="53" selection-end-line="142" selection-end-column="53" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#mat-card-actions#0;n#mat-card#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

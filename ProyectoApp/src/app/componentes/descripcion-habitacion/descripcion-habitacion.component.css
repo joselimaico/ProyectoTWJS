@@ -1,7 +1,7 @@
 .sa-contenedor-Informacion-Habitacion-Escogido {
   margin: auto;
   width: 90%;
-  border: 3px solid brown;
+  /*border: 3px solid brown;*/
   padding: 10px;
 }
 
@@ -34,6 +34,6 @@
 .sa-centrar-Informacion{
   margin: auto;
   width: 100%;
-  border: 3px solid green;
+  /*border: 3px solid green;*/
   /*padding: 50px;*/
 }
