@@ -1,10 +1,9 @@
-/*.sa-contenedor-Informacion-Habitacion-Escogida {*/
-  /*margin: auto;*/
-  /*!*width: 90%;*!*/
-  /*border: 3px solid brown;*/
-  /*padding: 50px;*/
-  /*text-align: center;*/
-/*}*/
+.sa-contenedor-Informacion-Habitacion-Escogido {
+  margin: auto;
+  width: 90%;
+  border: 3px solid brown;
+  padding: 10px;
+}
 
 .center{
   width: 75%;
@@ -22,12 +21,19 @@
 }
 
 .example-card {
-  text-align: center;
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .sa-Tarjeta-Informacion{
   max-width: 100%;
 
-  border: 3px solid brown;
+  /*border: 3px solid brown;*/
+}
+
+
+.sa-centrar-Informacion{
+  margin: auto;
+  width: 100%;
+  border: 3px solid green;
+  /*padding: 50px;*/
 }

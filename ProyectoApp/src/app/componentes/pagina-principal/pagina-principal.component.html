@@ -43,28 +43,20 @@
       </button>
       <p>Nueva Planta</p>
     </div>
-    <div class="col-lg-10">
+    <div class="col-lg-10" *ngIf="plantas">
       <p-carousel  headerText="Mis Plantas" [value]="plantas">
         <ng-template let-planta pTemplate="item">
           <div class="ui-grid ui-grid-responsive">
             <div class="ui-grid-row">
-              <div class="ui-grid-col-12"><img src="assets/imagenes/{{planta.especie}}.png" alt="imagen de la planta" width="60"></div>
+              <br>
+              <div class="ui-grid-col-12">
+                <img [src]="planta.imagenPlanta" alt="imagen de la planta" width="60">
+              </div>
+              <br>
             </div>
             <div class="ui-grid-row">
               <div class="ui-grid-col-6">Nombre</div>
-              <div class="ui-grid-col-6">{{planta.nombre}}</div>
-            </div>
-            <div class="ui-grid-row">
-              <div class="ui-grid-col-6">Años</div>
-              <div class="ui-grid-col-6">{{planta.anios}}</div>
-            </div>
-            <div class="ui-grid-row">
-              <div class="ui-grid-col-6">Color</div>
-              <div class="ui-grid-col-6">{{planta.color}}</div>
-            </div>
-            <div class="ui-grid-row">
-              <div class="ui-grid-col-6">Especie</div>
-              <div class="ui-grid-col-6">{{planta.especie}}</div>
+              <div class="ui-grid-col-6">{{planta.nombrePlanta}}</div>
             </div>
             <div class="ui-grid-row">
               <div class="ui-grid-col-12">

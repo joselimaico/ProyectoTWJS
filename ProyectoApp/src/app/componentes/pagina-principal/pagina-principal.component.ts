@@ -5,6 +5,7 @@ import {PlaceService} from "../../_services/place.service";
 import {InternalService} from "../../Servicios/internal.service";
 import {LugarService} from "../../Servicios/lugar.service";
 import {Lugar} from "../../_models/Clases/Lugar";
+import {PlantaService} from "../../Servicios/planta.service";
 
 class Planta {
   nombre:string
@@ -28,23 +29,23 @@ export class PaginaPrincipalComponent implements OnInit, OnChanges {
   constructor(private _router:Router,
               private _lugarService:LugarService,
               private _route:ActivatedRoute,
-              private _internalService:InternalService
+              private _internalService:InternalService,
+              private _plantaService: PlantaService
               ) {
     this.msgs = [];
-    this.plantas = [
-      {nombre: 'Helen', anios: 2, especie: 'Helecho', color: 'Verde'},
-      {nombre: 'Mongi', anios: 1, especie: 'Magnolia', color: 'Blanco'},
-      {nombre: 'Piny', anios: 1, especie: 'Pino', color: 'Verde'},
-      {nombre: 'Luz', anios: 2, especie: 'Amapola', color: 'Morado'},
-
-    ];
+    // this.plantas = [
+    //   {nombre: 'Helen', anios: 2, especie: 'Helecho', color: 'Verde'},
+    //   {nombre: 'Mongi', anios: 1, especie: 'Magnolia', color: 'Blanco'},
+    //   {nombre: 'Piny', anios: 1, especie: 'Pino', color: 'Verde'},
+    //   {nombre: 'Luz', anios: 2, especie: 'Amapola', color: 'Morado'},
+    //
+    // ];
   }
 
   selectPlanta(planta: Planta) {
     this.msgs = [];
     this.msgs.push({severity: 'info', summary: 'Planta Seleccionada', detail: 'Nombre:' + planta.nombre});
     console.log('lugares',this.lugares)
-    //this.selectUnLugar(0)
   }
 
   selectLugar(lugar:Lugar){
@@ -71,7 +72,10 @@ export class PaginaPrincipalComponent implements OnInit, OnChanges {
       .subscribe(
         (resultado) => {
           this.lugares = <Lugar[]>resultado.listaLugares;
-          console.log('los lugares que tengo con este usuario son: ',this.lugares);
+          this._plantaService.obtenerTodasLasPlantasCreadas()
+            .subscribe((respuesta) => {
+              this.plantas = <Planta[]>respuesta;
+            })
         }
       )
   }

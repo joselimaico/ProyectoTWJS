@@ -1,75 +1,158 @@
-<div class="sa-contenedor-Main" *ngIf="habitacionEscogida">
-    <mat-card class="center" *ngFor="let habitacion of habitacionEscogida">
-      <mat-card-header>
+<div class="sa-contenedor-Informacion-Habitacion-Escogido">
+  <div class="row">
+    <div class="col-lg-3" *ngIf="habitacionEscogida" style="border: black solid 3px">
 
-        <mat-card-title>Habitación</mat-card-title>
-        <mat-card-subtitle>{{habitacion.nombreHabitacion}}</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image [src]="habitacion.imagenHabitacion" alt="Photo of a random room">
-      <mat-card-content>
-        <div class="row">
-          <div class="col-lg-6">
-            Nombre de la Habitación:
-          </div>
-          <div class="col-lg-6">
-            {{habitacion.nombreHabitacion}}
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-lg-6">
-            Tamaño de la Habitación:
-          </div>
-          <div class="col-lg-6">
-            {{habitacion.tamanioHabitacion}}
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-lg-6">
-            ¿Recibe Luz Solar la habitación?
-          </div>
-          <div class="col-lg-6">
-            {{habitacion.luzSolarHabitacion}}
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-lg-6">
-            Tipo de Ambiente de la Habitación:
-          </div>
-          <div class="col-lg-6">
-            {{habitacion.descripcionHabitacion}}
-          </div>
-        </div>
-      </mat-card-content>
-      <mat-card-actions>
-        <p-dataScroller [value]="listaPlantasDeLaHabitacion" [rows]="2" *ngIf="listaPlantasDeLaHabitacion">
-          <p-header>
-            Lista de Plantas en la Habitación
-          </p-header>
-          <ng-template let-plant pTemplate="item" let-i="index">
-            <div class="ui-g car-item">
-              <div class="ui-g-12 ui-md-3">
-                <img [src]="plant.imagenPlanta">
+        <mat-card class="example-card" *ngFor="let habitacion of habitacionEscogida" style="max-height: 94%">
+          <mat-card-header>
+            <mat-card-title>Habitación</mat-card-title>
+            <mat-card-subtitle>{{habitacion.nombreHabitacion}}</mat-card-subtitle>
+          </mat-card-header>
+
+          <img mat-card-image [src]="habitacion.imagenHabitacion" alt="Photo of a random room" width="100" height="170">
+
+          <mat-card-actions>
+            <div class="row">
+              <div class="col-lg-6" style="text-align: center">
+
+                <button mat-fab color="primary" (click)="open(content)">
+                  <mat-icon matSuffix>update</mat-icon>
+                </button>
+                <p>Actualizar</p>
+
               </div>
-              <div class="ui-g-12 ui-md-9">
-                <div class="ui-g">
+              <div class="col-lg-6" style="text-align: center">
 
-                  <div class="ui-g-2 ui-sm-6">Nombre de la Planta: </div>
-                  <div class="ui-g-10 ui-sm-6">{{plant.nombrePlanta}}</div>
+                <button mat-fab color="primary">
+                  <mat-icon matSuffix>delete</mat-icon>
+                </button>
+                <p>Eliminar</p>
 
-                  <div class="ui-g-2 ui-sm-6">Detalle de la Planta: </div>
-                  <div class="ui-g-10 ui-sm-6">{{plant.detallePlanta}}</div>
-
-                </div>
               </div>
             </div>
-          </ng-template>
-        </p-dataScroller>
-      </mat-card-actions>
-    </mat-card>
+          </mat-card-actions>
+
+
+        </mat-card>
+
+    </div>
+    <div class="col-lg-9" style="border: black solid 3px">
+      <div class="row sa-centrar-Informacion">
+        <div class="col-lg-12">
+          <ngb-tabset>
+            <div class="row">
+
+              <div class="col-lg-6">
+                <ngb-tab title="Datos de la Habitacion" *ngFor="let habitacion of habitacionEscogida">
+                  <ng-template ngbTabContent>
+                    <mat-card class="sa-Tarjeta-Informacion">
+                      <mat-card-content>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            Nombre de la Habitación:
+                          </div>
+                          <div class="col-lg-6">
+                            {{habitacion.nombreHabitacion}}
+                          </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            Tamaño de la Habitación:
+                          </div>
+                          <div class="col-lg-6">
+                            {{habitacion.tamanioHabitacion}}
+                          </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            ¿Recibe Luz Solar la habitación?
+                          </div>
+                          <div class="col-lg-6">
+                            {{habitacion.luzSolarHabitacion}}
+                          </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            Tipo de Ambiente de la Habitación:
+                          </div>
+                          <div class="col-lg-6">
+                            {{habitacion.descripcionHabitacion}}
+                          </div>
+                        </div>
+                      </mat-card-content>
+                    </mat-card>
+                  </ng-template>
+                </ngb-tab>
+              </div>
+
+              <div class="col-lg-6">
+                <ngb-tab title="Mis Plantas" style="max-width: 100%">
+                  <ng-template ngbTabContent>
+                    <mat-card class="sa-Tarjeta-Informacion">
+                      <mat-card-content>
+                        <div class="row">
+                          <div class="col-lg-1" style="text-align: center; padding-top: 50px">
+                            <h1>
+                              <button mat-fab color="primary" (click)="irAlFormularioPlanta()">
+                                <mat-icon>add_circle</mat-icon>
+                              </button>
+                            </h1>
+                            <h6><p>Nueva planta</p></h6>
+                          </div>
+                          <div class="col-lg-11">
+
+                            <h2>
+                              <p-carousel  headerText="Lista de plantas que existen en esta habitación"  [value]="listaPlantasDeLaHabitacion">
+                                <ng-template let-plant pTemplate="item">
+                                  <div class="ui-grid ui-grid-responsive">
+                                    <div class="ui-grid-row">
+                                      <div class="ui-grid-col-12" style="text-align: center; padding: 20px">
+                                        <img [src]="plant.imagenPlanta" width="120" height="80">
+                                      </div>
+                                    </div>
+                                    <div class="ui-grid-row">
+                                      <div class="ui-grid-col-12" style="text-align: center; padding: 20px;">
+                                        {{plant.nombrePlanta}}
+                                      </div>
+                                    </div>
+                                    <h5>
+                                      <div class="ui-grid-row">
+                                        <div class="ui-grid-col-12" style="text-align: center">
+                                          <button type="button" pButton icon="pi pi-search"></button>
+                                        </div>
+                                      </div>
+                                    </h5>
+                                  </div>
+                                </ng-template>
+                              </p-carousel>
+                            </h2>
+
+
+                          </div>
+                        </div>
+                      </mat-card-content>
+                    </mat-card>
+                  </ng-template>
+                </ngb-tab>
+              </div>
+
+            </div>
+          </ngb-tabset>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+
 
 
 

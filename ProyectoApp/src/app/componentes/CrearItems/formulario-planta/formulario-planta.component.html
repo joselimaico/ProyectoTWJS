@@ -1,3 +1,64 @@
-<p>
-  formulario-planta works!
-</p>
+<br>
+<h1>Formulario para crear una nueva planta</h1>
+<br>
+
+<div class="row">
+  <div class="col-lg-9">
+    <mat-vertical-stepper>
+      <mat-step>
+
+        <form>
+          <ng-template matStepLabel><h3>Llena el nombre de tu planta</h3></ng-template>
+          <mat-form-field>
+            <input matInput placeholder="Nombre de la planta" required name="nombreP" [(ngModel)]="inputNombrePlanta" style="height: 80%; width: 60%">
+          </mat-form-field>
+        </form>
+
+      </mat-step>
+      <mat-step>
+
+        <form>
+          <ng-template matStepLabel><h3>Describe como es tu planta</h3></ng-template>
+          <mat-form-field>
+            <input matInput placeholder="descripción de la planta" required name="descripcionP" [(ngModel)]="inputDescripcionPlanta">
+          </mat-form-field>
+        </form>
+
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel><h3>Resumen de la planta</h3></ng-template>
+        <div class="row">
+          <div class="col-lg-12">
+            <mat-card style="width: 100%">
+              <div class="row">
+                <div class="col-lg-6">
+                  Nombre de la planta:
+                </div>
+                <div class="col-lg-6">
+                  {{inputNombrePlanta}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  Descripción de la planta:
+                </div>
+                <div class="col-lg-6">
+                  {{inputDescripcionPlanta}}
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </mat-step>
+    </mat-vertical-stepper>
+  </div>
+  <div class="col-lg-3">
+    <button mat-raised-button color="primary" style="float: right; width: 100%; height: 100%" (click)="registrarNuevaPlanta()"><h1>Terminar!</h1></button>
+  </div>
+</div>
+
+
+
+
+
+

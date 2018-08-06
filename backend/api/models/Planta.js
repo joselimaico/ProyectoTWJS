@@ -9,7 +9,6 @@ module.exports = {
 
   attributes: {
 
-    idPlanta: {type:'number',required: true},
     nombrePlanta: {type:'string',required: true},
     detallePlanta:{type:'string',required:false},
     imagenPlanta: {type:'string',required:false},

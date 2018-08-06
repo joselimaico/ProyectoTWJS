@@ -1,7 +1,7 @@
-<div class="sa-contenedor-Informacion-Lugar-Escogido">
+<div class="sa-contenedor-Informacion-Lugar-Escogido" *ngIf="!isHabitacionSelected">
   <div class="row">
 
-    <div class="col-lg-3" *ngIf="lugarSeleccionado">
+    <div class="col-lg-3" *ngIf="lugarSeleccionado" style="border-color: black">
       <mat-card class="example-card"  *ngFor="let place of lugarSeleccionado">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
@@ -28,7 +28,7 @@
       </mat-card>
     </div>
 
-    <div class="col-lg-9">
+    <div class="col-lg-9" style="border-color: black">
       <div class="row">
         <div class="col-lg-12">
 
@@ -40,45 +40,30 @@
                   <ng-template ngbTabContent>
                     <mat-card class="sa-Tarjeta-Informacion">
                       <mat-card-content>
-                        <p> Lugar: {{lugar.tipoLugar}}</p>
-                        <p> Sector: {{lugar.sectorLugar}}</p>
-                        <p>Descripcion: {{lugar.descripcionLugar}}</p>
-                      </mat-card-content>
-                    </mat-card>
-                  </ng-template>
-                </ngb-tab>
-              </div>
-
-              <div class="col-lg-6">
-                <ngb-tab title="Habitaciones">
-                  <ng-template ngbTabContent>
-                    <mat-card class="sa-Tarjeta-Informacion">
-                      <mat-card-content>
                         <div class="row">
-                          <div class="col-lg-1" style="text-align: center; padding-top: 50px">
-                            <button mat-fab color="primary" (click)="irAlFormularioHabitacion()">
-                              <mat-icon>add_circle</mat-icon>
-                            </button>
-                            <p>Nueva habitación</p>
+                          <div class="col-lg-6">
+                            <h3>Tipo de Lugar:</h3>
                           </div>
-                          <div class="col-lg-11">
-                            <p-carousel  headerText="Lista de Habitaciones"  [value]="listaHabitaciones">
-                              <ng-template let-room pTemplate="item">
-                                <div class="ui-grid ui-grid-responsive">
-                                  <div class="ui-grid-row">
-                                    <div class="ui-grid-col-12"><img [src]="room.imagenHabitacion" width="60"></div>
-                                  </div>
-                                  <div class="ui-grid-row">
-                                    <div class="ui-grid-col-12">{{room.nombreHabitacion}}</div>
-                                  </div>
-                                  <div class="ui-grid-row">
-                                    <div class="ui-grid-col-12">
-                                      <button type="button" pButton icon="pi pi-search" (click)="seleccionarHabitacion(room)" ></button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </ng-template>
-                            </p-carousel>
+                          <div class="col-lg-6">
+                            <h4>{{lugar.tipoLugar}}</h4>
+                          </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <h3>Sector del Lugar:</h3>
+                          </div>
+                          <div class="col-lg-6">
+                            <h4>{{lugar.sectorLugar}}</h4>
+                          </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <h3>Descripción adicional del Lugar:</h3>
+                          </div>
+                          <div class="col-lg-6">
+                            <h4>{{lugar.descripcionLugar}}</h4>
                           </div>
                         </div>
                       </mat-card-content>
@@ -87,13 +72,54 @@
                 </ngb-tab>
               </div>
 
+              <div class="col-lg-6">
+                <ngb-tab title="Habitaciones" style="max-width: 100%">
+                  <ng-template ngbTabContent>
+                    <mat-card class="sa-Tarjeta-Informacion">
+                      <mat-card-content>
+                        <div class="row">
+                          <div class="col-lg-1" style="text-align: center; padding-top: 50px">
+                            <h1>
+                              <button mat-fab color="primary" (click)="irAlFormularioHabitacion()">
+                                <mat-icon>add_circle</mat-icon>
+                              </button>
+                            </h1>
+                              <h6><p>Nueva habitación</p></h6>
+                          </div>
+                          <div class="col-lg-11">
+
+                            <h2>
+                              <p-carousel  headerText="Lista de Habitaciones"  [value]="listaHabitaciones">
+                                <ng-template let-room pTemplate="item">
+                                  <div class="ui-grid ui-grid-responsive">
+                                    <div class="ui-grid-row">
+                                      <div class="ui-grid-col-12"><img [src]="room.imagenHabitacion" width="60"></div>
+                                    </div>
+                                    <div class="ui-grid-row">
+                                      <div class="ui-grid-col-12">{{room.nombreHabitacion}}</div>
+                                    </div>
+                                    <div class="ui-grid-row">
+                                      <div class="ui-grid-col-12">
+                                        <button type="button" pButton icon="pi pi-search" (click)="seleccionarHabitacion(room)" ></button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </ng-template>
+                              </p-carousel>
+                            </h2>
+
+
+                          </div>
+                        </div>
+                      </mat-card-content>
+                    </mat-card>
+                  </ng-template>
+                </ngb-tab>
+              </div>
 
             </div>
           </ngb-tabset>
 
-        </div>
-        <div class="col-lg-12">
-          <router-outlet></router-outlet>
         </div>
       </div>
 
@@ -106,11 +132,16 @@
   </div>
 </div>
 
-<div class="sa-contenedor-Informacion-Lugar-Escogido">
-  <button mat-stroked-button color="primary" (click)="gotoMain()">Regresar a la lista</button>
+<br>
+
+<div class="row" *ngIf="isHabitacionSelected">
+  <div class="col-lg-12">
+    <router-outlet>
+      <button mat-stroked-button color="primary" (click)="retroceder()">Regresar a mi Lugar</button>
+    </router-outlet>
+  </div>
 </div>
 
-<br>
 
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">

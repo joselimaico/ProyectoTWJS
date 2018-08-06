@@ -57,7 +57,7 @@ export const RUTAS_APP: Routes = [
     canActivate:[AuthGuard]
   },
   {
-    path: 'FormularioPlanta',
+    path: 'CrearPlanta',
     component: FormularioPlantaComponent,
     canActivate:[AuthGuard]
   },

@@ -19,6 +19,7 @@ export class DescripcionLugarComponent implements OnInit {
 
   closeResult: string;
   listaHabitaciones: Habitacion[];
+  isHabitacionSelected = false;
   lugarSeleccionado:any;
 
   constructor(private route: ActivatedRoute,
@@ -50,6 +51,7 @@ export class DescripcionLugarComponent implements OnInit {
   }
 
   seleccionarHabitacion(room:Habitacion){
+    this.isHabitacionSelected = true;
     this._internalService.actualizarHabitacion(room);
     this._router.navigate([`/Lugar/${this._internalService.retornarLugar().id}/Habitacion/${this._internalService.retornarHabitacion().id}`]);
   }
@@ -77,9 +79,9 @@ export class DescripcionLugarComponent implements OnInit {
     }
   }
 
-  gotoMain(){
-    //let selectedId=this.Idlugar ?this.Idlugar:null
-    this._router.navigate(['/PaginaPrincipal'],{relativeTo:this.route})
+  retroceder(){
+    this.isHabitacionSelected= false;
+    this._router.navigate([`/Lugar/${this._internalService.retornarLugar().id}`],{relativeTo:this.route})
   }
 
   irAlFormularioHabitacion(){

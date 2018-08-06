@@ -25,10 +25,7 @@ export class LogInComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
               private _router:Router,
-              private authenticationService: AuthenticationService,
-              private alertService: AlertService,
-              private route: ActivatedRoute,
-              private _internalService:InternalService) { }
+              private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
     this.loginForm = this.fb.group({
@@ -37,10 +34,6 @@ export class LogInComponent implements OnInit {
         ])],
       password: ['',Validators.compose([Validators.required,Validators.minLength(8)])]
     });
-    // this.authenticationService.logout();
-
-    // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || 'main';
-
   }
 
   getErrorMessage() {
@@ -58,31 +51,6 @@ export class LogInComponent implements OnInit {
    get f() { return this.loginForm.controls; }
 
   onSubmit() {
-    //this.submitted = true;
-    // this.email=this.loginForm.get('email').value;
-    // this.password=this.loginForm.get('password').value;
-
-    // stop here if form is invalid
-    // if (this.loginForm.invalid) {
-    //   return;
-    // }
-
-    // this.loading = true;
-    // this.authenticationService.login(this.f.username.value, this.f.password.value)
-    //   .pipe(first())
-    //   .subscribe(
-    //     data => {
-    //       this.router.navigate([this.returnUrl]);
-    //     },
-    //     error => {
-    //       this.alertService.error(error);
-    //       this.loading = false;
-    //     });
-    // if(this.loginForm.get('username').value==='jose'&&this.loginForm.get('password').value==='12345678'){
-    //   this.authenticationService.login(this.loginForm.get('username').value,this.loginForm.get('password').value)
-    //   this.router.navigate(['/main']);
-    // }
-    //console.log(this.loginUserData)
      this.authenticationService.login(this.f.email.value,this.f.password.value)
       .subscribe(
         res => {
@@ -90,18 +58,11 @@ export class LogInComponent implements OnInit {
           localStorage.setItem('token',`${res.token}`)
           console.log('Dentro del subscribe el localstorage tiene algo??',localStorage.hasOwnProperty('token'));
           console.log('dentro del subscribe el token es: ',localStorage.getItem('token'));
-          this._internalService.cargarToken(res.token);
           this._router.navigate(['/PaginaPrincipal'])
         },
         err => console.log(err)
       )
   }
-
-
-  // logInUsuario(){
-  //   this.authenticationService.login()
-  // }
-
 
   irASignIn(){
     const url = ['/signin'];
