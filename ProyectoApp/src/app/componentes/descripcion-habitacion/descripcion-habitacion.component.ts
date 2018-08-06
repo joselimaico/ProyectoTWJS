@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {PlaceService} from "../../_services";
+import {InternalService} from "../../Servicios/internal.service";
+import {HabitacionService} from "../../Servicios/habitacion.service";
+import {Habitacion} from "../../_models/Clases/Habitacion";
+import {Planta} from "../../_models/Clases/Planta";
 
 @Component({
   selector: 'app-descripcion-habitacion',
@@ -8,22 +11,23 @@ import {PlaceService} from "../../_services";
 })
 export class DescripcionHabitacionComponent implements OnInit {
 
-  roomArray:[any]
-  constructor(private _lugarService:PlaceService) { }
+  habitacionEscogida : Habitacion[];
+  listaPlantasDeLaHabitacion: Planta[];
+
+  constructor(private _internalService:InternalService,
+              private _habitacionService:HabitacionService) { }
 
   ngOnInit() {
-    this.escucharCambios()
+    this.cargarDatosDeHabitacion();
   }
 
-  escucharCambios() {
-    this._lugarService
-      .envioArreglo
-      .subscribe(
-        (arreglo:[any]) => {
-          this.roomArray = [arreglo];
-          console.log('arreglo de habitacion recibido',this.roomArray)
-        }
-      )
+  cargarDatosDeHabitacion(){
+    this._habitacionService.
+    obtenerHabitacionEscogida(this._internalService.retornarHabitacion().id)
+      .subscribe((respuesta)=>{
+        console.log('esto arroja el servidor back: ',respuesta);
+        this.habitacionEscogida = <Habitacion[]>respuesta.habitacion;
+      })
   }
 
 }

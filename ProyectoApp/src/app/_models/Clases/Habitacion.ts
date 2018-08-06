@@ -1,7 +1,7 @@
 import {Planta} from "./Planta";
 
 export interface Habitacion{
- idHabitacion:number;
+ id:number;
  nombreHabitacion:string;
  tamanioHabitacion:string;
  luzSolarHabitacion:boolean;

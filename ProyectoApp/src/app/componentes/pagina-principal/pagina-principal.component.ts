@@ -48,8 +48,11 @@ export class PaginaPrincipalComponent implements OnInit, OnChanges {
   }
 
   selectLugar(lugar:Lugar){
-    this._internalService.actualizarLugar(lugar.id);
-    const url = ['/Lugar/'+this._internalService.retornarLugar()];
+    // this._internalService.actualizarIdLugar(lugar.id);
+    // const url = ['/Lugar/'+this._internalService.retornarIdLugar()];
+
+    this._internalService.actualizarLugar(lugar);
+    const url = ['/Lugar/'+this._internalService.retornarLugar().id];
 
     this._router.navigate(url);
   }
@@ -67,9 +70,8 @@ export class PaginaPrincipalComponent implements OnInit, OnChanges {
     this._lugarService.obtenerListaDeLugaresRegistrados()
       .subscribe(
         (resultado) => {
-          // console.log('mis lugares con este usuario: ',resultado);
           this.lugares = <Lugar[]>resultado.listaLugares;
-          console.log('los lugares que tengo en este momento son: ',this.lugares);
+          console.log('los lugares que tengo con este usuario son: ',this.lugares);
         }
       )
   }

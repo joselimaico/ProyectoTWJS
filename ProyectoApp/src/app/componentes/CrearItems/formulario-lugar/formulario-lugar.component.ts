@@ -4,6 +4,7 @@ import {HabitacionService} from "../../../Servicios/habitacion.service";
 import {forEach} from "@angular/router/src/utils/collection";
 import {Router} from "@angular/router";
 import {InternalService} from "../../../Servicios/internal.service";
+import {Lugar} from "../../../_models/Clases/Lugar";
 
 @Component({
   selector: 'app-formulario-lugar',
@@ -74,12 +75,10 @@ export class FormularioLugarComponent implements OnInit {
         bodyLugar.tipoLugar != 'undefined'){
         this._lugarService.crearNuevoLugar(bodyLugar)
         .subscribe(res => {
-          // console.log('esto devuelve el server: ',res);
+          this._internalService.actualizarLugar(<Lugar>res.newPlace);
           let idLugar = res.newPlace.id;
-          this._internalService.actualizarLugar(idLugar);
-          // console.log('id del lugar es: ',idLugar);
+          this._internalService.actualizarIdLugar(idLugar);
           let bodyHabitacion = this.crearNuevaHabitacion(idLugar);
-          //console.log('el body de la habitacion: ',bodyHabitacion);
 
           if (bodyHabitacion.nombreHabitacion!='undefined'&&
               bodyHabitacion.descripcionHabitacion != 'undefined'&&
@@ -90,8 +89,6 @@ export class FormularioLugarComponent implements OnInit {
             this._habitacionService.crearNuevaHabitacion(bodyHabitacion)
               .subscribe( resultado => {
                   console.log('el servidor pudo guardar una nueva habitación: ',resultado);
-                  // let idHabitacion = resultado.newRoom.id;
-                  // this._router.navigate([`/Lugar/${idLugar}/Habitacion/${idHabitacion}`]);
                 }
               )
           }
@@ -117,7 +114,6 @@ export class FormularioLugarComponent implements OnInit {
       imagenHabitacion: `${this.urlImagenHabitacion}`,
       lugarFK: `${FKLugar}`
     };
-    //console.log('objeto JSON', body);
     return body;
   }
 
@@ -130,7 +126,6 @@ export class FormularioLugarComponent implements OnInit {
       descripcionLugar: `${this.inputDescripcionLugar}`,
       imagenLugar: `${this.urlImagenLugar}`
     };
-    //console.log('objeto JSON', body);
     return body;
   }
 

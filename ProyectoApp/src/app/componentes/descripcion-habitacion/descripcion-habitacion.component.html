@@ -1,41 +1,67 @@
-<div class="sa-contenedor-Main">
-    <mat-card class="center">
+<div class="sa-contenedor-Main" *ngIf="habitacionEscogida">
+    <mat-card class="center" *ngFor="let habitacion of habitacionEscogida">
       <mat-card-header>
-        <!--<div mat-card-avatar class="example-header-image"></div>-->
-        <mat-card-title>Habitacion 1</mat-card-title>
-        <mat-card-subtitle>Tipo de la Habitación</mat-card-subtitle>
+
+        <mat-card-title>Habitación</mat-card-title>
+        <mat-card-subtitle>{{habitacion.nombreHabitacion}}</mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <img mat-card-image [src]="habitacion.imagenHabitacion" alt="Photo of a random room">
       <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
+        <div class="row">
+          <div class="col-lg-6">
+            Nombre de la Habitación:
+          </div>
+          <div class="col-lg-6">
+            {{habitacion.nombreHabitacion}}
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-lg-6">
+            Tamaño de la Habitación:
+          </div>
+          <div class="col-lg-6">
+            {{habitacion.tamanioHabitacion}}
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-lg-6">
+            ¿Recibe Luz Solar la habitación?
+          </div>
+          <div class="col-lg-6">
+            {{habitacion.luzSolarHabitacion}}
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-lg-6">
+            Tipo de Ambiente de la Habitación:
+          </div>
+          <div class="col-lg-6">
+            {{habitacion.descripcionHabitacion}}
+          </div>
+        </div>
       </mat-card-content>
       <mat-card-actions>
-        <p-dataScroller [value]="cars" [rows]="10">
+        <p-dataScroller [value]="listaPlantasDeLaHabitacion" [rows]="2" *ngIf="listaPlantasDeLaHabitacion">
           <p-header>
             Lista de Plantas en la Habitación
           </p-header>
-          <ng-template let-car pTemplate="item" let-i="index">
+          <ng-template let-plant pTemplate="item" let-i="index">
             <div class="ui-g car-item">
               <div class="ui-g-12 ui-md-3">
-                <img src="assets/showcase/images/demo/car/{{car.brand}}.png">
+                <img [src]="plant.imagenPlanta">
               </div>
               <div class="ui-g-12 ui-md-9">
                 <div class="ui-g">
-                  <div class="ui-g-2 ui-sm-6">Vin: </div>
-                  <div class="ui-g-10 ui-sm-6">{{car.vin}}</div>
 
-                  <div class="ui-g-2 ui-sm-6">Year: </div>
-                  <div class="ui-g-10 ui-sm-6">{{car.year}}</div>
+                  <div class="ui-g-2 ui-sm-6">Nombre de la Planta: </div>
+                  <div class="ui-g-10 ui-sm-6">{{plant.nombrePlanta}}</div>
 
-                  <div class="ui-g-2 ui-sm-6">Brand: </div>
-                  <div class="ui-g-10 ui-sm-6">{{car.brand}}</div>
+                  <div class="ui-g-2 ui-sm-6">Detalle de la Planta: </div>
+                  <div class="ui-g-10 ui-sm-6">{{plant.detallePlanta}}</div>
 
-                  <div class="ui-g-2 ui-sm-6">Color: </div>
-                  <div class="ui-g-10 ui-sm-6">{{car.color}}</div>
                 </div>
               </div>
             </div>

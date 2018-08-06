@@ -71,7 +71,11 @@ export const RUTAS_APP: Routes = [
     component:DescripcionLugarComponent,
     canActivate:[AuthGuard],
     children:[
-      {path:'Habitacion/:id',component:DescripcionHabitacionComponent}
+      {
+        path:'Habitacion/:id',
+        component:DescripcionHabitacionComponent,
+        canActivate: [AuthGuard]
+      }
 
     ]
   },

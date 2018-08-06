@@ -46,7 +46,7 @@ export class FormularioHabitacionComponent implements OnInit {
   }
 
   generarNuevaHabitacion(){
-    let idLugar = this._internalService.retornarLugar();
+    let idLugar = this._internalService.retornarIdLugar();
     let bodyHabitacion = this.crearNuevaHabitacion(idLugar);
     if (bodyHabitacion.nombreHabitacion!='undefined'&&
       bodyHabitacion.descripcionHabitacion != 'undefined'&&

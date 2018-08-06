@@ -35,24 +35,24 @@ export class DescripcionLugarComponent implements OnInit {
   }
 
   recibirLugar(){
-    let idDelLugar = this._internalService.retornarLugar();
+    // let idDelLugar = this._internalService.retornarIdLugar();
+
+    let idDelLugar = this._internalService.retornarLugar().id;
 
     this._lugarService.obtenerMiLugar(idDelLugar)
       .subscribe((resultado) => {
-        console.log('esto devuelve el servidor al consultar mi lugar: ',resultado);
         this.lugarSeleccionado = resultado.lugarEncontrado;
         this._habitacionService.obtenerListaDeHabitacionesRegistradas(idDelLugar)
           .subscribe((respuesta) => {
-            console.log('lista de habitaciones del lugar actual: ', respuesta);
             this.listaHabitaciones = <Habitacion[]>respuesta.listaHabitaciones;
           })
       });
   }
 
-  irAlFormularioHabitacion(){
-    this._router.navigate(['/crearNuevaHabitacion']);
+  seleccionarHabitacion(room:Habitacion){
+    this._internalService.actualizarHabitacion(room);
+    this._router.navigate([`/Lugar/${this._internalService.retornarLugar().id}/Habitacion/${this._internalService.retornarHabitacion().id}`]);
   }
-
 
 
 
@@ -82,5 +82,8 @@ export class DescripcionLugarComponent implements OnInit {
     this._router.navigate(['/PaginaPrincipal'],{relativeTo:this.route})
   }
 
+  irAlFormularioHabitacion(){
+    this._router.navigate(['/crearNuevaHabitacion']);
+  }
 
 }
