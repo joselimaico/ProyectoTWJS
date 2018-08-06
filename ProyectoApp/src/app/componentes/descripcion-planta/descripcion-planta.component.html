@@ -1,0 +1,163 @@
+<div class="sa-contenedor-Informacion-Planta-Escogida">
+  <div class="row">
+    <div class="col-lg-3" *ngIf="plantaEscogida">
+      <mat-card class="example-card" *ngFor="let plant of plantaEscogida">
+        <mat-card-header>
+
+          <mat-card-title>
+            <h4>Planta Escogida</h4>
+          </mat-card-title>
+          <mat-card-subtitle>
+            <h5>{{plant.nombrePlanta}}</h5>
+          </mat-card-subtitle>
+
+        </mat-card-header>
+
+        <img mat-card-image [src]="plant.imagenPlanta" alt="Photo of a random plant" width="100">
+
+        <mat-card-actions>
+          <div class="row">
+            <div class="col-lg-6" style="text-align: center">
+
+              <button mat-fab color="primary" (click)="open(content)"><mat-icon matSuffix>update</mat-icon></button>
+              <p>Actualizar</p>
+
+            </div>
+            <div class="col-lg-6" style="text-align: center">
+
+              <button mat-fab color="primary"><mat-icon matSuffix>delete</mat-icon></button>
+              <p>Eliminar</p>
+
+            </div>
+          </div>
+        </mat-card-actions>
+
+      </mat-card>
+    </div>
+    <div class="col-lg-9">
+      <div class="row sa-centrar-Informacion">
+        <div class="col-lg-12">
+          <mat-tab-group color="accent" backgroundColor="primary">
+            <mat-tab label="Ficha de Información de la Planta">
+              <mat-card class="sa-Tarjeta-Informacion" *ngFor="let plant of plantaEscogida">
+                <mat-card-content>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      Nombre de la planta:
+                    </div>
+                    <div class="col-lg-6">
+                      {{plant.nombrePlanta}}
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      Detalle Adicional de la planta:
+                    </div>
+                    <div class="col-lg-6">
+                      {{plant.detallePlanta}}
+                    </div>
+                  </div>
+                </mat-card-content>
+              </mat-card>
+            </mat-tab>
+            <mat-tab label="Actividades">
+              <mat-card>
+                <div class="row">
+                  <div class="col-lg-7">
+                    <h3> Lista de Actividades</h3>
+                    <br>
+                    <div class="row">
+
+                      <div class="col-lg-12">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <h6 style="padding-top: 5px; padding-bottom: 5px">¿Quieres regar la planta en este instante?</h6>
+                          </div>
+                          <div class="col-lg-6">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" style="width: 70%">¡¡Regar Ahora!!</button>
+                          </div>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="col-lg-12">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            ¿Cuándo fue la última vez que regaste?
+                          </div>
+                          <div class="col-lg-6">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" style="width: 70%">Ver último registro</button>
+                          </div>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="col-lg-12">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            ¿Cuál es el estado del suelo?
+                          </div>
+                          <div class="col-lg-6">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" style="width: 70%">Ver Estado Suelo</button>
+                          </div>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="col-lg-12">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            ¿Quieres iniciar el riego automático?
+                          </div>
+                          <div class="col-lg-6">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" style="width: 70%">Encender Riego Auto.</button>
+                          </div>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="col-lg-12">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            ¿Quieres parar el riego automático?
+                          </div>
+                          <div class="col-lg-6">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" style="width: 70%">Apagar Riego Auto.</button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <div class="col-lg-5">
+                    <h3>Resultado de la acción</h3>
+                    <br>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <mat-card style="width: 100%; height: 100%">
+                          <h1>AQUI EL RESULTADO DE LA ACCIÓN</h1>
+                        </mat-card>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </mat-card>
+
+
+            </mat-tab>
+            <mat-tab label="Historial de esta planta">
+              <div class="row" *ngFor="let plant of plantaEscogida">
+                <div class="col-lg-12">
+                  <mat-card>
+                    <h3>Historial de la planta: {{plant.nombrePlanta}}</h3>
+                    <br>
+                    AQUI LA TABLA DEL REGISTRO
+                  </mat-card>
+                </div>
+              </div>
+
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

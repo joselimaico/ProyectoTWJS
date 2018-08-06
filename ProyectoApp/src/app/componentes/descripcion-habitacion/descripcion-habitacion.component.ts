@@ -44,4 +44,9 @@ export class DescripcionHabitacionComponent implements OnInit {
     this._router.navigate(['/CrearPlanta']);
   }
 
+  seleccionarPlanta(plant: Planta){
+    this._internalService.actualizarPlanta(plant);
+    this._router.navigate([`/Lugar/${this._internalService.retornarLugar().id}/Habitacion/${this._internalService.retornarHabitacion().id}/Planta/${this._internalService.retornarPlanta().id}`]);
+  }
+
 }

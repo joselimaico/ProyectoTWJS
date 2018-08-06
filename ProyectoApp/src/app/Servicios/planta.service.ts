@@ -12,6 +12,7 @@ export class PlantaService {
   URLCargarRegistro = 'http://localhost:1337/Registro/saveRegister';
   URLObtenerTodasLasPlantasDeMiHabitacion = 'http://localhost:1337/Planta/getAllPlants';
   URLObtenerTodasLasPlantasCreadas = 'http://localhost:1337/Planta';
+  URLObtenerMiPlanta = 'http://localhost:1337/Planta/getMyPlant';
 
   constructor(private _httpClient: HttpClient) {
   }
@@ -27,6 +28,11 @@ export class PlantaService {
 
   obtenerTodasLasPlantasCreadas(){
     return this._httpClient.get<any>(this.URLObtenerTodasLasPlantasCreadas);
+  }
+
+  obtenerMiPlanta(idPlanta){
+    let params = new HttpParams().set('idPlanta',idPlanta);
+    return this._httpClient.get<any>(this.URLObtenerMiPlanta, {params})
   }
 
 

@@ -36,7 +36,7 @@ import { ContenedorPrincipalComponent } from './componentes/contenedor-principal
 import { MisLugaresComponent } from './componentes/mis-lugares/mis-lugares.component';
 import { MisPlantasComponent } from './componentes/mis-plantas/mis-plantas.component';
 import {MatExpansionModule} from '@angular/material/expansion';
-import {OrderListModule} from 'primeng/orderlist';
+import {MatTabsModule} from '@angular/material/tabs';
 import {DataScrollerModule} from "primeng/primeng";
 import { FormularioLugarComponent } from './componentes/CrearItems/formulario-lugar/formulario-lugar.component';
 import { FormularioPlantaComponent } from './componentes/CrearItems/formulario-planta/formulario-planta.component';
@@ -44,7 +44,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { PerfilUsuarioComponent } from './componentes/perfil-usuario/perfil-usuario.component';
 import { MenuOpcionesComponent } from './componentes/itemsContenedorPrincipal/menu-opciones/menu-opciones.component';
 import { BarraSuperiorComponent } from './componentes/itemsContenedorPrincipal/barra-superior/barra-superior.component';
-import { DescripcionPlantaComponent } from './componentes/MisPlantasComponents/descripcion-planta/descripcion-planta.component';
+import {DescripcionPlantaComponent} from "./componentes/descripcion-planta/descripcion-planta.component";
 import {TokenInterceptorService} from "./token-interceptor.service";
 import {PlaceService} from "./_services";
 import { FormularioHabitacionComponent } from './componentes/CrearItems/formulario-habitacion/formulario-habitacion.component';
@@ -83,6 +83,7 @@ import { FormularioHabitacionComponent } from './componentes/CrearItems/formular
     MatInputModule,
     MatSelectModule,
     MatChipsModule,
+    MatTabsModule,
     MatCardModule,
     MatToolbarModule,
     ReactiveFormsModule,

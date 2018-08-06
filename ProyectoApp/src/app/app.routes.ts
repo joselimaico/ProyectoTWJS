@@ -12,6 +12,7 @@ import {FormularioLugarComponent} from "./componentes/CrearItems/formulario-luga
 import {FormularioPlantaComponent} from "./componentes/CrearItems/formulario-planta/formulario-planta.component";
 import {PerfilUsuarioComponent} from "./componentes/perfil-usuario/perfil-usuario.component";
 import {FormularioHabitacionComponent} from "./componentes/CrearItems/formulario-habitacion/formulario-habitacion.component";
+import {DescripcionPlantaComponent} from "./componentes/descripcion-planta/descripcion-planta.component";
 
 
 
@@ -74,7 +75,14 @@ export const RUTAS_APP: Routes = [
       {
         path:'Habitacion/:id',
         component:DescripcionHabitacionComponent,
-        canActivate: [AuthGuard]
+        canActivate: [AuthGuard],
+        children: [
+          {
+            path: 'Planta/:id',
+            component: DescripcionPlantaComponent,
+            canActivate: [AuthGuard]
+          },
+        ]
       }
 
     ]

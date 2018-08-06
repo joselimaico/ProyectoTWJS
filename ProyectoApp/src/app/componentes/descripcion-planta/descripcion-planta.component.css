@@ -1,0 +1,39 @@
+.sa-contenedor-Informacion-Planta-Escogida {
+  margin: auto;
+  width: 90%;
+  /*border: 3px solid brown;*/
+  padding: 10px;
+}
+
+.center{
+  width: 75%;
+  margin: 10px auto;
+}
+.center image{
+  max-width: 30px;
+}
+
+.sa-contenedor-Main{
+  /*height: 100vh;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-card {
+  max-width: 100%;
+}
+
+.sa-Tarjeta-Informacion{
+  max-width: 100%;
+
+  /*border: 3px solid brown;*/
+}
+
+
+.sa-centrar-Informacion{
+  margin: auto;
+  width: 100%;
+  /*border: 3px solid green;*/
+  /*padding: 50px;*/
+}

@@ -1,9 +1,9 @@
 import {Registro} from "./Registro";
 
 export interface Planta{
-  idPlanta:number;
+  id:number;
   nombrePlanta:string;
-  detalleSueloPlanta:string;
+  detallePlanta:string;
   imagenPlanta:string;
 
   habitacionFK:number;
