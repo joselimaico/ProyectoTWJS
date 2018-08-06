@@ -39,6 +39,7 @@
                   <mat-card-content>
                     <p> Lugar: {{lugar.tipoLugar}}</p>
                     <p> Sector: {{lugar.sectorLugar}}</p>
+                    <p>Descripcion: {{lugar.descripcionLugar}}</p>
                   </mat-card-content>
                 </mat-card>
               </ng-template>
@@ -59,7 +60,7 @@
                         <p>Nueva habitación</p>
                       </div>
                       <div class="col-lg-11">
-                        <p-carousel  headerText="Lista de Habitaciones"  [value]="lugarSeleccionado.misHabitaciones">
+                        <p-carousel  headerText="Lista de Habitaciones"  [value]="listaHabitaciones">
                           <ng-template let-room pTemplate="item">
                             <div class="ui-grid ui-grid-responsive">
                               <div class="ui-grid-row">

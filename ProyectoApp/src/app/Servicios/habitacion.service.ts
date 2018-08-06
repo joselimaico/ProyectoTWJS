@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable} from "rxjs/index";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -8,12 +8,14 @@ import {HttpClient} from "@angular/common/http";
 export class HabitacionService {
 
   URL='http://localhost:1337/Habitacion';
-  URLCrearNuevaHabitacion = 'http:/localhost:1337/Habitacion/createRoom';
+  URLCrearNuevaHabitacion = 'http://localhost:1337/Habitacion/createRoom';
+  URLObtenerTodasHabitaciones = 'http://localhost:1337/Habitacion/getAllRooms';
 
   constructor(private _httpClient:HttpClient) { }
 
-  obtenerListaDeHabitacionesRegistradas():Observable<any>{
-    return this._httpClient.get<any>(this.URL);
+  obtenerListaDeHabitacionesRegistradas(idLugar):Observable<any>{
+    let params = new HttpParams().set("idLugar",idLugar);
+    return this._httpClient.get<any>(this.URLObtenerTodasHabitaciones,{params});
   }
 
   obtenerHabitacionEscogida(id):Observable<any>{

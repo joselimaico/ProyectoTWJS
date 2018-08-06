@@ -5,6 +5,7 @@ import {Lugar} from "../../_models";
 import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {InternalService} from "../../Servicios/internal.service";
 import {LugarService} from "../../Servicios/lugar.service";
+import {HabitacionService} from "../../Servicios/habitacion.service";
 
 
 
@@ -21,12 +22,14 @@ export class DescripcionLugarComponent implements OnInit {
   closeResult: string;
   Idlugar:number
   lugares:Lugar[]
+  listaHabitaciones:any;
   lugarSeleccionado:any;
   habitacionSeleccionada=[];
   constructor(private route: ActivatedRoute,
+              private _router:Router,
               private _lugarService:LugarService,
               private _internalService: InternalService,
-              private _router:Router,
+              private _habitacionService: HabitacionService,
               private modalService: NgbModal) {
 
 
@@ -43,6 +46,11 @@ export class DescripcionLugarComponent implements OnInit {
       .subscribe((resultado) => {
         console.log('esto devuelve el servidor al consultar mi lugar: ',resultado);
         this.lugarSeleccionado = resultado.lugarEncontrado;
+        this._habitacionService.obtenerListaDeHabitacionesRegistradas(idDelLugar)
+          .subscribe((respuesta) => {
+            console.log('lista de habitaciones del lugar actual: ', respuesta);
+            this.listaHabitaciones = respuesta.listaHabitaciones;
+          })
       });
   }
 

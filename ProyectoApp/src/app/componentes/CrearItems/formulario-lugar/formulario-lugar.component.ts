@@ -90,8 +90,8 @@ export class FormularioLugarComponent implements OnInit {
             this._habitacionService.crearNuevaHabitacion(bodyHabitacion)
               .subscribe( resultado => {
                   console.log('el servidor pudo guardar una nueva habitación: ',resultado);
-                  let idHabitacion = resultado.newRoom.id;
-                  this._router.navigate([`/Lugar/${idLugar}/Habitacion/${idHabitacion}`]);
+                  // let idHabitacion = resultado.newRoom.id;
+                  // this._router.navigate([`/Lugar/${idLugar}/Habitacion/${idHabitacion}`]);
                 }
               )
           }
