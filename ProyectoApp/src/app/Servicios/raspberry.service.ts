@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs/index";
 
 @Injectable({
@@ -11,9 +11,24 @@ export class RaspberryService {
   URLlastWatered='http://192.168.43.225/last_watered';
   URLsensor='http://192.168.43.225/sensor';
   URLautoWater='http://192.168.43.225/auto/water/';
+
   toogle: string;
 
+  URLGuardarRegistro = 'http://localhost:1337/Registro/saveRegister';
+  URlObtenerTodosLosRegistros = 'http://localhost:1337/Registro/getAllRecords';
+
   constructor(private _httpClient:HttpClient) { }
+
+
+  guardarRegistro(body):Observable<any>{
+    return this._httpClient.post<any>(this.URLGuardarRegistro,body);
+  }
+
+  obtenerTodosLosRegistros(idPlanta):Observable<any>{
+    let params = new HttpParams().set('idPlanta',idPlanta);
+    return this._httpClient.get<any>(this.URlObtenerTodosLosRegistros,{params});
+  }
+
 
   water():Observable<any>{
     return this._httpClient.get<any>(this.URLwater);

@@ -75,7 +75,7 @@
                             <h6 style="padding-top: 5px; padding-bottom: 5px">¿Quieres regar la planta en este instante?</h6>
                           </div>
                           <div class="col-lg-6">
-                            <button type="button" class="btn btn-primary btn-lg btn-block" style="width: 70%">¡¡Regar Ahora!!</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" style="width: 70%" (click)="regarLaPlanta()">¡¡Regar Ahora!!</button>
                           </div>
                         </div>
                       </div>
@@ -149,7 +149,50 @@
                   <mat-card>
                     <h3>Historial de la planta: {{plant.nombrePlanta}}</h3>
                     <br>
-                    AQUI LA TABLA DEL REGISTRO
+                    <table mat-table [dataSource]="listadoDeRegistros" class="mat-elevation-z8">
+
+                      <!--- Note that these columns can be defined in any order.
+                            The actual rendered columns are set as a property on the row definition" -->
+
+                      <!-- Position Column -->
+                      <!--<ng-container matColumnDef="position">-->
+                        <!--<th mat-header-cell *matHeaderCellDef> No. </th>-->
+                        <!--<td mat-cell *matCellDef="let record"> {{array.indexOf(record)}} </td>-->
+                      <!--</ng-container>-->
+
+                      <!-- Name Column -->
+                      <ng-container matColumnDef="fecha">
+                        <th mat-header-cell *matHeaderCellDef> Fecha de Registro </th>
+                        <td mat-cell *matCellDef="let record"> {{record.fechaRegistro}} </td>
+                      </ng-container>
+
+                      <!-- Weight Column -->
+                      <ng-container matColumnDef="hora">
+                        <th mat-header-cell *matHeaderCellDef> Hora de Registro </th>
+                        <td mat-cell *matCellDef="let record"> {{record.horaRegistro}} </td>
+                      </ng-container>
+
+                      <!-- Symbol Column -->
+                      <ng-container matColumnDef="estadoSuelo">
+                        <th mat-header-cell *matHeaderCellDef> Estado del Suelo </th>
+                        <td mat-cell *matCellDef="let record"> {{record.estadoSueloRegistro}} </td>
+                      </ng-container>
+
+                      <!-- Symbol Column -->
+                      <ng-container matColumnDef="fueRegado">
+                        <th mat-header-cell *matHeaderCellDef> Fue regado previamente </th>
+                        <td mat-cell *matCellDef="let record"> {{record.sueloRegadoRegistro}} </td>
+                      </ng-container>
+
+                      <!-- Symbol Column -->
+                      <ng-container matColumnDef="observacionAdicional">
+                        <th mat-header-cell *matHeaderCellDef> Observacion Adicional </th>
+                        <td mat-cell *matCellDef="let record"> {{record.observacionRegistro}} </td>
+                      </ng-container>
+
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
                   </mat-card>
                 </div>
               </div>

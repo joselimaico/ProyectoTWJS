@@ -1,5 +1,5 @@
 export interface Registro{
-  idRegistro:number;
+  id:number;
   fechaRegistro:string;
   horaRegistro:string;
   estadoSueloRegistro:string;

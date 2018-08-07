@@ -48,7 +48,7 @@ import {DescripcionPlantaComponent} from "./componentes/descripcion-planta/descr
 import {TokenInterceptorService} from "./token-interceptor.service";
 import {PlaceService} from "./_services";
 import { FormularioHabitacionComponent } from './componentes/CrearItems/formulario-habitacion/formulario-habitacion.component';
-
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -80,6 +80,7 @@ import { FormularioHabitacionComponent } from './componentes/CrearItems/formular
     FormsModule,
     MatIconModule,
     MatButtonModule,
+    MatTableModule,
     MatInputModule,
     MatSelectModule,
     MatChipsModule,
